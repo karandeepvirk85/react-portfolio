@@ -1,26 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'antd/dist/antd.css';
 import './App.css';
-
+import 'react-image-gallery/styles/css/image-gallery.css';
+import TopNavigationBar from './components/top-bar.component.js';
+import Routes from './components/routes.component.js';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return(
+        <div className="App">
+            <TopNavigationBar/>
+            <Routes/>
+        </div>
+    );
 }
-
 export default App;

@@ -1,0 +1,42 @@
+@import "https://fonts.googleapis.com/css2?family=Fira+Sans&family=Recursive:wght@400;500&display=swap";
+
+$primaryFont:'Fira Sans', sans-serif;
+$secondaryFont:'Recursive', sans-serif;
+$primaryColor:#312e6d;
+
+#root{
+    .App{
+        .navbar-dark{
+            background-color: $primaryColor;
+            a{
+                img{
+                    border-radius: 100%;
+                    width: 10%;
+                    margin-right: 10px;
+                }
+            }
+            .navbar-nav{
+                a{
+                    font-family: $primaryFont!important;
+                }
+            }
+        }
+        .page-container{
+            padding: 20px 4%;
+            &.skills{
+                h2{
+                    color: $primaryColor;
+                    font-family: $primaryFont;
+                    font-size: 1.2rem;
+                    font-weight: 900;
+                    border-bottom: 2px solid #312e6d;
+                    margin: 20px 0;
+                }
+                svg{
+                    font-size: 3rem;
+                    color:gray;
+                }
+            }
+        }
+    }
+}
