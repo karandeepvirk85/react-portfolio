@@ -10,6 +10,7 @@ import WorkIcon from '@material-ui/icons/Work';
 import BuildIcon from '@material-ui/icons/Build';
 import SchoolIcon from '@material-ui/icons/School';
 import PhotoCameraIcon from '@material-ui/icons/PhotoCamera';
+import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 
 const useStyles = makeStyles((theme) => ({
   popover: {
@@ -51,7 +52,10 @@ const getIcon = (icon) =>{
 	}
 	if(icon=="PhotoCameraIcon"){
 		return <PhotoCameraIcon/>
-	}
+  }
+  if(icon=="socialIcon"){
+		return <InsertEmoticonIcon/>
+  }
 }
 
 const getText = (text) =>{

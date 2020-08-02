@@ -80,6 +80,7 @@ export default class Skills extends Component{
                         <FaLinkedin/> LinkedIn
                     </Col>
                 </Row>
+                
                 <h2>CMS</h2>
                 <Row>
                     <Col xs={12} md={2}>

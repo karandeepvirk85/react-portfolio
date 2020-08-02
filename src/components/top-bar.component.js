@@ -28,18 +28,7 @@ const TopNavigationBar = () =>{
                             text="Resume"
                         />
                         </Link>
-                        <Link 
-                            to="/documents/business-card.png" 
-                            target="_blank" 
-                            className="nav-link" 
-                            download
-                        > 
-                        <PopOver 
-                            icon="CardBusiness" 
-                            text="Business Card"
-                        />
-                        </Link>
-                        
+
                         <Link className="nav-link" to="/contact">
                             <PopOver 
                                 icon="Contact" 
@@ -72,6 +61,14 @@ const TopNavigationBar = () =>{
                                 text="Skills"
                             /> 
                         </Link>
+
+                        <Link className="nav-link" to="/connect">
+                            <PopOver 
+                                icon="socialIcon" 
+                                text="Connect"
+                            /> 
+                        </Link>
+
                         <Link className="nav-link" to="/gallery">
                             <PopOver 
                                 icon="PhotoCameraIcon" 
