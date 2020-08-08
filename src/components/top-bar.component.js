@@ -1,16 +1,23 @@
 import React from 'react';
 import {Navbar, Nav} from 'react-bootstrap';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import FbIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import PopOver from '../components/popover.component.js';
-import {BrowserRouter as Router, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import Avatar from '../components/avatar.component.js';
+import Home from '../components/home.component.js';
+import Gallery from '../components/gallery.component.js';
+import Skills from '../components/skills.component.js';
+import Work from '../components/work.component.js';
+import Instagram from '../components/instagram.component.js';
+import Education from '../components/education.component.js';
+import Facebook from '../components/facebook.component.js';
+
 const TopNavigationBar = () =>{
     return(
         <Router>
             <Navbar collapseOnSelect expand="lg" variant="dark">
-                <Navbar.Brand href="#home">
+                <Navbar.Brand href="/">
                     <Avatar/> 
                     Karandeep Virk
                 </Navbar.Brand>
@@ -25,7 +32,7 @@ const TopNavigationBar = () =>{
                         > 
                         <PopOver 
                             icon="IconDownload" 
-                            text="Resume"
+                            text="Download Resume"
                         />
                         </Link>
 
@@ -62,10 +69,10 @@ const TopNavigationBar = () =>{
                             /> 
                         </Link>
 
-                        <Link className="nav-link" to="/connect">
+                        <Link className="nav-link" to="/instagram">
                             <PopOver 
-                                icon="socialIcon" 
-                                text="Connect"
+                                icon="instagram" 
+                                text="Instagram"
                             /> 
                         </Link>
 
@@ -76,12 +83,27 @@ const TopNavigationBar = () =>{
                             /> 
                         </Link>
 
-                        <Nav.Link href="https://www.facebook.com/karandeepvirk" rel="noopener noreferrer" target="_blank"><FbIcon/></Nav.Link>
+                        <Link className="nav-link" to="/facebook">
+                            <PopOver 
+                                icon="fbIcon" 
+                                text="Facebook"
+                            /> 
+                        </Link>
+    
                         <Nav.Link href="https://github.com/karandeepvirk85" rel="noopener noreferrer" target="_blank"><GitHubIcon/></Nav.Link>
                         <Nav.Link href="https://www.linkedin.com/in/kv85/" rel="noopener noreferrer" target="_blank"><LinkedInIcon/></Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
+            <Switch>
+                <Route path="/" exact component={Home} />
+                <Route path="/gallery" component={Gallery} />
+                <Route path="/skills" component={Skills} />
+                <Route path="/work" component={Work} />
+                <Route path="/instagram" component={Instagram} />
+                <Route path="/education" component={Education} />
+                <Route path="/facebook" component={Facebook} />
+            </Switch>
         </Router>
     )
 }

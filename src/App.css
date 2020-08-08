@@ -1,6 +1,14 @@
 @import "https://fonts.googleapis.com/css2?family=Fira+Sans&family=Recursive:wght@400;500&display=swap";
+#root .App h1 {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+}
 #root .App .navbar-dark {
-  background-color: #312e6d;
+  background-color: #3f51b5;
+}
+#root .App .navbar-dark .MuiSvgIcon-root {
+  font-size: 2rem;
 }
 #root .App .navbar-dark a img {
   border-radius: 100%;
@@ -12,21 +20,41 @@
 }
 #root .App .page-container {
   padding: 20px 4%;
+  min-height: 100vh;
+  background: #ececec;
 }
 #root .App .page-container.skills h2 {
-  color: #312e6d;
+  color: #333333;
   font-family: "Fira Sans", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 900;
   border-bottom: 2px solid #312e6d;
   margin: 20px 0;
+  text-transform: uppercase;
 }
 #root .App .page-container.skills svg {
   font-size: 3rem;
-  color: gray;
+  color: #0081cb;
+}
+#root .App .page-container.skills .circular-bar {
+  margin-top: 60px;
+}
+#root .App .page-container.skills .MuiCollapse-container .MuiCollapse-wrapper .MuiCollapse-wrapperInner .MuiAccordionDetails-root p {
+  display: flex;
+  justify-content: start;
+}
+#root .App .page-container.skills .MuiCollapse-container .MuiCollapse-wrapper .MuiCollapse-wrapperInner .MuiAccordionDetails-root p .sub-icons {
+  margin: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#root .App .page-container.skills .MuiCollapse-container .MuiCollapse-wrapper .MuiCollapse-wrapperInner .MuiAccordionDetails-root p .sub-icons p img {
+  width: 3.8rem;
 }
 #root .App .page-container.work h2 {
-  color: #312e6d;
+  color: #3f51b5;
   font-family: "Fira Sans", sans-serif;
   font-size: 1.8rem;
   font-weight: 900;
@@ -34,7 +62,7 @@
 }
 #root .App .page-container.work .job-address {
   margin-bottom: 10px;
-  border-bottom: 1px solid #312e6d;
+  border-bottom: 1px solid #3f51b5;
   font-family: sans-serif;
 }
 #root .App .page-container.work .job-address h3 {
@@ -44,6 +72,86 @@
 #root .App .page-container.work .job-address h4 {
   font-size: 1rem;
   margin: 0;
+}
+#root .App .page-container.education .MuiCard-root {
+  margin-bottom: 50px;
+}
+#root .App .page-container.education .MuiCard-root .MuiCardContent-root {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#root .App .page-container.education .MuiCard-root .MuiCardContent-root h2 {
+  color: #333333;
+  font-size: 1.6rem;
+  font-weight: 800;
+  font-family: "Fira Sans", sans-serif;
+  text-transform: uppercase;
+}
+#root .App .page-container.education .MuiCard-root button {
+  width: 100%;
+}
+#root .App .page-container.education .MuiCard-root p {
+  margin: 0;
+}
+#root .App .footer {
+  font-family: "Fira Sans", sans-serif;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background: #3f51b5;
+}
+#root .App .footer .footer-right {
+  padding: 0 1%;
+  min-height: 100px;
+  background-color: #3f51b5;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+}
+#root .App .footer .footer-right p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white;
+}
+#root .App .footer .footer-right .share-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+#root .App .footer .footer-right .share-profile svg {
+  font-size: 2.2rem;
+  color: #9fa8da;
+}
+#root .App .footer .footer-left {
+  padding: 0 1%;
+  min-height: 100px;
+  background-color: #3f51b5;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+#root .App .footer .footer-left p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+}
+#root .App .footer .footer-left .user-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+#root .App .footer .footer-left .user-profile svg {
+  font-size: 2.2rem;
+  color: #9fa8da;
 }
 
 /*# sourceMappingURL=App.css.map */

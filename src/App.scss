@@ -2,11 +2,20 @@
 
 $primaryFont:'Fira Sans', sans-serif;
 $secondaryFont:'Recursive', sans-serif;
-$primaryColor:#312e6d;
+$primaryColor:#3f51b5;
+$secondaryColor:#333333;
 
 #root{
     .App{
+        h1{
+            font-family: $primaryFont;
+            font-size: 3rem;
+            font-weight: 900;
+        }
         .navbar-dark{
+            .MuiSvgIcon-root{
+                font-size: 2rem;
+            }
             background-color: $primaryColor;
             a{
                 img{
@@ -23,18 +32,49 @@ $primaryColor:#312e6d;
         }
         .page-container{
             padding: 20px 4%;
+            min-height: 100vh;
+            background: #ececec;
             &.skills{
                 h2{
-                    color: $primaryColor;
+                    color: $secondaryColor;
                     font-family: $primaryFont;
-                    font-size: 1.2rem;
+                    font-size: 1.3rem;
                     font-weight: 900;
                     border-bottom: 2px solid #312e6d;
                     margin: 20px 0;
+                    text-transform: uppercase;
                 }
                 svg{
                     font-size: 3rem;
-                    color:gray;
+                    color: #0081cb;
+                }
+                .circular-bar{
+                    margin-top: 60px;
+                }
+                .MuiCollapse-container{
+                    .MuiCollapse-wrapper{
+                        .MuiCollapse-wrapperInner{
+                            .MuiAccordionDetails-root{
+                                p{
+                                    display: flex;
+                                    justify-content: start;
+                                    
+                                    .sub-icons{
+                                        margin: 0 2rem;
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        align-items: center;
+                                        p{
+                                            img{
+                                                width: 3.8rem;
+                                            }
+                                        }
+                                    }
+                                }
+                            }   
+                        }
+                    }
                 }
             }
             &.work{
@@ -59,6 +99,88 @@ $primaryColor:#312e6d;
                     }
                 }
             }
+            &.education{
+                .MuiCard-root{
+                    .MuiCardContent-root{
+                        height: 120px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        h2{
+                            color: $secondaryColor;
+                            font-size: 1.6rem;
+                            font-weight: 800;
+                            font-family: $primaryFont;
+                            text-transform: uppercase;
+                        }
+                    }
+                    margin-bottom: 50px;
+                    button{
+                        width: 100%;
+                    }
+                    p{
+                        margin:0;
+                    }
+                }
+            }
         }
+        .footer{
+            font-family: $primaryFont;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            background: #3f51b5;
+            .footer-right{
+                padding: 0 1%;
+                min-height: 100px;
+                background-color:$primaryColor;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                flex-direction: row;
+                p{
+                    margin:0;
+                    font-weight: bold;
+                    font-size: 1.5rem;
+                    color: white;
+                }
+                .share-profile{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: row;
+                    svg{
+                        font-size: 2.2rem;
+                        color: rgb(159 168 218);
+                    }
+                }
+            }
+            .footer-left{
+                padding: 0 1%;
+                min-height: 100px;
+                background-color:$primaryColor;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: row;
+                p{
+                    margin:0;
+                    font-weight: bold;
+                    font-size: 1rem;
+                    color: white;
+                }
+                .user-profile{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: row;
+                    svg{
+                        font-size: 2.2rem;
+                        color: rgb(159 168 218);
+                    }
+                }
+            }
+        }        
     }
 }
