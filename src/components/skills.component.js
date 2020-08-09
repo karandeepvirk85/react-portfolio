@@ -39,6 +39,49 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
+const objExpertise = [
+    {
+        header:"React",
+        value:"70",
+        color:"#333333"
+    },
+    {
+        header:"JavaScript",
+        value:"70",
+        color:"#333333"
+    },
+    {
+        header:"PHP",
+        value:"90",
+        color:"#333333"
+    },
+    {
+        header:"Angular",
+        value:"45",
+        color:"#333333"
+    },
+    {
+        header:"Git",
+        value:"50",
+        color:"#333333"
+    },
+    {
+        header:"Bootstrap",
+        value:"80",
+        color:"#333333"
+    },
+    {
+        header:"Materials-UI",
+        value:"60",
+        color:"#333333"
+    },
+    {
+        header:"Wordpress",
+        value:"90",
+        color:"#333333"
+    }
+]
+
 const objSkills = [
 {
     header:'FRAMEWORKS, LIBRARIES & COMPILERS',
@@ -118,7 +161,7 @@ const objSkills = [
 },
 
 {
-    header:'PAYMENTS API',
+    header:'RAW PAYMENTS API',
     language:[
         {
             icon:{
@@ -231,6 +274,23 @@ const Accordians = () => {
     return  <div className={classes.root}>{List}</div>;
 }
 
+const CircularBar = () =>{
+    const List = objExpertise.map((item, index)=>
+        <Col xs={12} md={2}>
+            <CircularProgressbar
+                value={item.value}
+                text={`${item.value}%`}
+                styles={buildStyles({
+                    pathColor: item.color,
+                    textColor: item.color
+                })}
+            />;
+            <h5 className="text-center">{item.header}</h5>
+        </Col>
+    );
+
+    return List;
+}
 export default class Skills extends Component{
 	render() {
         return (
@@ -238,72 +298,7 @@ export default class Skills extends Component{
                 <h1>SKILLS</h1>
                 <Accordians/>
                 <Row className="circular-bar">
-                    <Col xs={12} md={2}>
-                        <CircularProgressbar
-                        value={70}
-                        text={`${70}%`}
-                        styles={buildStyles({
-                            pathColor: 'rgb(0 171 73 / 70%)',
-                            textColor: 'rgb(0 171 73 / 70%)',
-                        })}
-                        />;
-                        <h4 className="text-center">React</h4>
-                    </Col>
-                    <Col xs={12} md={2}>
-                        <CircularProgressbar 
-                            value={70} 
-                            text={`${70}%`} 
-                            styles={buildStyles({
-                            pathColor: 'rgb(0 171 73 / 70%)',
-                            textColor: 'rgb(0 171 73 / 70%)',
-                        })}
-                        />
-                        <h4 className="text-center">JavaScript</h4>
-                    </Col>
-                    <Col xs={12} md={2}>
-                        <CircularProgressbar 
-                            value={90} 
-                            text={`${90}%`}
-                            styles={buildStyles({
-                                pathColor: 'rgb(9 226 102 / 70%)',
-                                textColor: 'rgb(9 226 102 / 70%)',
-                            })} 
-                        />
-                        <h4 className="text-center">PHP</h4>
-                    </Col>
-                    <Col xs={12} md={2}>
-                        <CircularProgressbar 
-                            value={45} 
-                            text={`${45}%`} 
-                            styles={buildStyles({
-                                pathColor: 'rgb(202 27 27 / 70%)',
-                                textColor: 'rgb(202 27 27 / 70%)',
-                            })}
-                        />
-                        <h4 className="text-center">Angular</h4>
-                    </Col>
-                    <Col xs={12} md={2}>
-                        <CircularProgressbar
-                            value={50} 
-                            text={`${50}%`}
-                            styles={buildStyles({
-                                pathColor: 'rgb(141 214 56)',
-                                textColor: 'rgb(141 214 56)',
-                            })}
-                        />
-                        <h4 className="text-center">Git</h4>
-                    </Col>
-                    <Col xs={12} md={2}>
-                        <CircularProgressbar
-                            value={80} 
-                            text={`${80}%`} 
-                            styles={buildStyles({
-                                pathColor: 'rgba(0, 171, 73, 0.7)',
-                                textColor: 'rgba(0, 171, 73, 0.7)',
-                        })}
-                        />
-                        <h4 className="text-center">Bootstrap</h4>
-                    </Col>
+                    <CircularBar/>           
                 </Row>
             </div>
         )  	

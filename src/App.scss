@@ -1,6 +1,6 @@
-@import "https://fonts.googleapis.com/css2?family=Fira+Sans&family=Recursive:wght@400;500&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap";
 
-$primaryFont:'Fira Sans', sans-serif;
+$primaryFont:'Open Sans', sans-serif;
 $secondaryFont:'Recursive', sans-serif;
 $primaryColor:#3f51b5;
 $secondaryColor:#333333;
@@ -8,7 +8,8 @@ $secondaryColor:#333333;
 #root{
     .App{
         h1{
-            font-family: $primaryFont;
+            font-family: $secondaryFont;
+            text-transform: uppercase;
             font-size: 3rem;
             font-weight: 900;
         }
@@ -16,7 +17,7 @@ $secondaryColor:#333333;
             .MuiSvgIcon-root{
                 font-size: 2rem;
             }
-            background-color: $primaryColor;
+            background-color: $secondaryColor;
             a{
                 img{
                     border-radius: 100%;
@@ -46,10 +47,14 @@ $secondaryColor:#333333;
                 }
                 svg{
                     font-size: 3rem;
-                    color: #0081cb;
+                    color:$secondaryColor;
                 }
                 .circular-bar{
                     margin-top: 60px;
+                    margin-top: 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 .MuiCollapse-container{
                     .MuiCollapse-wrapper{
@@ -78,8 +83,13 @@ $secondaryColor:#333333;
                 }
             }
             &.work{
+                ul{
+                    background-color: white;
+                    padding: 20px 3%;
+                    border: 1px solid rgba(0,0,0,0.2);
+                }
                 h2{
-                    color: $primaryColor;
+                    color: $secondaryColor;
                     font-family: $primaryFont;
                     font-size: 1.8rem;
                     font-weight: 900;
@@ -87,11 +97,11 @@ $secondaryColor:#333333;
                 }
                 .job-address{
                     margin-bottom: 10px;
-                    border-bottom: 1px solid $primaryColor;
-                    font-family: sans-serif;
                     h3{
-                        font-size: 1.2rem;
+                        color: rgba(0,0,0,0.5);
+                        font-size: 1rem;
                         margin:0;
+                        font-weight: 400;
                     }
                     h4{
                         font-size: 1rem;
@@ -101,11 +111,11 @@ $secondaryColor:#333333;
             }
             &.education{
                 .MuiCard-root{
+                    height: 220px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
                     .MuiCardContent-root{
-                        height: 120px;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
                         h2{
                             color: $secondaryColor;
                             font-size: 1.6rem;
@@ -125,62 +135,24 @@ $secondaryColor:#333333;
             }
         }
         .footer{
-            font-family: $primaryFont;
             display: flex;
-            width: 100%;
-            align-items: center;
+            padding: 6px 6px 6px 2%;
+            background-color: $secondaryColor;
             justify-content: space-between;
-            background: #3f51b5;
-            .footer-right{
-                padding: 0 1%;
-                min-height: 100px;
-                background-color:$primaryColor;
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-                flex-direction: row;
-                p{
-                    margin:0;
-                    font-weight: bold;
-                    font-size: 1.5rem;
-                    color: white;
-                }
-                .share-profile{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: row;
-                    svg{
-                        font-size: 2.2rem;
-                        color: rgb(159 168 218);
-                    }
-                }
-            }
+            align-items: center;
             .footer-left{
-                padding: 0 1%;
-                min-height: 100px;
-                background-color:$primaryColor;
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                flex-direction: row;
-                p{
-                    margin:0;
-                    font-weight: bold;
-                    font-size: 1rem;
-                    color: white;
-                }
-                .user-profile{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: row;
-                    svg{
-                        font-size: 2.2rem;
-                        color: rgb(159 168 218);
-                    }
-                }
+                font-weight: bold;
+                color: gray;
+            }
+            .footer-right{
             }
         }        
     }
 }
+    .share-links{
+        padding: 1px 6px;
+        svg{
+            font-size: 2rem;
+            color: $secondaryColor;
+        }
+    }

@@ -12,6 +12,7 @@ import Work from '../components/work.component.js';
 import Instagram from '../components/instagram.component.js';
 import Education from '../components/education.component.js';
 import Facebook from '../components/facebook.component.js';
+import Project from './projects.component.js';
 
 const TopNavigationBar = () =>{
     return(
@@ -103,6 +104,7 @@ const TopNavigationBar = () =>{
                 <Route path="/instagram" component={Instagram} />
                 <Route path="/education" component={Education} />
                 <Route path="/facebook" component={Facebook} />
+                <Route path="/projects" component={Project} />
             </Switch>
         </Router>
     )

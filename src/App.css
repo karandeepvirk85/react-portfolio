@@ -1,11 +1,12 @@
-@import "https://fonts.googleapis.com/css2?family=Fira+Sans&family=Recursive:wght@400;500&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap";
 #root .App h1 {
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Recursive", sans-serif;
+  text-transform: uppercase;
   font-size: 3rem;
   font-weight: 900;
 }
 #root .App .navbar-dark {
-  background-color: #3f51b5;
+  background-color: #333333;
 }
 #root .App .navbar-dark .MuiSvgIcon-root {
   font-size: 2rem;
@@ -16,7 +17,7 @@
   margin-right: 10px;
 }
 #root .App .navbar-dark .navbar-nav a {
-  font-family: "Fira Sans", sans-serif !important;
+  font-family: "Open Sans", sans-serif !important;
 }
 #root .App .page-container {
   padding: 20px 4%;
@@ -25,7 +26,7 @@
 }
 #root .App .page-container.skills h2 {
   color: #333333;
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1.3rem;
   font-weight: 900;
   border-bottom: 2px solid #312e6d;
@@ -34,10 +35,14 @@
 }
 #root .App .page-container.skills svg {
   font-size: 3rem;
-  color: #0081cb;
+  color: #333333;
 }
 #root .App .page-container.skills .circular-bar {
   margin-top: 60px;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #root .App .page-container.skills .MuiCollapse-container .MuiCollapse-wrapper .MuiCollapse-wrapperInner .MuiAccordionDetails-root p {
   display: flex;
@@ -53,40 +58,43 @@
 #root .App .page-container.skills .MuiCollapse-container .MuiCollapse-wrapper .MuiCollapse-wrapperInner .MuiAccordionDetails-root p .sub-icons p img {
   width: 3.8rem;
 }
+#root .App .page-container.work ul {
+  background-color: white;
+  padding: 20px 3%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
 #root .App .page-container.work h2 {
-  color: #3f51b5;
-  font-family: "Fira Sans", sans-serif;
+  color: #333333;
+  font-family: "Open Sans", sans-serif;
   font-size: 1.8rem;
   font-weight: 900;
   margin: 0;
 }
 #root .App .page-container.work .job-address {
   margin-bottom: 10px;
-  border-bottom: 1px solid #3f51b5;
-  font-family: sans-serif;
 }
 #root .App .page-container.work .job-address h3 {
-  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
   margin: 0;
+  font-weight: 400;
 }
 #root .App .page-container.work .job-address h4 {
   font-size: 1rem;
   margin: 0;
 }
 #root .App .page-container.education .MuiCard-root {
-  margin-bottom: 50px;
-}
-#root .App .page-container.education .MuiCard-root .MuiCardContent-root {
-  height: 120px;
+  height: 220px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+  margin-bottom: 50px;
 }
 #root .App .page-container.education .MuiCard-root .MuiCardContent-root h2 {
   color: #333333;
   font-size: 1.6rem;
   font-weight: 800;
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
 }
 #root .App .page-container.education .MuiCard-root button {
@@ -96,62 +104,22 @@
   margin: 0;
 }
 #root .App .footer {
-  font-family: "Fira Sans", sans-serif;
   display: flex;
-  width: 100%;
-  align-items: center;
+  padding: 6px 6px 6px 2%;
+  background-color: #333333;
   justify-content: space-between;
-  background: #3f51b5;
-}
-#root .App .footer .footer-right {
-  padding: 0 1%;
-  min-height: 100px;
-  background-color: #3f51b5;
-  display: flex;
-  justify-content: flex-end;
   align-items: center;
-  flex-direction: row;
-}
-#root .App .footer .footer-right p {
-  margin: 0;
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: white;
-}
-#root .App .footer .footer-right .share-profile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-#root .App .footer .footer-right .share-profile svg {
-  font-size: 2.2rem;
-  color: #9fa8da;
 }
 #root .App .footer .footer-left {
-  padding: 0 1%;
-  min-height: 100px;
-  background-color: #3f51b5;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: row;
-}
-#root .App .footer .footer-left p {
-  margin: 0;
   font-weight: bold;
-  font-size: 1rem;
-  color: white;
+  color: gray;
 }
-#root .App .footer .footer-left .user-profile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+.share-links {
+  padding: 1px 6px;
 }
-#root .App .footer .footer-left .user-profile svg {
-  font-size: 2.2rem;
-  color: #9fa8da;
+.share-links svg {
+  font-size: 2rem;
+  color: #333333;
 }
 
 /*# sourceMappingURL=App.css.map */

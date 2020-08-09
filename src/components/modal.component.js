@@ -16,7 +16,7 @@ export default class MyModal extends Component{
             const handleShow = () => setShow(true);
             return (
                 <>
-                <Button variant="primary" onClick={handleShow}>View Certificate</Button>
+                <Button variant="dark" onClick={handleShow}>View Certificate</Button>
 
                 <Modal size="lg" show={show} onHide={handleClose}  animation={false} aria-labelledby="example-custom-modal-styling-title">
                     <Modal.Header closeButton>

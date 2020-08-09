@@ -1,97 +1,128 @@
 import React,{Component, useRef} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import {Row, Col} from 'react-bootstrap';
+import ButtonBase from '@material-ui/core/ButtonBase';
 import ImageModal from '../components/modal.component.js';
-
+import {Row, Col} from 'react-bootstrap';
 const useStyles = makeStyles((theme) => ({
-    modal: {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
+    root: {
+      flexGrow: 1,
+      marginBottom:"10px"
     },
     paper: {
-        backgroundColor: theme.palette.background.paper,
-        border: '2px solid #000',
-        boxShadow: theme.shadows[5],
-        padding: theme.spacing(2, 4, 3),
+      padding: theme.spacing(2),
+      margin: 'auto',
+      maxWidth: 800,
     },
-    root: {
-        maxWidth: 445
+    image: {
+      width: 128,
+      height: 128,
     },
-    media: {
-        height: 240,
-    }
+    img: {
+      margin: 'auto',
+      display: 'block',
+      maxWidth: '100%',
+      maxHeight: '100%',
+    },
 }));
 
 const arrDocuments = [
     {
-        image:'master.jpg',
+        image:'/documents/certificates/original/master.jpg',
+        thumb:'/documents/certificates/thumbs/master.jpg',
         title:'Master Degree',
         subtitle:'E Security',
-        location:'Fatehgarh Sahib, PTU'
+        location:'Fatehgarh Sahib, PTU',
+        year:'May 2013'
     },
     {
-        image:'btech.jpg',
+        image:'/documents/certificates/original/btech.jpg',
+        thumb:'/documents/certificates/thumbs/btech.jpg',
+
         title:'Bachelor Degree',
         subtitle:'Computer Science',
         location:'Lalru Mandi, Mohali, PTU',
+        year:'May 2011'
     },
     {
-        image:'hcl.jpg',
+        image:'/documents/certificates/original/hcl.jpg',
+        thumb:'/documents/certificates/thumbs/hcl.jpg',
         title:'Industrial Traning',
         subtitle:'JAVA',
-        location:'Mohali, HCL'
+        location:'Mohali, HCL',
+        year:'Jan 2011'
     },
     {
-        image:'award.jpg',
+        image:'/documents/certificates/original/award.jpg',
+        thumb:'/documents/certificates/thumbs/award.jpg',
         title:'1st Prize',
         subtitle:'Presentation on Artifical Intelligence',
-        location:'BBSBEC, Fatehgarh Sahib, PTU'
+        location:'BBSBEC, Fatehgarh Sahib, PTU',
+        year:'Jan 2012'
     },
     {
-        image:'wireless.jpg',
+        image:'/documents/certificates/original/wireless.jpg',
+        thumb:'/documents/certificates/thumbs/wireless.jpg',
         title:'Wireless Technology',
         subtitle:'International Conference',
-        location:'Ram Nagar, Banur, Patiala'
+        location:'Ram Nagar, Banur, Patiala',
+        year:'June 2012'
     },
     {
-        image:'stn.jpg',
+        image:'/documents/certificates/original/stn.jpg',
+        thumb:'/documents/certificates/thumbs/stn.jpg',
         title:'Training',
         subtitle:'JAVA',
-        location:'Sector 34-A, CHD'
+        location:'Sector 34-A, CHD',
+        year:'July 2009'
     }
 ];
 
 const MediaCard = () =>{
     const classes = useStyles();
     const List = arrDocuments.map((item,index) =>
-        <Col lg={4} md={4} sm={6} xs={12}>
-            <Card className={classes.root}>
-                <CardActionArea>
-                    <CardContent>
-                        <Typography gutterBottom variant="h6" component="h2">{item.title}</Typography>
-                        <Typography gutterBottom component="p">{item.location}</Typography>
-                        <Typography gutterBottom variant="p" component="p">{item.subtitle}</Typography>
-                        <Typography variant="body2" color="textSecondary" component="p">
-                            {item.text}
-                        </Typography>
-                    </CardContent>
-                </CardActionArea>
-                <CardActions>
-                    <ImageModal title={item.title} image={"documents/certificates/original/"+item.image} />
-                </CardActions>
-            </Card>
+        <Col sm={12} md={12} lg={12} xl={6}>
+            <div className={classes.root}>
+                <Paper className={classes.paper}>
+                    <Grid container spacing={2}>
+                        <Grid item>
+                            <ButtonBase className={classes.image}>
+                                <img className={classes.img} alt="complex" src={item.thumbx} />
+                            </ButtonBase>
+                        </Grid>
+                        <Grid item xs={12} sm container>
+                            <Grid item xs container direction="column" spacing={2}>
+                                <Grid item xs>
+                                    <Typography gutterBottom variant="subtitle1">
+                                        {item.title}
+                                    </Typography>
+                                    <Typography variant="body2" gutterBottom>
+                                        {item.subtitle}
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary">
+                                        {item.location}
+                                    </Typography>
+                                </Grid>
+                                <Grid item>
+                                    <Typography variant="body2" style={{ cursor: 'pointer' }}>
+                                        <ImageModal title={item.title} image={item.image} />
+                                    </Typography>
+                                </Grid>
+                            </Grid>
+                            <Grid item>
+                                <Typography variant="subtitle1">{item.year}</Typography>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Paper>
+            </div>
         </Col>
     );
     return List;
 }
+
 
 
 export default class Education extends Component{
