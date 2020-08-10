@@ -6,6 +6,7 @@ export default class Facebook extends Component {
 	render() {
 		return (
 			<div className="page-container facebook">
+				<h1>FACEBOOK</h1>
 				<FacebookProvider appId="378244259239209">
 					<Row>
 						<Col xs={12} md={4}>

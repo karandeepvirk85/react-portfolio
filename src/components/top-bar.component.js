@@ -13,15 +13,13 @@ import Instagram from '../components/instagram.component.js';
 import Education from '../components/education.component.js';
 import Facebook from '../components/facebook.component.js';
 import Project from './projects.component.js';
-
+import Contact from './contact.component.js';
+import Twitter from './twitter.component.js';
 const TopNavigationBar = () =>{
     return(
         <Router>
             <Navbar collapseOnSelect expand="lg" variant="dark">
-                <Navbar.Brand href="/">
-                    <Avatar/> 
-                    Karandeep Virk
-                </Navbar.Brand>
+                <Link to="/"><Avatar/> Karandeep Virk</Link>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ml-auto">
@@ -35,6 +33,20 @@ const TopNavigationBar = () =>{
                             icon="IconDownload" 
                             text="Download Resume"
                         />
+                        <p className="d-block margin-0 d-sm-none">Resume</p>
+                        </Link>
+
+                        <Link 
+                            to="/documents/vcard.png" 
+                            target="_blank" 
+                            className="nav-link" 
+                            download
+                        > 
+                        <PopOver 
+                            icon="IdCard" 
+                            text="Visiting Card"
+                        />
+                        <p className="d-block margin-0 d-sm-none">V Card</p>
                         </Link>
 
                         <Link className="nav-link" to="/contact">
@@ -42,6 +54,7 @@ const TopNavigationBar = () =>{
                                 icon="Contact" 
                                 text="Contact"
                             />
+                            <p className="d-block margin-0 d-sm-none">Contact</p>
                         </Link>
 
                         <Link className="nav-link" to="education">
@@ -49,25 +62,29 @@ const TopNavigationBar = () =>{
                                 icon="SchoolIcon" 
                                 text="Education"
                             />
+                            <p className="d-block margin-0 d-sm-none">Education</p>
                         </Link>
                         <Link className="nav-link" to="work">
                             <PopOver 
                                 icon="WorkIcon" 
                                 text="Work Experience"
                             />
+                            <p className="d-block margin-0 d-sm-none">Work</p>
                         </Link>
                         <Link className="nav-link" to="/projects">
                             <PopOver 
                                 icon="AccountTreeIcon" 
                                 text="Projects"
-                            />    
+                            />
+                            <p className="d-block margin-0 d-sm-none">Projects</p>
                         </Link>
 
                         <Link className="nav-link" to="/skills">
                             <PopOver 
                                 icon="BuildIcon" 
                                 text="Skills"
-                            /> 
+                            />
+                            <p className="d-block margin-0 d-sm-none">Skills</p>
                         </Link>
 
                         <Link className="nav-link" to="/instagram">
@@ -75,24 +92,35 @@ const TopNavigationBar = () =>{
                                 icon="instagram" 
                                 text="Instagram"
                             /> 
+                            <p className="d-block margin-0 d-sm-none">Instagram</p>
                         </Link>
 
                         <Link className="nav-link" to="/gallery">
                             <PopOver 
                                 icon="PhotoCameraIcon" 
                                 text="Photography"
-                            /> 
+                            />
+                            <p className="d-block margin-0 d-sm-none">Photography</p>
                         </Link>
 
                         <Link className="nav-link" to="/facebook">
                             <PopOver 
                                 icon="fbIcon" 
                                 text="Facebook"
-                            /> 
+                            />
+                            <p className="d-block margin-0 d-sm-none">Facebook</p>
+                        </Link>
+
+                        <Link className="nav-link" to="/twitter">
+                            <PopOver 
+                                icon="twitter" 
+                                text="Twitter"
+                            />
+                            <p className="d-block margin-0 d-sm-none">Twitter</p>
                         </Link>
     
-                        <Nav.Link href="https://github.com/karandeepvirk85" rel="noopener noreferrer" target="_blank"><GitHubIcon/></Nav.Link>
-                        <Nav.Link href="https://www.linkedin.com/in/kv85/" rel="noopener noreferrer" target="_blank"><LinkedInIcon/></Nav.Link>
+                        <Nav.Link href="https://github.com/karandeepvirk85" rel="noopener noreferrer" target="_blank"><GitHubIcon/> <p className="d-block margin-0 d-sm-none"> Github</p></Nav.Link>
+                        <Nav.Link href="https://www.linkedin.com/in/kv85/" rel="noopener noreferrer" target="_blank"><LinkedInIcon/> <p className="d-block margin-0 d-sm-none"> LinkedIn</p></Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
@@ -105,6 +133,8 @@ const TopNavigationBar = () =>{
                 <Route path="/education" component={Education} />
                 <Route path="/facebook" component={Facebook} />
                 <Route path="/projects" component={Project} />
+                <Route path="/contact" component={Contact} />
+                <Route path="/twitter" component={Twitter} />
             </Switch>
         </Router>
     )

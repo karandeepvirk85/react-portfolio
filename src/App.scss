@@ -7,7 +7,13 @@ $secondaryColor:#333333;
 
 #root{
     .App{
+        .margin-0{
+            margin:0;
+        }
         h1{
+            @media only screen and (max-width: 768px) {
+                font-size: 2rem;
+            }
             font-family: $secondaryFont;
             text-transform: uppercase;
             font-size: 3rem;
@@ -19,6 +25,12 @@ $secondaryColor:#333333;
             }
             background-color: $secondaryColor;
             a{
+                @media only screen and (max-width: 768px) {
+                   width: 80%;
+                }
+                color: white;
+                font-size: 1.5rem;
+                font-weight: 700;
                 img{
                     border-radius: 100%;
                     width: 10%;
@@ -27,7 +39,12 @@ $secondaryColor:#333333;
             }
             .navbar-nav{
                 a{
+                    color: gray;
+                    font-size: 1rem;
                     font-family: $primaryFont!important;
+                }
+                svg{
+                    font-size: 2rem;
                 }
             }
         }
@@ -35,6 +52,30 @@ $secondaryColor:#333333;
             padding: 20px 4%;
             min-height: 100vh;
             background: #ececec;
+            &.home{
+                .home-info{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    p{
+                        margin: 0;
+                    }
+                    a{
+                        color: white;
+                    }
+                }
+            }
+            &.contact{
+                form{
+                    background: white;
+                    width: 100%;
+                    padding: 2rem;
+                    .alert{
+                        margin-top: 20px;
+                    }
+                }
+            }
             &.skills{
                 h2{
                     color: $secondaryColor;
@@ -84,6 +125,9 @@ $secondaryColor:#333333;
             }
             &.work{
                 ul{
+                    @media only screen and (max-width: 768px) {
+                        padding: 20px 8%;
+                    }
                     background-color: white;
                     padding: 20px 3%;
                     border: 1px solid rgba(0,0,0,0.2);
@@ -143,8 +187,6 @@ $secondaryColor:#333333;
             .footer-left{
                 font-weight: bold;
                 color: gray;
-            }
-            .footer-right{
             }
         }        
     }

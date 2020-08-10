@@ -89,7 +89,7 @@ const MediaCard = () =>{
                     <Grid container spacing={2}>
                         <Grid item>
                             <ButtonBase className={classes.image}>
-                                <img className={classes.img} alt="complex" src={item.thumbx} />
+                                <img className={classes.img} alt="complex" src={item.thumb} />
                             </ButtonBase>
                         </Grid>
                         <Grid item xs={12} sm container>

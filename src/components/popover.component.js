@@ -9,9 +9,11 @@ import AccountTreeIcon from '@material-ui/icons/AccountTree';
 import WorkIcon from '@material-ui/icons/Work';
 import BuildIcon from '@material-ui/icons/Build';
 import SchoolIcon from '@material-ui/icons/School';
-import PhotoCameraIcon from '@material-ui/icons/CameraEnhance';
+import PhotoCameraIcon from '@material-ui/icons/PhotoLibrary';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FbIcon from '@material-ui/icons/Facebook';
+import {FaIdCard} from 'react-icons/fa';
+import TwitterIcon from '@material-ui/icons/Twitter';
 
 const useStyles = makeStyles((theme) => ({
   popover: {
@@ -57,9 +59,15 @@ const getIcon = (icon) =>{
     if(icon=="instagram"){
         return <InstagramIcon/>
     }
-    if(icon="fbIcon"){
+    if(icon=="fbIcon"){
         return <FbIcon/>
     }
+    if(icon=="IdCard"){
+        return <FaIdCard/>
+    }
+    if(icon=="twitter"){
+        return <TwitterIcon/>
+    }  
 }
 
 const getText = (text) =>{
