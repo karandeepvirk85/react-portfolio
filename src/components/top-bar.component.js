@@ -3,7 +3,7 @@ import {Navbar, Nav} from 'react-bootstrap';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import PopOver from '../components/popover.component.js';
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import {HashRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import Avatar from '../components/avatar.component.js';
 import Home from '../components/home.component.js';
 import Gallery from '../components/gallery.component.js';
@@ -15,6 +15,8 @@ import Facebook from '../components/facebook.component.js';
 import Project from './projects.component.js';
 import Contact from './contact.component.js';
 import Twitter from './twitter.component.js';
+import {DownLoadDocument} from '../components/utility/utility.component.js';
+
 const TopNavigationBar = () =>{
     return(
         <Router>
@@ -23,40 +25,6 @@ const TopNavigationBar = () =>{
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ml-auto">
-                        <Link 
-                            to="/documents/Karandeep_Virk.pdf" 
-                            target="_blank" 
-                            className="nav-link" 
-                            download
-                        > 
-                        <PopOver 
-                            icon="IconDownload" 
-                            text="Download Resume"
-                        />
-                        <p className="d-block margin-0 d-sm-none">Resume</p>
-                        </Link>
-
-                        <Link 
-                            to="/documents/vcard.png" 
-                            target="_blank" 
-                            className="nav-link" 
-                            download
-                        > 
-                        <PopOver 
-                            icon="IdCard" 
-                            text="Visiting Card"
-                        />
-                        <p className="d-block margin-0 d-sm-none">V Card</p>
-                        </Link>
-
-                        <Link className="nav-link" to="/contact">
-                            <PopOver 
-                                icon="Contact" 
-                                text="Contact"
-                            />
-                            <p className="d-block margin-0 d-sm-none">Contact</p>
-                        </Link>
-
                         <Link className="nav-link" to="education">
                             <PopOver 
                                 icon="SchoolIcon" 
@@ -64,7 +32,7 @@ const TopNavigationBar = () =>{
                             />
                             <p className="d-block margin-0 d-sm-none">Education</p>
                         </Link>
-                        <Link className="nav-link" to="work">
+                        <Link className="nav-link" to="/work">
                             <PopOver 
                                 icon="WorkIcon" 
                                 text="Work Experience"
@@ -79,7 +47,7 @@ const TopNavigationBar = () =>{
                             <p className="d-block margin-0 d-sm-none">Projects</p>
                         </Link>
 
-                        <Link className="nav-link" to="/skills">
+                        <Link className="skills-link nav-link" to="/skills">
                             <PopOver 
                                 icon="BuildIcon" 
                                 text="Skills"
@@ -111,6 +79,37 @@ const TopNavigationBar = () =>{
                             <p className="d-block margin-0 d-sm-none">Facebook</p>
                         </Link>
 
+                        <Link
+                            className="nav-link"
+                            onClick = {(e)=>{DownLoadDocument('/documents/Karandeep_Virk.pdf',e)}}
+                        > 
+
+                        <PopOver 
+                            icon="IconDownload" 
+                            text="View PDF Resume"
+                        />
+                            <p className="d-block margin-0 d-sm-none">View Resume</p>
+                        </Link>
+
+                        <Link
+                            className="nav-link"
+                            onClick = {(e)=>{DownLoadDocument("/documents/vcard.png",e)}}
+                        > 
+                        <PopOver 
+                            icon="IdCard" 
+                            text="Visiting Card"
+                        />
+                            <p className="d-block margin-0 d-sm-none">V Card</p>
+                        </Link>
+
+                        <Link className="nav-link" to="/contact">
+                            <PopOver 
+                                icon="Contact" 
+                                text="Contact"
+                            />
+                            <p className="d-block margin-0 d-sm-none">Contact</p>
+                        </Link>
+                
                         <Link className="nav-link" to="/twitter">
                             <PopOver 
                                 icon="twitter" 
@@ -118,7 +117,6 @@ const TopNavigationBar = () =>{
                             />
                             <p className="d-block margin-0 d-sm-none">Twitter</p>
                         </Link>
-    
                         <Nav.Link href="https://github.com/karandeepvirk85" rel="noopener noreferrer" target="_blank"><GitHubIcon/> <p className="d-block margin-0 d-sm-none"> Github</p></Nav.Link>
                         <Nav.Link href="https://www.linkedin.com/in/kv85/" rel="noopener noreferrer" target="_blank"><LinkedInIcon/> <p className="d-block margin-0 d-sm-none"> LinkedIn</p></Nav.Link>
                     </Nav>

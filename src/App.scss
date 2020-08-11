@@ -56,12 +56,16 @@ $secondaryColor:#333333;
                 .home-info{
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
                     justify-content: center;
                     p{
-                        margin: 0;
+                        margin: 6px;
+                        font-family: $primaryFont;
+                        font-size: 1.1rem;
+                        color: black;
+                        font-weight: 300;
                     }
                     a{
+                        margin-top: 20px;
                         color: white;
                     }
                 }
@@ -74,6 +78,16 @@ $secondaryColor:#333333;
                     .alert{
                         margin-top: 20px;
                     }
+                }
+                p{
+                    margin:0;
+                    a{
+                        color: gray;
+                        font-size: 1.2rem;
+                    }
+                }
+                svg{
+                    font-size: 1.2rem;
                 }
             }
             &.skills{
@@ -179,22 +193,75 @@ $secondaryColor:#333333;
             }
         }
         .footer{
-            display: flex;
-            padding: 6px 6px 6px 2%;
-            background-color: $secondaryColor;
-            justify-content: space-between;
-            align-items: center;
-            .footer-left{
-                font-weight: bold;
-                color: gray;
-            }
-        }        
+            background-color:#4e4e4e;
+            .top-footer{
+                padding: 20px 0;
+                h2{
+                    color: #ededed;
+                }
+                .general-info{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    p{
+                        color: #ededed;
+                        font-size: 1rem;
+                        margin: 3px;
+                        a{
+                            color: #ededed;
+                        } 
+                    }
+                
+                    h2{
+                        color: #ffffff;
+                        font-family: inherit;
+                        font-weight: 900;
+                        text-transform: uppercase;
+                        text-shadow: 1px 1px 4px #000000d6;                    
+                    }
+                }
+                .twitter{
+                    background: white;
+                }
+                .footer-links{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    a{
+                        color: #ededed;
+                        padding: 4px 2% 4px 8%;
+                        font-size: 1.1rem;
+                        font-family: $primaryFont;
+                    }
+                }
+            }   
+            .bottom-footer{
+                display: flex;
+                padding: 3px 6px 3px 2%;
+                background-color:$secondaryColor;
+                justify-content: space-between;
+                align-items: center;
+                .footer-left{
+                    color: gray;
+                }
+                .footer-icons{
+                    display: inline-flex;
+                    svg{
+                        color: gray;
+                        font-size: 1.2rem;
+                    }
+                }
+            }    
+        }    
     }
 }
-    .share-links{
-        padding: 1px 6px;
-        svg{
-            font-size: 2rem;
-            color: $secondaryColor;
-        }
+.share-links{
+    padding: 1px 6px;
+    svg{
+        font-size: 2rem;
+        color: $secondaryColor;
     }
+}

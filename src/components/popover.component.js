@@ -14,7 +14,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import FbIcon from '@material-ui/icons/Facebook';
 import {FaIdCard} from 'react-icons/fa';
 import TwitterIcon from '@material-ui/icons/Twitter';
-
+import VideocamIcon from '@material-ui/icons/Videocam';
 const useStyles = makeStyles((theme) => ({
   popover: {
     pointerEvents: 'none',
@@ -40,6 +40,10 @@ const getIcon = (icon) =>{
 
     if(icon == "AccountTreeIcon"){
         return <AccountTreeIcon/>
+    }
+
+    if(icon == "multimedia"){
+        return <VideocamIcon/>
     }
 
     if(icon == "WorkIcon"){

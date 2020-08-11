@@ -7,9 +7,10 @@
 		}
 		public function sendEmail($arrRestData){
 			$arrData  	  = json_decode($arrRestData,true);
-			$strEmail  	  = isset($arrData['email'])  	   	? $arrData['email'] : '';
+			$strContact   = isset($arrData['contact'])  	? $arrData['contact'] : '';
 			$strName 	  = isset($arrData['name'])  		? $arrData['name'] : '';
 			$strMessage   = isset($arrData['message'])   	? $arrData['message'] : '';
+			$strMessage   = $strMessage.'<br> By'.$strContact;
 			if(mail('virkkarandeep85@gmail.com',$strName, $strMessage)){
 				echo json_encode(array(
 					"sent" => true

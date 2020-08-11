@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import{Row, Col, Form, Button, Alert} from 'react-bootstrap';
 import axios from 'axios';
-
+import Address from './address.component.js'; 
 export default class Contact extends Component {
     constructor(props){
         super(props);
@@ -17,7 +17,8 @@ export default class Contact extends Component {
         const objData           = new FormData(event.target);
         const strName           = objData.get('name');
         const strMessage        = objData.get('message');
-        if(strName.length==0 || strMessage.length==0){
+        const strContact        = objData.get('contact');
+        if(strName.length===0 || strMessage.length===0 || strContact.length ===0){
             alert('Please Fill Both Fields');
         }else{
             axios({
@@ -38,13 +39,19 @@ export default class Contact extends Component {
     render(){
         return(
             <div className = "page-container contact">
-                <h1>Contact Me</h1>
+                <h1>Hire Me</h1>
                 <Row>
-                    <Col xs={12} md={12}>
+                    <Col xs={12} md={4}>
+                        <Address/>
+                    </Col>
+                    <Col xs={12} md={8}>
                         <Form onSubmit={this.handleFormSubmit}>
                             <Form.Group controlId="formBasicEmail">
                                 <Form.Label>Name</Form.Label>
                                 <Form.Control type="text" name="name" placeholder="Name" />
+                                <br/>
+                                <Form.Label>Email/Contact</Form.Label>
+                                <Form.Control type="text" name="contact" placeholder="Contact" />
                                 <br/>
                                 <Form.Label>Message</Form.Label>
                                 <Form.Control as="textarea" name="message" rows ="3" />

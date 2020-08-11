@@ -27,7 +27,7 @@ export default function MenuPopupState() {
         <PopupState variant="popover" popupId="demo-popup-menu">
             {(popupState) => (
             <React.Fragment>
-            <Button variant="contained"  {...bindTrigger(popupState)}><ShareIcon/></Button>
+            <Button variant="contained"  {...bindTrigger(popupState)}>Share <ShareIcon/></Button>
             <Menu {...bindMenu(popupState)}>
                 <ShareProfile/>
             </Menu>

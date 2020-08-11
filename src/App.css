@@ -50,13 +50,17 @@
 #root .App .page-container.home .home-info {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 #root .App .page-container.home .home-info p {
-  margin: 0;
+  margin: 6px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1rem;
+  color: black;
+  font-weight: 300;
 }
 #root .App .page-container.home .home-info a {
+  margin-top: 20px;
   color: white;
 }
 #root .App .page-container.contact form {
@@ -66,6 +70,16 @@
 }
 #root .App .page-container.contact form .alert {
   margin-top: 20px;
+}
+#root .App .page-container.contact p {
+  margin: 0;
+}
+#root .App .page-container.contact p a {
+  color: gray;
+  font-size: 1.2rem;
+}
+#root .App .page-container.contact svg {
+  font-size: 1.2rem;
 }
 #root .App .page-container.skills h2 {
   color: #333333;
@@ -152,15 +166,66 @@
   margin: 0;
 }
 #root .App .footer {
+  background-color: #4e4e4e;
+}
+#root .App .footer .top-footer {
+  padding: 20px 0;
+}
+#root .App .footer .top-footer h2 {
+  color: #ededed;
+}
+#root .App .footer .top-footer .general-info {
   display: flex;
-  padding: 6px 6px 6px 2%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#root .App .footer .top-footer .general-info p {
+  color: #ededed;
+  font-size: 1rem;
+  margin: 3px;
+}
+#root .App .footer .top-footer .general-info p a {
+  color: #ededed;
+}
+#root .App .footer .top-footer .general-info h2 {
+  color: #ffffff;
+  font-family: inherit;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 4px #000000d6;
+}
+#root .App .footer .top-footer .twitter {
+  background: white;
+}
+#root .App .footer .top-footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#root .App .footer .top-footer .footer-links a {
+  color: #ededed;
+  padding: 4px 2% 4px 8%;
+  font-size: 1.1rem;
+  font-family: "Open Sans", sans-serif;
+}
+#root .App .footer .bottom-footer {
+  display: flex;
+  padding: 3px 6px 3px 2%;
   background-color: #333333;
   justify-content: space-between;
   align-items: center;
 }
-#root .App .footer .footer-left {
-  font-weight: bold;
+#root .App .footer .bottom-footer .footer-left {
   color: gray;
+}
+#root .App .footer .bottom-footer .footer-icons {
+  display: inline-flex;
+}
+#root .App .footer .bottom-footer .footer-icons svg {
+  color: gray;
+  font-size: 1.2rem;
 }
 
 .share-links {

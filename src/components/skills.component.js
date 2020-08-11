@@ -7,7 +7,19 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import NatureIcon from '@material-ui/icons/Nature';
-import { MaterialsUI } from '../components/customicons.component.js'; 
+import { 
+    MaterialsUI,
+    Authorize,
+    Elavon,
+    WooCommerece,
+    ACF,
+    Total,
+    Buddy,
+    Lasso,
+    Constant,
+    Solve,
+    Checkfront
+} from '../components/customicons.component.js'; 
 import {
     FaReact, 
     FaWordpress, 
@@ -24,7 +36,10 @@ import {
     FaLinkedin,
     FaFacebook,
     FaInstagram,
-    FaAngular
+    FaAngular,
+    FaTwitter,
+    FaYoast,
+    FaMailchimp
 } from 'react-icons/fa';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
@@ -206,7 +221,14 @@ const objSkills = [
                 name:'LinkedIn',
                 symbol: <FaLinkedin/>,
             }
-        }
+        },
+
+        {
+            icon:{
+                name:'Twitter',
+                symbol: <FaTwitter/>,
+            }
+        },
     ],
 },
 
@@ -235,6 +257,98 @@ const objSkills = [
             icon:{
                 name:'SOURCE TREE',
                 symbol: <NatureIcon/>
+            }
+        },
+    ],
+},
+
+{
+    header:'REST CRM INTEGRATIONS',
+    language:[
+        {
+            icon:{
+                name:'Lasso',
+                symbol: <Lasso/>,
+            },
+        },
+
+        {
+            icon:{
+                name:'Mailchimp',
+                symbol: <FaMailchimp/>,
+            },
+        },
+
+        {
+            icon:{
+                name:'Constant Contact',
+                symbol: <Constant/>,
+            },
+        },
+
+        {
+            icon:{
+                name:'Solve 360',
+                symbol: <Solve/>,
+            },
+        },
+
+        {
+            icon:{
+                name:'CheckFront',
+                symbol: <Checkfront/>,
+            },
+        }
+    ],
+},
+{
+    header:'WORDPRESS PLUGINS',
+    language:[
+        {
+            icon:{
+                name:'Authorize.net',
+                symbol: <Authorize/>,
+            },
+        },
+
+        {
+            icon:{
+                name:'Elavon',
+                symbol: <Elavon/>
+            }
+        },
+
+        {
+            icon:{
+                name:'WooCommerece',
+                symbol: <WooCommerece/>
+            }
+        },
+
+        {
+            icon:{
+                name:'ACF',
+                symbol: <ACF/>
+            }
+        },
+
+        {
+            icon:{
+                name:'Total Cache',
+                symbol: <Total/>
+            }
+        },
+
+        {
+            icon:{
+                name:'Yoast SEO',
+                symbol: <FaYoast/>
+            }
+        },
+        {
+            icon:{
+                name:'BuddyPress',
+                symbol: <Buddy/>
             }
         },
     ],
