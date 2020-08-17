@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import ImageModal from '../components/modal.component.js';
 import {Row, Col} from 'react-bootstrap';
+
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,

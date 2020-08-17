@@ -2,7 +2,7 @@ import React from 'react';
 import Popover from '@material-ui/core/Popover';
 import Typography from '@material-ui/core/Typography';
 import {makeStyles} from '@material-ui/core/styles';
-import IconDownload from '@material-ui/icons/SystemUpdateAlt';
+import {FaFilePdf, FaFileWord } from 'react-icons/fa';
 import Cardbusiness from '@material-ui/icons/FeaturedPlayList';  
 import PermPhoneMsgIcon from '@material-ui/icons/PermPhoneMsg';
 import AccountTreeIcon from '@material-ui/icons/AccountTree';
@@ -27,50 +27,53 @@ const useStyles = makeStyles((theme) => ({
 
 const getIcon = (icon) =>{
     if(icon == "IconDownload"){
-        return <IconDownload/>
+        return <FaFilePdf className="d-none d-sm-block"/>
+    }
+    if(icon=="IconDocX"){
+      return <FaFileWord className="d-none d-sm-block"/>
     }
 
     if(icon == "CardBusiness"){
-        return <Cardbusiness/>
+        return <Cardbusiness className="d-none d-sm-block"/>
     }
 
     if(icon == "Contact"){
-        return <PermPhoneMsgIcon/>
+        return <PermPhoneMsgIcon className="d-none d-sm-block"/>
     }
 
     if(icon == "AccountTreeIcon"){
-        return <AccountTreeIcon/>
+        return <AccountTreeIcon className="d-none d-sm-block"/>
     }
 
     if(icon == "multimedia"){
-        return <VideocamIcon/>
+        return <VideocamIcon className="d-none d-sm-block"/>
     }
 
     if(icon == "WorkIcon"){
-        return <WorkIcon/>
+        return <WorkIcon className="d-none d-sm-block"/>
     }
 
     if(icon == "BuildIcon"){
-        return <BuildIcon/>
+        return <BuildIcon className="d-none d-sm-block"/>
     }
 
     if(icon == "SchoolIcon"){
-        return <SchoolIcon/>
+        return <SchoolIcon className="d-none d-sm-block"/>
     }
     if(icon=="PhotoCameraIcon"){
-        return <PhotoCameraIcon/>
+        return <PhotoCameraIcon className="d-none d-sm-block"/>
     }
     if(icon=="instagram"){
-        return <InstagramIcon/>
+        return <InstagramIcon className="d-none d-sm-block"/>
     }
     if(icon=="fbIcon"){
-        return <FbIcon/>
+        return <FbIcon className="d-none d-sm-block"/>
     }
     if(icon=="IdCard"){
-        return <FaIdCard/>
+        return <FaIdCard className="d-none d-sm-block"/>
     }
     if(icon=="twitter"){
-        return <TwitterIcon/>
+        return <TwitterIcon className="d-none d-sm-block" />
     }  
 }
 
@@ -80,50 +83,52 @@ const getText = (text) =>{
     )
 }
 export default function MouseOverPopover(props){
-  const classes = useStyles();
-  const [anchorEl, setAnchorEl] = React.useState(null);
+    const classes = useStyles();
+    const [anchorEl, setAnchorEl] = React.useState(null);
 
-  const handlePopoverOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+    const handlePopoverOpen = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
 
-  const handlePopoverClose = () => {
-    setAnchorEl(null);
-  };
+    const handlePopoverClose = () => {
+        setAnchorEl(null);
+    };
 
-  const open = Boolean(anchorEl);
+    const open = Boolean(anchorEl);
 
-  return (
-    <div>
-      <Typography
-        aria-owns={open ? 'mouse-over-popover' : undefined}
-        aria-haspopup="true"
-        onMouseEnter={handlePopoverOpen}
-        onMouseLeave={handlePopoverClose}
-      >
-        {getIcon(props.icon)}
-      </Typography>
-      <Popover
-        id="mouse-over-popover"
-        className={classes.popover}
-        classes={{
-          paper: classes.paper,
-        }}
-        open={open}
-        anchorEl={anchorEl}
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'left',
-        }}
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'left',
-        }}
-        onClose={handlePopoverClose}
-        disableRestoreFocus
-      >
-      {getText(props.text)}
-      </Popover>
-    </div>
-  );
-}
+    return(
+        <div>
+            <Typography
+                aria-owns={open ? 'mouse-over-popover' : undefined}
+                aria-haspopup="true"
+                onMouseEnter={handlePopoverOpen}
+                onMouseLeave={handlePopoverClose}
+            >
+                {getIcon(props.icon)}
+            </Typography>
+
+            <Popover
+                id="mouse-over-popover"
+                className= {classes.popover}
+                classes={{
+                    paper: classes.paper,
+                }}
+                open={open}
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                    vertical: 'bottom',
+                    horizontal: 'left',
+                }}
+                transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'left',
+                }}
+
+                onClose={handlePopoverClose}
+                    disableRestoreFocus
+                >
+                {getText(props.text)}
+            </Popover>
+        </div>
+    );
+    }

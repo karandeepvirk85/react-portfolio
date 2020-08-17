@@ -26,7 +26,7 @@ const ACF = () =>{
 }
 const Total = () =>{
     return(
-        <img src="/icons/Total.png"/>
+        <img src="/icons/total.png"/>
     )
 }
 
@@ -38,7 +38,7 @@ const Yoast = () =>{
 
 const Buddy = () =>{
     return(
-        <img src="/icons/Buddy.png"/>
+        <img src="/icons/buddy.png"/>
     )
 }
 

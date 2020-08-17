@@ -358,7 +358,7 @@ const objSkills = [
 const SubIcons = (arrItem) => {
     console.log(arrItem);
     const ListIcons = arrItem.map((item, index) =>
-        <div className="sub-icons" key={index}>
+        <div className="col-md-1 sub-icons" key={index}>
             <p>{item.icon.symbol}</p>
             <p>{item.icon.name}</p>
         </div>
@@ -380,7 +380,9 @@ const Accordians = () => {
             
             <AccordionDetails>
                 <Typography>
-                    {SubIcons(item.language)}
+                    <Row>
+                        {SubIcons(item.language)}
+                    </Row>
                 </Typography>
             </AccordionDetails>
         </Accordion>

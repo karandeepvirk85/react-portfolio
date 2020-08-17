@@ -14,8 +14,10 @@ const useStyles = makeStyles((theme) => ({
 export default function LinearIndeterminate() {
     const classes = useStyles();
     return (
-        <div className={classes.root}>
-            <LinearProgress />
+        <div className = "spinner-bar">
+            <div className={classes.root}>
+                <LinearProgress />
+            </div>
         </div>
     );
 }

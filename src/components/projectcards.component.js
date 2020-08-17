@@ -42,8 +42,8 @@ const openLink = (link) =>{
 export default function ProjectCards(props){
     const classes = useStyles();
     return(
-        <Col xl= {3} lg= {4} md={6} xs={12}>
-            <Card className={classes.root}>
+        <Col xl= {3} lg= {4} md={6} xs={12} className="project-tile">
+            <Card className= {classes.root} onClick = {()=>openLink(props.link)}>
                 <CardHeader
                     avatar={
                         <Avatar aria-label={props.letter} className={classes.avatar}>{props.letter}</Avatar>

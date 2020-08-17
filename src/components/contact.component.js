@@ -1,7 +1,15 @@
 import React, {Component} from 'react';
-import{Row, Col, Form, Button, Alert} from 'react-bootstrap';
+import{Row, Col, Form, Button, Alert, Nav} from 'react-bootstrap';
 import axios from 'axios';
 import Address from './address.component.js'; 
+import {HashRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import {
+    FaInstagram,
+    FaTwitter,
+    FaFacebook,
+    FaGithubSquare,
+    FaLinkedin
+} from 'react-icons/fa';
 export default class Contact extends Component {
     constructor(props){
         super(props);
@@ -43,6 +51,13 @@ export default class Contact extends Component {
                 <Row>
                     <Col xs={12} md={4}>
                         <Address/>
+                        <Router>
+                            <p><a href="https://www.linkedin.com/in/kv85/" rel="noopener noreferrer" target="_blank"><FaLinkedin/> LinkedIn</a></p>
+                            <p><a href="https://github.com/karandeepvirk85" rel="noopener noreferrer" target="_blank"><FaGithubSquare/> GitHub </a></p>
+                            <p><Link to="/instagram"><FaInstagram/> Instagram </Link></p>
+                            <p><Link to="/twitter"><FaTwitter/> Twitter </Link></p>
+                            <p><Link to="/facebook"><FaFacebook/> Facebook</Link></p>
+                        </Router>
                     </Col>
                     <Col xs={12} md={8}>
                         <Form onSubmit={this.handleFormSubmit}>
@@ -57,7 +72,7 @@ export default class Contact extends Component {
                                 <Form.Control as="textarea" name="message" rows ="3" />
                             </Form.Group>
 
-                            <Button variant="primary" type="submit">Submit</Button>
+                            <Button className="k-button" type="submit">Click to Submit</Button>
                             {this.state.mailSent &&
                                 <p>
                                     <Alert variant="success">
