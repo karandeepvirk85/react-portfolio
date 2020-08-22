@@ -1,12 +1,12 @@
 @import "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap";
 #root .App .MuiButton-root {
-  background: linear-gradient(45deg, #673AB7, #ab7cff) !important;
+  background-color: #1d282c;
   color: white;
   border: none;
 }
 #root .App .MuiButton-root:hover {
   border: none;
-  background: linear-gradient(145deg, #673AB7, #ab7cff) !important;
+  background: linear-gradient(145deg, #673ab7, #ab7cff) !important;
   color: white;
 }
 #root .App .margin-0 {
@@ -24,7 +24,7 @@
   }
 }
 #root .App .navbar-dark {
-  background-color: #333333;
+  background: linear-gradient(45deg, #673ab7, #ab7cff) !important;
 }
 #root .App .navbar-dark .MuiSvgIcon-root {
   font-size: 2rem;
@@ -50,7 +50,7 @@
   }
 }
 #root .App .navbar-dark .navbar-nav a {
-  color: gray;
+  color: white;
   font-size: 1rem;
   font-family: "Open Sans", sans-serif !important;
 }
@@ -60,11 +60,31 @@
     margin: 0px;
     color: white;
     padding: 10px 20px;
-    background: linear-gradient(45deg, #673AB7, transparent);
+    background: linear-gradient(45deg, #545454, #0a0a0a) !important;
   }
 }
 #root .App .navbar-dark .navbar-nav svg {
   font-size: 2rem;
+}
+#root .App .navbar-dark .navbar-nav .makeStyles-root-3 {
+  align-items: center;
+}
+#root .App .navbar-dark .navbar-nav .makeStyles-root-3 .top-bar-menu {
+  position: relative;
+  z-index: 9;
+}
+#root .App .navbar-dark .navbar-nav .makeStyles-root-3 .top-bar-menu ul {
+  margin-top: 10px;
+}
+#root .App .navbar-dark .navbar-nav .makeStyles-root-3 .top-bar-menu button {
+  margin: 0 6px;
+}
+#root .App .navbar-dark .navbar-nav .makeStyles-root-3 .top-bar-menu .MuiButton-label svg {
+  font-size: 12px;
+  margin-left: 4px;
+}
+#root .App .navbar-dark .navbar-nav .makeStyles-root-3 .top-bar-menu a {
+  color: #673ab7;
 }
 #root .App .page-container {
   padding: 20px 4%;
@@ -72,6 +92,7 @@
   max-width: 100%;
   width: 100%;
   background: #ececec;
+  position: relative;
 }
 #root .App .page-container .spinner-bar {
   width: 100%;
@@ -81,21 +102,148 @@
   align-items: center;
   justify-content: center;
 }
-#root .App .page-container.home .home-info {
+#root .App .page-container.about .home-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-#root .App .page-container.home .home-info p {
+#root .App .page-container.about .home-info p {
   margin: 6px;
   font-family: "Open Sans", sans-serif;
   font-size: 1.1rem;
   color: black;
   font-weight: 300;
 }
-#root .App .page-container.home .home-info a {
+#root .App .page-container.about .home-info a {
   margin-top: 20px;
   color: white;
+}
+#root .App .page-container.blog .news-bar {
+  min-height: 700px;
+  max-height: 1200px;
+  overflow-y: scroll;
+}
+#root .App .page-container.blog .news-bar .news-box {
+  cursor: pointer;
+  transition: 500ms;
+  background: #ffffff;
+  padding: 20px;
+  margin: 10px 0;
+}
+#root .App .page-container.blog .news-bar .news-box .news-image {
+  padding: 60px 0;
+}
+#root .App .page-container.blog .news-bar .news-box h2 {
+  margin-top: 6px;
+  font-size: 1rem;
+  color: #8c5dde;
+}
+#root .App .page-container.blog .news-bar .news-box p.date {
+  color: darkgrey;
+}
+#root .App .page-container.blog .news-bar .news-box:hover {
+  background-color: #e4e4e4;
+}
+#root .App .page-container.blog .blog-tile {
+  background-color: #000000;
+  transition: 300ms;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 0px 0px 5px -2px #0000006b;
+}
+#root .App .page-container.blog .blog-tile .blog-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#root .App .page-container.blog .blog-tile .blog-inner .blog-left img {
+  width: auto;
+}
+#root .App .page-container.blog .blog-tile .blog-inner .blog-right {
+  background-color: #f3f3f3;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 200px;
+}
+#root .App .page-container.blog .blog-tile .blog-inner .blog-right .blog-description .blog-content {
+  padding: 0px 1rem;
+}
+#root .App .page-container.blog .blog-tile .blog-inner .blog-right svg {
+  margin: 0 2px;
+  cursor: pointer;
+}
+#root .App .page-container.blog .blog-tile .blog-inner .blog-right h1 {
+  padding: 10px 1rem;
+  margin: 0;
+}
+#root .App .page-container.blog .blog-tile .blog-inner .blog-right h1 a {
+  margin: 0;
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-family: inherit;
+  font-weight: 900;
+  color: #4c4c4c;
+}
+#root .App .page-container.blog .blog-tile .blog-inner .blog-right h1 .blog-info {
+  display: flex;
+  color: #ababab;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: flex-start;
+}
+#root .App .page-container.blog .blog-tile .blog-inner .blog-right h1 .blog-info p {
+  font-size: 12px;
+  font-weight: normal;
+}
+#root .App .page-container.blog .blog-tile .blog-inner .blog-right h1 .blog-info p.blog-info-data {
+  margin: 6px 4px;
+  display: flex;
+  align-items: center;
+}
+#root .App .page-container.blog .blog-tile .blog-bottom {
+  align-items: center;
+  font-size: 1rem;
+  justify-content: space-between;
+  display: flex;
+  padding: 4px;
+  background: linear-gradient(45deg, #000000, #989898);
+}
+#root .App .page-container.blog .blog-tile .blog-bottom p {
+  font-size: 12px;
+  font-weight: normal;
+  display: inline-flex;
+  margin: 0;
+}
+#root .App .page-container.blog .blog-tile .blog-bottom p.category {
+  cursor: pointer;
+  background: #673ab7;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 1px 6px;
+  font-size: 12px;
+  margin-right: 4px;
+  border: 1px solid #251b38;
+}
+#root .App .page-container.blog .blog-tile .blog-bottom p.category:hover {
+  background-color: transparent;
+  color: gray;
+  border: 1px solid #8d5fdf;
+}
+#root .App .page-container.blog .blog-tile .blog-bottom span {
+  font-size: 1rem;
+}
+#root .App .page-container.blog .blog-tile .blog-bottom svg {
+  margin: 0 10px;
+  font-size: 1.1rem;
+  color: white;
+}
+#root .App .page-container.blog .blog-tile:hover {
+  opacity: 0.9;
 }
 #root .App .page-container.contact form {
   background: white;
@@ -203,7 +351,7 @@
   margin: 0;
 }
 #root .App .footer {
-  background-color: #4e4e4e;
+  background: #1d282c;
 }
 #root .App .footer .top-footer {
   padding: 20px 0;
@@ -213,27 +361,29 @@
 }
 #root .App .footer .top-footer .general-info {
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+#root .App .footer .top-footer .general-info .img-fluid-avatar {
+  max-width: 130%;
+}
 #root .App .footer .top-footer .general-info p {
-  color: #ededed;
+  color: white;
   font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
   margin: 3px;
 }
 #root .App .footer .top-footer .general-info p a {
-  color: #ededed;
+  color: white;
 }
 #root .App .footer .top-footer .general-info h2 {
   color: #ffffff;
-  font-family: inherit;
+  font-family: "Open Sans", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
   text-shadow: 1px 1px 4px #000000d6;
-}
-#root .App .footer .top-footer .twitter {
-  background: white;
 }
 #root .App .footer .top-footer .footer-links {
   display: flex;
@@ -247,15 +397,16 @@
   }
 }
 #root .App .footer .top-footer .footer-links a {
-  color: #ededed;
-  padding: 4px 2% 4px 8%;
+  color: white;
+  padding: 6px 0;
   font-size: 1.1rem;
+  font-family: "Open Sans", sans-serif;
   font-family: "Open Sans", sans-serif;
 }
 #root .App .footer .bottom-footer {
   display: flex;
   padding: 3px 6px 3px 2%;
-  background-color: #333333;
+  background: linear-gradient(45deg, #673ab7, #ab7cff) !important;
   justify-content: space-between;
   align-items: center;
 }
@@ -266,18 +417,18 @@
   display: inline-flex;
 }
 #root .App .footer .bottom-footer .footer-icons svg {
-  color: gray;
+  color: #1d282c;
   font-size: 1.2rem;
 }
 
 .k-button {
-  background: linear-gradient(45deg, #673AB7, #ab7cff) !important;
+  background: #1d282c;
   color: white;
   border: none;
 }
 .k-button:hover {
   border: none;
-  background: linear-gradient(145deg, #673AB7, #ab7cff) !important;
+  background: linear-gradient(145deg, #673ab7, #ab7cff) !important;
   color: white;
 }
 
@@ -287,6 +438,22 @@
 .share-links svg {
   font-size: 2rem;
   color: #333333;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 /*# sourceMappingURL=App.css.map */

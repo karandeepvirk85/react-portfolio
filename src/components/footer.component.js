@@ -16,7 +16,8 @@ import {
     FaProjectDiagram,
     FaUniversity,
     FaImages,
-    FaFilePdf
+    FaFilePdf,
+    FaMobile
 } from 'react-icons/fa';
 import {DownLoadDocument} from '../components/utility/utility.component.js';
 
@@ -29,23 +30,26 @@ export default class Footer extends Component{
                             <div className="container-fluid">
                                 <Row>
                                     <Col className="general-info" xl={3} lg={6} md={12}>
+                                        <img className="img-fluid-avatar" src="/images/animated-logo.gif"/>
                                         <Address/>
                                     </Col>
 
                                     <Col className = "footer-links" xl={3} lg={6} md={12}>
                                         <Router>
-                                            <Link className="nav-link" to="/work"><FaBriefcase/> Work Experience </Link>
-                                            <Link className="nav-link" to="/projects"><FaProjectDiagram/> Recent Projects</Link>
+                                            <h2 className="text-center">LINKS</h2>
+                                            <Link className="nav-link" to="/work"> Work Experience </Link>
+                                            <Link className="nav-link" to="/projects"> Recent Projects</Link>
                                             <Link 
                                                 onClick = {(e)=>{DownLoadDocument('/documents/Karandeep_Virk.pdf',e)}} 
                                                 target="_blank" 
                                                 className="nav-link" 
                                             >
-                                           <FaFilePdf/> View Resume
+                                           View Resume
                                             </Link> 
-                                            <Link className="nav-link" to="/skills"><FaWrench/> My Skills</Link>
-                                            <Link className="nav-link" to="/education"><FaUniversity/> Education</Link>
-                                            <Link className="nav-link" to="/gallery"><FaImages/> Photography</Link>
+                                            <Link className="nav-link" to="/skills"> My Skills</Link>
+                                            <Link className="nav-link" to="/contact"> Contact me</Link>
+                                            <Link className="nav-link" to="/education"> Education</Link>
+                                            <Link className="nav-link" to="/gallery"> Photography</Link>
                                         </Router>
                                     </Col>
 
@@ -53,7 +57,7 @@ export default class Footer extends Component{
                                         <div className="centerContent">
                                             <div className="selfCenter standardWidth">
                                             <TwitterTweetEmbed
-                                                tweetId={'1136693392660844545'}
+                                                tweetId={'1294928003554848771'}
                                             />
                                             </div>
                                         </div>
