@@ -8,7 +8,7 @@ $secondaryColor: #333333;
 #root {
     .App {
         .MuiButton-root {
-            background-color: #1d282c;
+            background: linear-gradient(145deg, #ab7cff #673ab7) !important;
             color: white;
             border: none;
             &:hover {
@@ -72,15 +72,21 @@ $secondaryColor: #333333;
                     font-family: $primaryFont !important;
                 }
                 svg {
-                    font-size: 2rem;
+                    font-size: 1.5rem;
                 }
-                .makeStyles-root-3 {
+                .makeStyles-root-3,
+                .jss3 {
                     align-items: center;
                     .top-bar-menu {
                         position: relative;
                         z-index: 9;
                         ul {
                             margin-top: 10px;
+                            li {
+                                a {
+                                    font-size: 1rem;
+                                }
+                            }
                         }
                         button {
                             margin: 0 6px;
@@ -132,137 +138,196 @@ $secondaryColor: #333333;
                 }
             }
             &.blog {
-                .news-bar {
-                    min-height: 700px;
-                    max-height: 1200px;
-                    overflow-y: scroll;
-                    .news-box {
-                        cursor: pointer;
-                        transition: 500ms;
-                        background: #ffffff;
-                        padding: 20px;
-                        margin: 10px 0;
-                        .news-image {
-                            padding: 60px 0;
-                        }
-                        h2 {
-                            margin-top: 6px;
-                            font-size: 1rem;
-                            color: rgb(140 93 222);
-                        }
-                        p {
-                            &.date {
-                                color: darkgrey;
+                .side-bar {
+                    h2 {
+                        color: #7f51d0;
+                        padding: 4px;
+                        font-size: 1.5rem;
+                    }
+                    .category-bar {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        a {
+                            background-color: #ffffff;
+                            display: flex;
+                            width: calc(100% - 16px);
+                            border-bottom: 1px solid #dedede;
+                            margin: 0;
+                            align-items: center;
+                            justify-content: start;
+                            padding: 6px;
+                            margin: 2px;
+                            .tiny-image {
+                                padding: 20px;
+                                margin-right: 10px;
                             }
                         }
-                        &:hover {
-                            background-color: #e4e4e4;
+                    }
+                    padding: 0;
+                    .news-bar {
+                        min-height: 900px;
+                        max-height: 200vh;
+                        overflow-y: scroll;
+                        border: 12px solid #ececec;
+                        border-top: 0;
+                        padding: 0;
+                        border-left: 0;
+                        .news-box {
+                            cursor: pointer;
+                            transition: 500ms;
+                            background: #f3f3f3;
+                            padding: 20px;
+                            margin: 0;
+                            margin-bottom: 10px;
+                            .news-image {
+                                padding: 60px 0;
+                            }
+                            h2 {
+                                margin-top: 6px;
+                                font-size: 1.5rem;
+                                color: #666666;
+                                border-bottom: none;
+                            }
+                            p {
+                                &.date {
+                                    color: darkgrey;
+                                }
+                            }
+                            &:hover {
+                                background-color: #e4e4e4;
+                            }
                         }
                     }
                 }
-                .blog-tile {
-                    background-color: #000000;
-                    transition: 300ms;
-                    margin: 10px 0;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-around;
-                    box-shadow: 0px 0px 5px -2px #0000006b;
-                    .blog-inner {
+                .blog-container {
+                    overflow: hidden;
+                    padding: 0;
+                    .blog-tile {
+                        background-color: #000000;
+                        margin: 0 0 20px 0;
                         display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
-                        .blog-left {
-                            img {
-                                width: auto;
-                            }
-                        }
-                        .blog-right {
-                            background-color: #f3f3f3;
-                            padding: 0;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        box-shadow: 0px 0px 5px -2px #0000006b;
+                        .blog-inner {
+                            overflow: hidden;
                             display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            min-height: 200px;
-                            .blog-description {
-                                .blog-content {
-                                    padding: 0px 1rem;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            &:hover {
+                                .blog-left {
+                                    transform: scale(1.2);
+                                    filter: saturate(2.5);
                                 }
                             }
-                            svg {
-                                margin: 0 2px;
-                                cursor: pointer;
+                            .blog-left {
+                                box-shadow: inset 0px 0px 20px 4px #0000005c;
+                                transition: 1s;
+                                img {
+                                    width: auto;
+                                }
                             }
-                            h1 {
-                                padding: 10px 1rem;
-                                margin: 0;
-                                a {
+                            .blog-right {
+                                background-color: #ffffff;
+                                padding: 0;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                min-height: 200px;
+                                .blog-description {
+                                    .blog-content {
+                                        padding: 0px 1rem;
+                                    }
+                                }
+                                svg {
+                                    margin: 0 2px;
+                                    cursor: pointer;
+                                }
+                                h1 {
+                                    padding: 10px 1rem;
                                     margin: 0;
-                                    padding: 10px 0;
-                                    text-transform: uppercase;
-                                    font-size: 1.5rem;
-                                    font-family: inherit;
-                                    font-weight: 900;
-                                    color: #4c4c4c;
-                                }
-                                .blog-info {
-                                    display: flex;
-                                    color: #ababab;
-                                    text-transform: uppercase;
-                                    align-items: center;
-                                    justify-content: flex-start;
-                                    p {
-                                        font-size: 12px;
-                                        font-weight: normal;
-                                        &.blog-info-data {
-                                            margin: 6px 4px;
-                                            display: flex;
-                                            align-items: center;
+                                    a {
+                                        margin: 0;
+                                        padding: 10px 0;
+                                        text-transform: uppercase;
+                                        font-size: 1.5rem;
+                                        font-family: $primaryFont;
+                                        font-weight: 900;
+                                        color: black;
+                                    }
+                                    .blog-info {
+                                        display: flex;
+                                        color: #ababab;
+                                        text-transform: uppercase;
+                                        align-items: center;
+                                        justify-content: flex-start;
+                                        p {
+                                            font-size: 12px;
+                                            font-weight: normal;
+                                            &.blog-info-data {
+                                                margin: 6px 4px;
+                                                display: flex;
+                                                align-items: center;
+                                            }
                                         }
                                     }
                                 }
                             }
                         }
-                    }
-                    .blog-bottom {
-                        align-items: center;
-                        font-size: 1rem;
-                        justify-content: space-between;
-                        display: flex;
-                        padding: 4px;
-                        background: linear-gradient(45deg, #000000, #989898);
-                        p {
-                            font-size: 12px;
-                            font-weight: normal;
-                            display: inline-flex;
-                            margin: 0;
-                            &.category {
-                                cursor: pointer;
-                                background: #673ab7;
-                                color: #ffffff;
-                                border-radius: 10px;
-                                padding: 1px 6px;
+                        .blog-bottom {
+                            align-items: center;
+                            font-size: 1rem;
+                            justify-content: space-between;
+                            display: flex;
+                            padding: 4px;
+                            background: #ffffff;
+                            border: 1px solid #f3f3f3;
+                            p {
                                 font-size: 12px;
-                                margin-right: 4px;
-                                border: 1px solid #251b38;
-                                &:hover {
-                                    background-color: transparent;
-                                    color: gray;
-                                    border: 1px solid #8d5fdf;
+                                font-weight: normal;
+                                display: inline-flex;
+                                margin: 0;
+                                a {
+                                    color: #673ab7;
+                                }
+
+                                &.category {
+                                    cursor: pointer;
+                                    background: #673ab7;
+                                    color: white;
+                                    border-radius: 10px;
+                                    padding: 1px 6px;
+                                    font-size: 12px;
+                                    margin-right: 4px;
+                                    border: 1px solid #251b38;
+                                    &:hover {
+                                        background-color: transparent;
+                                        color: gray;
+                                        border: 1px solid #8d5fdf;
+                                    }
                                 }
                             }
+                            span {
+                                font-size: 1rem;
+                            }
+                            svg {
+                                &:first-child {
+                                    color: #ababab;
+                                    margin: 0 10px;
+                                }
+                                margin: 0 4px;
+                                font-size: 1.1rem;
+                                color: #673ab7;
+                            }
+                            button {
+                                background-color: #1d282c;
+                            }
                         }
-                        span {
-                            font-size: 1rem;
+                        &:hover {
+                            opacity: 0.9;
                         }
-                        svg {
-                            margin: 0 10px;
-                            font-size: 1.1rem;
-                            color: white;
-                        }
-                    }
-                    &:hover {
-                        opacity: 0.9;
                     }
                 }
             }
@@ -429,6 +494,26 @@ $secondaryColor: #333333;
                     }
                 }
 
+                .terms-category {
+                    h2 {
+                        font-family: $primaryFont;
+                    }
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    a {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: center;
+                        color: white;
+                        padding: 3px 0;
+                        font-size: 1.1rem;
+                        font-family: $primaryFont;
+                    }
+                }
+
                 .footer-links {
                     @media only screen and (max-width: 992px) {
                         margin: 20px 0;
@@ -437,11 +522,13 @@ $secondaryColor: #333333;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                    h2 {
+                        font-family: $primaryFont;
+                    }
                     a {
                         color: white;
-                        padding: 6px 0;
+                        padding: 3px 0;
                         font-size: 1.1rem;
-                        font-family: "Open Sans", sans-serif;
                         font-family: $primaryFont;
                     }
                 }
@@ -454,6 +541,11 @@ $secondaryColor: #333333;
                 align-items: center;
                 .footer-left {
                     color: gray;
+                }
+                .footer-right {
+                    button {
+                        background: #1d282c;
+                    }
                 }
                 .footer-icons {
                     display: inline-flex;
@@ -468,6 +560,7 @@ $secondaryColor: #333333;
 }
 .k-button {
     background: #1d282c;
+    background-color: #1d282c !important;
     color: white;
     border: none;
     &:hover {

@@ -1,6 +1,6 @@
 @import "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap";
 #root .App .MuiButton-root {
-  background-color: #1d282c;
+  background: linear-gradient(145deg, #ab7cff #673ab7) !important;
   color: white;
   border: none;
 }
@@ -64,26 +64,36 @@
   }
 }
 #root .App .navbar-dark .navbar-nav svg {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
-#root .App .navbar-dark .navbar-nav .makeStyles-root-3 {
+#root .App .navbar-dark .navbar-nav .makeStyles-root-3,
+#root .App .navbar-dark .navbar-nav .jss3 {
   align-items: center;
 }
-#root .App .navbar-dark .navbar-nav .makeStyles-root-3 .top-bar-menu {
+#root .App .navbar-dark .navbar-nav .makeStyles-root-3 .top-bar-menu,
+#root .App .navbar-dark .navbar-nav .jss3 .top-bar-menu {
   position: relative;
   z-index: 9;
 }
-#root .App .navbar-dark .navbar-nav .makeStyles-root-3 .top-bar-menu ul {
+#root .App .navbar-dark .navbar-nav .makeStyles-root-3 .top-bar-menu ul,
+#root .App .navbar-dark .navbar-nav .jss3 .top-bar-menu ul {
   margin-top: 10px;
 }
-#root .App .navbar-dark .navbar-nav .makeStyles-root-3 .top-bar-menu button {
+#root .App .navbar-dark .navbar-nav .makeStyles-root-3 .top-bar-menu ul li a,
+#root .App .navbar-dark .navbar-nav .jss3 .top-bar-menu ul li a {
+  font-size: 1rem;
+}
+#root .App .navbar-dark .navbar-nav .makeStyles-root-3 .top-bar-menu button,
+#root .App .navbar-dark .navbar-nav .jss3 .top-bar-menu button {
   margin: 0 6px;
 }
-#root .App .navbar-dark .navbar-nav .makeStyles-root-3 .top-bar-menu .MuiButton-label svg {
+#root .App .navbar-dark .navbar-nav .makeStyles-root-3 .top-bar-menu .MuiButton-label svg,
+#root .App .navbar-dark .navbar-nav .jss3 .top-bar-menu .MuiButton-label svg {
   font-size: 12px;
   margin-left: 4px;
 }
-#root .App .navbar-dark .navbar-nav .makeStyles-root-3 .top-bar-menu a {
+#root .App .navbar-dark .navbar-nav .makeStyles-root-3 .top-bar-menu a,
+#root .App .navbar-dark .navbar-nav .jss3 .top-bar-menu a {
   color: #673ab7;
 }
 #root .App .page-container {
@@ -118,131 +128,189 @@
   margin-top: 20px;
   color: white;
 }
-#root .App .page-container.blog .news-bar {
-  min-height: 700px;
-  max-height: 1200px;
-  overflow-y: scroll;
+#root .App .page-container.blog .side-bar {
+  padding: 0;
 }
-#root .App .page-container.blog .news-bar .news-box {
+#root .App .page-container.blog .side-bar h2 {
+  color: #7f51d0;
+  padding: 4px;
+  font-size: 1.5rem;
+}
+#root .App .page-container.blog .side-bar .category-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+#root .App .page-container.blog .side-bar .category-bar a {
+  background-color: #ffffff;
+  display: flex;
+  width: calc(100% - 16px);
+  border-bottom: 1px solid #dedede;
+  margin: 0;
+  align-items: center;
+  justify-content: start;
+  padding: 6px;
+  margin: 2px;
+}
+#root .App .page-container.blog .side-bar .category-bar a .tiny-image {
+  padding: 20px;
+  margin-right: 10px;
+}
+#root .App .page-container.blog .side-bar .news-bar {
+  min-height: 900px;
+  max-height: 200vh;
+  overflow-y: scroll;
+  border: 12px solid #ececec;
+  border-top: 0;
+  padding: 0;
+  border-left: 0;
+}
+#root .App .page-container.blog .side-bar .news-bar .news-box {
   cursor: pointer;
   transition: 500ms;
-  background: #ffffff;
+  background: #f3f3f3;
   padding: 20px;
-  margin: 10px 0;
+  margin: 0;
+  margin-bottom: 10px;
 }
-#root .App .page-container.blog .news-bar .news-box .news-image {
+#root .App .page-container.blog .side-bar .news-bar .news-box .news-image {
   padding: 60px 0;
 }
-#root .App .page-container.blog .news-bar .news-box h2 {
+#root .App .page-container.blog .side-bar .news-bar .news-box h2 {
   margin-top: 6px;
-  font-size: 1rem;
-  color: #8c5dde;
+  font-size: 1.5rem;
+  color: #666666;
+  border-bottom: none;
 }
-#root .App .page-container.blog .news-bar .news-box p.date {
+#root .App .page-container.blog .side-bar .news-bar .news-box p.date {
   color: darkgrey;
 }
-#root .App .page-container.blog .news-bar .news-box:hover {
+#root .App .page-container.blog .side-bar .news-bar .news-box:hover {
   background-color: #e4e4e4;
 }
-#root .App .page-container.blog .blog-tile {
+#root .App .page-container.blog .blog-container {
+  overflow: hidden;
+  padding: 0;
+}
+#root .App .page-container.blog .blog-container .blog-tile {
   background-color: #000000;
-  transition: 300ms;
-  margin: 10px 0;
+  margin: 0 0 20px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   box-shadow: 0px 0px 5px -2px #0000006b;
 }
-#root .App .page-container.blog .blog-tile .blog-inner {
+#root .App .page-container.blog .blog-container .blog-tile .blog-inner {
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-#root .App .page-container.blog .blog-tile .blog-inner .blog-left img {
+#root .App .page-container.blog .blog-container .blog-tile .blog-inner:hover .blog-left {
+  transform: scale(1.2);
+  filter: saturate(2.5);
+}
+#root .App .page-container.blog .blog-container .blog-tile .blog-inner .blog-left {
+  box-shadow: inset 0px 0px 20px 4px #0000005c;
+  transition: 1s;
+}
+#root .App .page-container.blog .blog-container .blog-tile .blog-inner .blog-left img {
   width: auto;
 }
-#root .App .page-container.blog .blog-tile .blog-inner .blog-right {
-  background-color: #f3f3f3;
+#root .App .page-container.blog .blog-container .blog-tile .blog-inner .blog-right {
+  background-color: #ffffff;
   padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 200px;
 }
-#root .App .page-container.blog .blog-tile .blog-inner .blog-right .blog-description .blog-content {
+#root .App .page-container.blog .blog-container .blog-tile .blog-inner .blog-right .blog-description .blog-content {
   padding: 0px 1rem;
 }
-#root .App .page-container.blog .blog-tile .blog-inner .blog-right svg {
+#root .App .page-container.blog .blog-container .blog-tile .blog-inner .blog-right svg {
   margin: 0 2px;
   cursor: pointer;
 }
-#root .App .page-container.blog .blog-tile .blog-inner .blog-right h1 {
+#root .App .page-container.blog .blog-container .blog-tile .blog-inner .blog-right h1 {
   padding: 10px 1rem;
   margin: 0;
 }
-#root .App .page-container.blog .blog-tile .blog-inner .blog-right h1 a {
+#root .App .page-container.blog .blog-container .blog-tile .blog-inner .blog-right h1 a {
   margin: 0;
   padding: 10px 0;
   text-transform: uppercase;
   font-size: 1.5rem;
-  font-family: inherit;
+  font-family: "Open Sans", sans-serif;
   font-weight: 900;
-  color: #4c4c4c;
+  color: black;
 }
-#root .App .page-container.blog .blog-tile .blog-inner .blog-right h1 .blog-info {
+#root .App .page-container.blog .blog-container .blog-tile .blog-inner .blog-right h1 .blog-info {
   display: flex;
   color: #ababab;
   text-transform: uppercase;
   align-items: center;
   justify-content: flex-start;
 }
-#root .App .page-container.blog .blog-tile .blog-inner .blog-right h1 .blog-info p {
+#root .App .page-container.blog .blog-container .blog-tile .blog-inner .blog-right h1 .blog-info p {
   font-size: 12px;
   font-weight: normal;
 }
-#root .App .page-container.blog .blog-tile .blog-inner .blog-right h1 .blog-info p.blog-info-data {
+#root .App .page-container.blog .blog-container .blog-tile .blog-inner .blog-right h1 .blog-info p.blog-info-data {
   margin: 6px 4px;
   display: flex;
   align-items: center;
 }
-#root .App .page-container.blog .blog-tile .blog-bottom {
+#root .App .page-container.blog .blog-container .blog-tile .blog-bottom {
   align-items: center;
   font-size: 1rem;
   justify-content: space-between;
   display: flex;
   padding: 4px;
-  background: linear-gradient(45deg, #000000, #989898);
+  background: #ffffff;
+  border: 1px solid #f3f3f3;
 }
-#root .App .page-container.blog .blog-tile .blog-bottom p {
+#root .App .page-container.blog .blog-container .blog-tile .blog-bottom p {
   font-size: 12px;
   font-weight: normal;
   display: inline-flex;
   margin: 0;
 }
-#root .App .page-container.blog .blog-tile .blog-bottom p.category {
+#root .App .page-container.blog .blog-container .blog-tile .blog-bottom p a {
+  color: #673ab7;
+}
+#root .App .page-container.blog .blog-container .blog-tile .blog-bottom p.category {
   cursor: pointer;
   background: #673ab7;
-  color: #ffffff;
+  color: white;
   border-radius: 10px;
   padding: 1px 6px;
   font-size: 12px;
   margin-right: 4px;
   border: 1px solid #251b38;
 }
-#root .App .page-container.blog .blog-tile .blog-bottom p.category:hover {
+#root .App .page-container.blog .blog-container .blog-tile .blog-bottom p.category:hover {
   background-color: transparent;
   color: gray;
   border: 1px solid #8d5fdf;
 }
-#root .App .page-container.blog .blog-tile .blog-bottom span {
+#root .App .page-container.blog .blog-container .blog-tile .blog-bottom span {
   font-size: 1rem;
 }
-#root .App .page-container.blog .blog-tile .blog-bottom svg {
-  margin: 0 10px;
+#root .App .page-container.blog .blog-container .blog-tile .blog-bottom svg {
+  margin: 0 4px;
   font-size: 1.1rem;
-  color: white;
+  color: #673ab7;
 }
-#root .App .page-container.blog .blog-tile:hover {
+#root .App .page-container.blog .blog-container .blog-tile .blog-bottom svg:first-child {
+  color: #ababab;
+  margin: 0 10px;
+}
+#root .App .page-container.blog .blog-container .blog-tile .blog-bottom button {
+  background-color: #1d282c;
+}
+#root .App .page-container.blog .blog-container .blog-tile:hover {
   opacity: 0.9;
 }
 #root .App .page-container.contact form {
@@ -385,6 +453,25 @@
   text-transform: uppercase;
   text-shadow: 1px 1px 4px #000000d6;
 }
+#root .App .footer .top-footer .terms-category {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#root .App .footer .top-footer .terms-category h2 {
+  font-family: "Open Sans", sans-serif;
+}
+#root .App .footer .top-footer .terms-category a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 3px 0;
+  font-size: 1.1rem;
+  font-family: "Open Sans", sans-serif;
+}
 #root .App .footer .top-footer .footer-links {
   display: flex;
   flex-direction: column;
@@ -396,11 +483,13 @@
     margin: 20px 0;
   }
 }
+#root .App .footer .top-footer .footer-links h2 {
+  font-family: "Open Sans", sans-serif;
+}
 #root .App .footer .top-footer .footer-links a {
   color: white;
-  padding: 6px 0;
+  padding: 3px 0;
   font-size: 1.1rem;
-  font-family: "Open Sans", sans-serif;
   font-family: "Open Sans", sans-serif;
 }
 #root .App .footer .bottom-footer {
@@ -413,6 +502,9 @@
 #root .App .footer .bottom-footer .footer-left {
   color: gray;
 }
+#root .App .footer .bottom-footer .footer-right button {
+  background: #1d282c;
+}
 #root .App .footer .bottom-footer .footer-icons {
   display: inline-flex;
 }
@@ -423,6 +515,7 @@
 
 .k-button {
   background: #1d282c;
+  background-color: #1d282c !important;
   color: white;
   border: none;
 }

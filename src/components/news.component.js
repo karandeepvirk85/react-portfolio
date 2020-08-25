@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { CircularIndeterminate } from "./utility/utility.component.js";
 const ApiUrl =
-    "http://newsapi.org/v2/everything?q=bitcoin&from=2020-07-21&sortBy=publishedAt&apiKey=def4ca1eafa64c9bb9bf915e2cc8f2c7";
+    "https://karandeepvirk.com/api/wp-admin/admin-ajax.php?action=get_news";
 export default class NewsBar extends Component {
     constructor(props) {
         super(props);
@@ -39,8 +39,8 @@ export default class NewsBar extends Component {
                         className="news-image"
                         style={{
                             backgroundImage: "url(" + item.urlToImage + ")",
-                            backgroundPosition: "center",
-                            backgroundSize: "cover",
+                            backgroundPosition: "left",
+                            backgroundSize: "contain",
                             backgroundRepeat: "no-repeat",
                         }}
                     ></div>

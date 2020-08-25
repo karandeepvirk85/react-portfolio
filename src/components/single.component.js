@@ -3,8 +3,10 @@ import {
     LinearIndeterminate,
     renderHTML,
 } from "./utility/utility.component.js";
-import NewsBar from "./news.component.js";
 import { Row, Col } from "react-bootstrap";
+import SideBar from "./sidebar.component.js";
+import AllBlogs from "./blogs.component.js";
+
 export default class Single extends Component {
     constructor(props) {
         super(props);
@@ -33,7 +35,7 @@ export default class Single extends Component {
             match: { params },
         } = this.props;
         var apiEndPost =
-            "http://localhost/react-portfolio/api/wp-admin/admin-ajax.php?action=get_single&slug=" +
+            "https://karandeepvirk.com/api/wp-admin/admin-ajax.php?action=get_single&slug=" +
             this.props.match.params.slug;
         fetch(apiEndPost)
             .then((response) => response.json())
@@ -45,8 +47,10 @@ export default class Single extends Component {
     getSingle() {
         return (
             <>
-                <h1>{this.state.objData.title}</h1>
-                <img src={this.state.objData.image_full} />
+                <img
+                    className="img-fluid"
+                    src={this.state.objData.image_full}
+                />
                 <p>&nbsp;</p>
                 <div>{renderHTML(this.state.objData.content)}</div>
             </>
@@ -57,12 +61,12 @@ export default class Single extends Component {
         return (
             <div className="page-container blog">
                 <Row>
-                    <Col md={3} className="news-bar">
-                        <NewsBar />
+                    <Col md={3} className="side-bar">
+                        <SideBar />
                     </Col>
-                    <Col md={9} className="single">
-                        {this.state.isLoading && <LinearIndeterminate />}
-                        {!this.state.isLoading && this.getSingle()}
+                    <Col md={9} className="blog-container">
+                        <h1>{this.state.objData.title}</h1>
+                        {this.getSingle()}
                     </Col>
                 </Row>
             </div>

@@ -4,7 +4,7 @@ import PopOver from "../components/popover.component.js";
 import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Avatar from "../components/avatar.component.js";
 import About from "./about.component.js";
-import Blog from "./blogs.component.js";
+import Home from "./home.component.js";
 import Gallery from "../components/gallery.component.js";
 import Skills from "../components/skills.component.js";
 import Work from "../components/work.component.js";
@@ -23,6 +23,7 @@ import Popper from "@material-ui/core/Popper";
 import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
 import { makeStyles } from "@material-ui/core/styles";
+import SingleCategory from "./singlecategory.component.js";
 import {
     FaChevronDown,
     FaFacebook,
@@ -31,6 +32,11 @@ import {
     FaGithub,
     FaLinkedin,
     FaUser,
+    FaImages,
+    FaPhoneAlt,
+    FaFilePdf,
+    FaIdCard,
+    FaFileWord,
 } from "react-icons/fa";
 import Single from "./single.component.js";
 
@@ -47,16 +53,28 @@ const MenuListComposition = () => {
     const [expanded, setExpanded] = useState(false);
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
-    const [openDownload, setOpenDownload] = React.useState(false);
     const anchorRef = React.useRef(null);
+
+    const [openDownload, setOpenDownload] = React.useState(false);
     const anchorRefDownload = React.useRef(null);
+
+    const [openAboutMe, setOpenAboutMe] = React.useState(false);
+    const anchorRefAboutMe = React.useRef(null);
 
     const handleToggle = () => {
         setOpenDownload(false);
+        setOpenAboutMe(false);
         setOpen((prevOpen) => !prevOpen);
     };
 
+    const handleToggleAboutMe = () => {
+        setOpenDownload(false);
+        setOpen(false);
+        setOpenAboutMe((prevAboutMe) => !prevAboutMe);
+    };
+
     const handleToggleDownload = () => {
+        setOpenAboutMe(false);
         setOpen(false);
         setOpenDownload((prevOpenDownload) => !prevOpenDownload);
     };
@@ -71,7 +89,14 @@ const MenuListComposition = () => {
         ) {
             return;
         }
+        if (
+            anchorRefAboutMe.current &&
+            anchorRefAboutMe.current.contains(event.target)
+        ) {
+            return;
+        }
         setOpen(false);
+        setOpenAboutMe(false);
         setOpenDownload(false);
     };
 
@@ -80,18 +105,28 @@ const MenuListComposition = () => {
             event.preventDefault();
             setOpen(false);
             setOpenDownload(false);
+            setOpenAboutMe(false);
         }
     }
 
     // return focus to the button when we transitioned from !open -> open
     const prevOpen = React.useRef(open);
     const prevOpenDownload = React.useRef(openDownload);
+    const prevAboutMe = React.useRef(openAboutMe);
+
     React.useEffect(() => {
         if (prevOpen.current === true && open === false) {
             anchorRef.current.focus();
         }
         prevOpen.current = open;
     }, [open]);
+
+    React.useEffect(() => {
+        if (prevAboutMe.current === true && openAboutMe === false) {
+            anchorRefAboutMe.current.focus();
+        }
+        prevAboutMe.current = openAboutMe;
+    }, [openAboutMe]);
 
     React.useEffect(() => {
         if (prevOpenDownload.current === true && openDownload === false) {
@@ -119,7 +154,17 @@ const MenuListComposition = () => {
                     onClick={handleToggle}
                     className="nice-dark-button"
                 >
-                    Follow Me <FaChevronDown />
+                    Social <FaChevronDown />
+                </Button>
+
+                <Button
+                    ref={anchorRefAboutMe}
+                    aria-controls={openAboutMe ? "menu-list-grow" : undefined}
+                    aria-haspopup="true"
+                    onClick={handleToggleAboutMe}
+                    className="nice-dark-button"
+                >
+                    About Me <FaChevronDown />
                 </Button>
 
                 <Popper
@@ -241,7 +286,7 @@ const MenuListComposition = () => {
                                                     );
                                                 }}
                                             >
-                                                PDF Resume
+                                                <FaFilePdf /> PDF Resume
                                             </Link>
                                         </MenuItem>
 
@@ -255,7 +300,7 @@ const MenuListComposition = () => {
                                                     );
                                                 }}
                                             >
-                                                DOCX Resume
+                                                <FaFileWord /> DOCX Resume
                                             </Link>
                                         </MenuItem>
 
@@ -269,7 +314,73 @@ const MenuListComposition = () => {
                                                     );
                                                 }}
                                             >
-                                                V Card
+                                                <FaIdCard /> V Card
+                                            </Link>
+                                        </MenuItem>
+                                    </MenuList>
+                                </ClickAwayListener>
+                            </Paper>
+                        </Grow>
+                    )}
+                </Popper>
+
+                <Popper
+                    open={openAboutMe}
+                    anchorEl={anchorRefAboutMe.current}
+                    role={undefined}
+                    transition
+                    disablePortal
+                >
+                    {({ TransitionProps, placement }) => (
+                        <Grow
+                            {...TransitionProps}
+                            style={{
+                                transformOrigin:
+                                    placement === "bottom"
+                                        ? "center top"
+                                        : "center bottom",
+                            }}
+                        >
+                            <Paper>
+                                <ClickAwayListener onClickAway={handleClose}>
+                                    <MenuList
+                                        autoFocusItem={openAboutMe}
+                                        id="menu-list-grow"
+                                        onKeyDown={handleListKeyDown}
+                                    >
+                                        <MenuItem onClick={handleClose}>
+                                            <Link
+                                                onClick={() =>
+                                                    setExpanded(false)
+                                                }
+                                                className="nav-link"
+                                                to="/gallery"
+                                            >
+                                                <FaImages /> Photography
+                                            </Link>
+                                        </MenuItem>
+
+                                        <MenuItem onClick={handleClose}>
+                                            <Link
+                                                onClick={() =>
+                                                    setExpanded(false)
+                                                }
+                                                className="nav-link"
+                                                to="/contact"
+                                            >
+                                                <FaPhoneAlt /> Contact
+                                            </Link>
+                                        </MenuItem>
+
+                                        <MenuItem onClick={handleClose}>
+                                            <Link
+                                                onClick={() =>
+                                                    setExpanded(false)
+                                                }
+                                                className="nav-link"
+                                                to="/about"
+                                            >
+                                                <FaUser /> About me
                                             </Link>
                                         </MenuItem>
                                     </MenuList>
@@ -348,48 +459,12 @@ const TopNavigationBar = () => {
                             <PopOver icon="BuildIcon" text="Skills" />
                             <p className="d-block margin-0 d-lg-none">Skills</p>
                         </Link>
-
-                        <Link
-                            onClick={() => setExpanded(false)}
-                            className="nav-link"
-                            to="/gallery"
-                        >
-                            <PopOver
-                                icon="PhotoCameraIcon"
-                                text="Photography"
-                            />
-                            <p className="d-block margin-0 d-lg-none">
-                                Photography
-                            </p>
-                        </Link>
-
-                        <Link
-                            onClick={() => setExpanded(false)}
-                            className="nav-link"
-                            to="/contact"
-                        >
-                            <PopOver icon="Contact" text="Contact" />
-                            <p className="d-block margin-0 d-lg-none">
-                                Contact
-                            </p>
-                        </Link>
-
-                        <Link
-                            onClick={() => setExpanded(false)}
-                            className="nav-link"
-                            to="/about"
-                        >
-                            <PopOver icon="About" text="About Me" />
-                            <p className="d-block margin-0 d-lg-none">
-                                About me
-                            </p>
-                        </Link>
                         <MenuListComposition />
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
             <Switch>
-                <Route path="/" exact component={Blog} />
+                <Route path="/" exact component={Home} />
                 <Route path="/about" component={About} />
                 <Route path="/gallery" component={Gallery} />
                 <Route path="/skills" component={Skills} />
@@ -403,6 +478,10 @@ const TopNavigationBar = () => {
                 <Route
                     path="/post/:slug"
                     render={(props) => <Single {...props} />}
+                />
+                <Route
+                    path="/category/:slug"
+                    render={(props) => <SingleCategory {...props} />}
                 />
             </Switch>
         </Router>

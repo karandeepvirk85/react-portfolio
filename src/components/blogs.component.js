@@ -3,9 +3,9 @@ import {
     renderHTML,
     LinearIndeterminate,
 } from "./utility/utility.component.js";
-import NewsBar from "./news.component.js";
-import { Row, Col } from "react-bootstrap";
+
 import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 import {
     FaUser,
     FaCalendar,
@@ -13,9 +13,11 @@ import {
     FaFacebook,
     FaInstagram,
     FaTwitter,
+    FaShareAlt,
 } from "react-icons/fa";
+
 const apiUrl =
-    "http://localhost/react-portfolio/api/wp-admin/admin-ajax.php?action=get_blogs";
+    "https://karandeepvirk.com/api/wp-admin/admin-ajax.php?action=get_blogs";
 
 export default class Blogs extends Component {
     constructor(props) {
@@ -50,8 +52,7 @@ export default class Blogs extends Component {
                         <div
                             className="blog-left col-md-4"
                             style={{
-                                backgroundImage:
-                                    "url(" + item.image_thumb + ")",
+                                backgroundImage: "url(" + item.image_full + ")",
                                 backgroundPosition: "center",
                                 backgroundSize: "cover",
                                 backgroundRepeat: "no-repeat",
@@ -79,14 +80,20 @@ export default class Blogs extends Component {
                         </div>
                     </div>
                     <div className="blog-bottom">
-                        <p className="blog-user blog-info-data">
-                            {this.getCategories(item.category)}
-                        </p>
                         <p>
+                            <FaShareAlt />
                             <FaInstagram />
                             <FaFacebook />
                             <FaLinkedin />
                             <FaTwitter />
+                        </p>
+                        <p className="blog-user blog-info-data">
+                            {this.getCategories(item.category)}
+                        </p>
+                        <p>
+                            <Link className="nav-link" to={item.url}>
+                                Read More
+                            </Link>
                         </p>
                     </div>
                 </div>
@@ -97,19 +104,10 @@ export default class Blogs extends Component {
 
     render() {
         return (
-            <div className="page-container blog">
-                <Row>
-                    <Col md={3} className="news-bar">
-                        <NewsBar />
-                    </Col>
-                    <Col md={9}>
-                        {this.state.isLoading && <LinearIndeterminate />}
-                        <Router>
-                            {!this.state.isLoading && this.getAllBlogs()}
-                        </Router>
-                    </Col>
-                </Row>
-            </div>
+            <>
+                {this.state.isLoading && <LinearIndeterminate />}
+                <Router>{!this.state.isLoading && this.getAllBlogs()}</Router>
+            </>
         );
     }
 }
