@@ -128,6 +128,11 @@
   margin-top: 20px;
   color: white;
 }
+#root .App .page-container.blog.single .blog-container .blog-info {
+  display: flex;
+  justify-content: space-between;
+  color: #717171;
+}
 #root .App .page-container.blog .side-bar {
   padding: 0;
 }

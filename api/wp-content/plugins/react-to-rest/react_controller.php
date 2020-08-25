@@ -70,8 +70,19 @@ class Blog_Controller{
     	$arrReturn = array(
     		'error' => true,
     		'data' => array()
-    	);
-
+		);
+		$arrTaxQuery = array();
+		$strSlug  = !empty($_GET['category']) ? $_GET['category'] : '';
+		
+		if($strSlug != 'all'){
+			$arrTaxQuery =  array(
+				array(
+					'taxonomy' => 'category',
+					'field' => 'slug',
+					'terms' =>  $strSlug
+				)
+			)
+		}
     	// Args for Blog Posts
     	$arrArgs = array(
     		'post_type' => 'post',
@@ -79,7 +90,8 @@ class Blog_Controller{
     		'numberposts' => -1,
     		'order_by' => 'date',
     		'order' => 'DESC',
-    		'category_name' => array('blog')
+			'category_name' => array('blog'),
+			'tax_query' => $arrTaxQuery
     	);
 
     	// Get All Posts 
@@ -97,7 +109,7 @@ class Blog_Controller{
 					'image_thumb' => self::getFeaturedImage($objPosts->ID)['medium'],
 					'image_full' => self::getFeaturedImage($objPosts->ID)['full'],
 					'category' => get_the_terms($objPosts->ID,'category'),
-					'url' => 'post/'.$objPosts->post_name
+					'url' => 'https://karandeepvirk.com/post/'.$objPosts->post_name
 				);
 			}
 		}

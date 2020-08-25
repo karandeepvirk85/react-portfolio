@@ -16,9 +16,6 @@ import {
     FaShareAlt,
 } from "react-icons/fa";
 
-const apiUrl =
-    "https://karandeepvirk.com/api/wp-admin/admin-ajax.php?action=get_blogs";
-
 export default class Blogs extends Component {
     constructor(props) {
         super(props);
@@ -29,10 +26,19 @@ export default class Blogs extends Component {
     }
 
     componentDidMount() {
-        fetch(apiUrl)
+        let category = "all";
+        if (this.props.category != undefined) {
+            if (this.props.category.length > 0) {
+                category = this.props.category;
+            }
+        }
+        var apiEndPost =
+            "https://karandeepvirk.com/api/wp-admin/admin-ajax.php?action=get_blogs&category=" +
+            category;
+        fetch(apiEndPost)
             .then((response) => response.json())
             .then((result) => {
-                this.setState({ isLoading: false, data: result.data });
+                this.setState({ isLoading: false, objData: result.data });
             });
     }
 
@@ -44,8 +50,8 @@ export default class Blogs extends Component {
     };
 
     getAllBlogs = () => {
-        if (this.state.data != null) {
-            let objData = this.state.data;
+        if (this.state.objData != null) {
+            let objData = this.state.objData;
             const List = objData.map((item, index) => (
                 <div className="blog-tile">
                     <div className="blog-inner">
@@ -82,10 +88,33 @@ export default class Blogs extends Component {
                     <div className="blog-bottom">
                         <p>
                             <FaShareAlt />
-                            <FaInstagram />
-                            <FaFacebook />
-                            <FaLinkedin />
-                            <FaTwitter />
+                            <a
+                                target="blank"
+                                href={
+                                    "https://www.linkedin.com/shareArticle?mini=true&amp;url=" +
+                                    item.url
+                                }
+                            >
+                                <FaInstagram />
+                            </a>
+                            <a
+                                target="blank"
+                                href="https://www.facebook.com/sharer/sharer.php?u=wwww.karandeepvirk.com"
+                            >
+                                <FaFacebook />
+                            </a>
+                            <a
+                                target="blank"
+                                href="https://twitter.com/intent/tweet?text=&amp;url=www.karandeepvirk.com&amp;via="
+                            >
+                                <FaLinkedin />
+                            </a>
+                            <a
+                                target="blank"
+                                href="mailto:someone@yoursite.com?subject=Sharing Profile Of Karandeep Virk&body=karandeepvirk.com"
+                            >
+                                <FaTwitter />
+                            </a>
                         </p>
                         <p className="blog-user blog-info-data">
                             {this.getCategories(item.category)}

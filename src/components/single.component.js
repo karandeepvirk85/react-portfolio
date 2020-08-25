@@ -6,6 +6,15 @@ import {
 import { Row, Col } from "react-bootstrap";
 import SideBar from "./sidebar.component.js";
 import AllBlogs from "./blogs.component.js";
+import {
+    FaUser,
+    FaCalendar,
+    FaLinkedin,
+    FaFacebook,
+    FaInstagram,
+    FaTwitter,
+    FaShareAlt,
+} from "react-icons/fa";
 
 export default class Single extends Component {
     constructor(props) {
@@ -20,7 +29,7 @@ export default class Single extends Component {
     componentDidUpdate = (prevProps) => {
         if (this.props.match.params.slug !== prevProps.match.params.slug) {
             var apiEndPost =
-                "http://localhost/react-portfolio/api/wp-admin/admin-ajax.php?action=get_single&slug=" +
+                "https://karandeepvirk.com/api/wp-admin/admin-ajax.php?action=get_single&slug=" +
                 this.props.match.params.slug;
             fetch(apiEndPost)
                 .then((response) => response.json())
@@ -51,7 +60,14 @@ export default class Single extends Component {
                     className="img-fluid"
                     src={this.state.objData.image_full}
                 />
-                <p>&nbsp;</p>
+                <div className="blog-info">
+                    <p className="blog-date blog-info-data">
+                        <FaCalendar /> {this.state.objData.date}
+                    </p>
+                    <p className="blog-user blog-info-data">
+                        <FaUser /> {this.state.objData.author}
+                    </p>
+                </div>
                 <div>{renderHTML(this.state.objData.content)}</div>
             </>
         );
@@ -59,7 +75,7 @@ export default class Single extends Component {
 
     render() {
         return (
-            <div className="page-container blog">
+            <div className="page-container blog single">
                 <Row>
                     <Col md={3} className="side-bar">
                         <SideBar />

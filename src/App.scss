@@ -138,6 +138,15 @@ $secondaryColor: #333333;
                 }
             }
             &.blog {
+                &.single {
+                    .blog-container {
+                        .blog-info {
+                            display: flex;
+                            justify-content: space-between;
+                            color: #717171;
+                        }
+                    }
+                }
                 .side-bar {
                     h2 {
                         color: #7f51d0;
