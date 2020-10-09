@@ -14,6 +14,7 @@ import {
     FaInstagram,
     FaTwitter,
     FaShareAlt,
+    FaEnvelope,
 } from "react-icons/fa";
 
 export default class Blogs extends Component {
@@ -95,7 +96,7 @@ export default class Blogs extends Component {
                                     item.url
                                 }
                             >
-                                <FaInstagram />
+                                <FaLinkedin />
                             </a>
                             <a
                                 target="blank"
@@ -107,13 +108,13 @@ export default class Blogs extends Component {
                                 target="blank"
                                 href="https://twitter.com/intent/tweet?text=&amp;url=www.karandeepvirk.com&amp;via="
                             >
-                                <FaLinkedin />
+                                <FaTwitter />
                             </a>
                             <a
                                 target="blank"
                                 href="mailto:someone@yoursite.com?subject=Sharing Profile Of Karandeep Virk&body=karandeepvirk.com"
                             >
-                                <FaTwitter />
+                                <FaEnvelope />
                             </a>
                         </p>
                         <p className="blog-user blog-info-data">

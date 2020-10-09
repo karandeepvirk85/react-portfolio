@@ -4,7 +4,7 @@ import PopOver from "../components/popover.component.js";
 import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Avatar from "../components/avatar.component.js";
 import About from "./about.component.js";
-import Home from "./home.component.js";
+import Blog from "./home.component.js";
 import Gallery from "../components/gallery.component.js";
 import Skills from "../components/skills.component.js";
 import Work from "../components/work.component.js";
@@ -24,6 +24,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
 import { makeStyles } from "@material-ui/core/styles";
 import SingleCategory from "./singlecategory.component.js";
+import Services from "./services.component.js";
 import {
     FaChevronDown,
     FaFacebook,
@@ -37,6 +38,11 @@ import {
     FaFilePdf,
     FaIdCard,
     FaFileWord,
+    FaProjectDiagram,
+    FaSuitcase,
+    FaUniversity,
+    FaWrench,
+    FaToolbox,
 } from "react-icons/fa";
 import Single from "./single.component.js";
 
@@ -52,30 +58,47 @@ const useStyles = makeStyles((theme) => ({
 const MenuListComposition = () => {
     const [expanded, setExpanded] = useState(false);
     const classes = useStyles();
+
     const [open, setOpen] = React.useState(false);
     const anchorRef = React.useRef(null);
-
     const [openDownload, setOpenDownload] = React.useState(false);
     const anchorRefDownload = React.useRef(null);
 
     const [openAboutMe, setOpenAboutMe] = React.useState(false);
     const anchorRefAboutMe = React.useRef(null);
+    const prevOpen = React.useRef(open);
+    const prevOpenDownload = React.useRef(openDownload);
+
+    const [openPortfolio, setOpenPortfolio] = React.useState(false);
+    const anchorRefPortfolio = React.useRef(null);
+    const prevAboutMe = React.useRef(openAboutMe);
+    const prevPortfolio = React.useRef(openPortfolio);
 
     const handleToggle = () => {
         setOpenDownload(false);
         setOpenAboutMe(false);
+        setOpenPortfolio(false);
         setOpen((prevOpen) => !prevOpen);
+    };
+
+    const handlePortfolio = () => {
+        setOpenDownload(false);
+        setOpenAboutMe(false);
+        setOpen(false);
+        setOpenPortfolio((prevPortfolio) => !prevPortfolio);
     };
 
     const handleToggleAboutMe = () => {
         setOpenDownload(false);
         setOpen(false);
+        setOpenPortfolio(false);
         setOpenAboutMe((prevAboutMe) => !prevAboutMe);
     };
 
     const handleToggleDownload = () => {
         setOpenAboutMe(false);
         setOpen(false);
+        setOpenPortfolio(false);
         setOpenDownload((prevOpenDownload) => !prevOpenDownload);
     };
 
@@ -83,21 +106,31 @@ const MenuListComposition = () => {
         if (anchorRef.current && anchorRef.current.contains(event.target)) {
             return;
         }
+
         if (
             anchorRefDownload.current &&
             anchorRefDownload.current.contains(event.target)
         ) {
             return;
         }
+
         if (
             anchorRefAboutMe.current &&
             anchorRefAboutMe.current.contains(event.target)
         ) {
             return;
         }
+
+        if (
+            anchorRefPortfolio.current &&
+            anchorRefPortfolio.current.contains(event.target)
+        ) {
+            return;
+        }
         setOpen(false);
         setOpenAboutMe(false);
         setOpenDownload(false);
+        setOpenPortfolio(false);
     };
 
     function handleListKeyDown(event) {
@@ -106,13 +139,17 @@ const MenuListComposition = () => {
             setOpen(false);
             setOpenDownload(false);
             setOpenAboutMe(false);
+            setOpenPortfolio(false);
         }
     }
 
     // return focus to the button when we transitioned from !open -> open
-    const prevOpen = React.useRef(open);
-    const prevOpenDownload = React.useRef(openDownload);
-    const prevAboutMe = React.useRef(openAboutMe);
+    React.useEffect(() => {
+        if (prevPortfolio.current === true && openPortfolio === false) {
+            anchorRefPortfolio.current.focus();
+        }
+        prevOpen.current = openPortfolio;
+    }, [openPortfolio]);
 
     React.useEffect(() => {
         if (prevOpen.current === true && open === false) {
@@ -155,6 +192,16 @@ const MenuListComposition = () => {
                     className="nice-dark-button"
                 >
                     Social <FaChevronDown />
+                </Button>
+
+                <Button
+                    ref={anchorRefPortfolio}
+                    aria-controls={openPortfolio ? "menu-list-grow" : undefined}
+                    aria-haspopup="true"
+                    onClick={handlePortfolio}
+                    className="nice-dark-button"
+                >
+                    Portfolio <FaChevronDown />
                 </Button>
 
                 <Button
@@ -325,6 +372,83 @@ const MenuListComposition = () => {
                 </Popper>
 
                 <Popper
+                    open={openPortfolio}
+                    anchorEl={anchorRefPortfolio.current}
+                    role={undefined}
+                    transition
+                    disablePortal
+                >
+                    {({ TransitionProps, placement }) => (
+                        <Grow
+                            {...TransitionProps}
+                            style={{
+                                transformOrigin:
+                                    placement === "bottom"
+                                        ? "center top"
+                                        : "center bottom",
+                            }}
+                        >
+                            <Paper>
+                                <ClickAwayListener onClickAway={handleClose}>
+                                    <MenuList
+                                        autoFocusItem={openPortfolio}
+                                        id="menu-list-grow"
+                                        onKeyDown={handleListKeyDown}
+                                    >
+                                        <MenuItem onClick={handleClose}>
+                                            <Link
+                                                onClick={() =>
+                                                    setExpanded(false)
+                                                }
+                                                className="nav-link"
+                                                to="/projects"
+                                            >
+                                                <FaProjectDiagram /> Projects
+                                            </Link>
+                                        </MenuItem>
+
+                                        <MenuItem onClick={handleClose}>
+                                            <Link
+                                                onClick={() =>
+                                                    setExpanded(false)
+                                                }
+                                                className="nav-link"
+                                                to="/work"
+                                            >
+                                                <FaSuitcase /> Work
+                                            </Link>
+                                        </MenuItem>
+
+                                        <MenuItem onClick={handleClose}>
+                                            <Link
+                                                onClick={() =>
+                                                    setExpanded(false)
+                                                }
+                                                className="nav-link"
+                                                to="/education"
+                                            >
+                                                <FaUniversity /> Education
+                                            </Link>
+                                        </MenuItem>
+
+                                        <MenuItem onClick={handleClose}>
+                                            <Link
+                                                onClick={() =>
+                                                    setExpanded(false)
+                                                }
+                                                className="skills-link nav-link"
+                                                to="/skills"
+                                            >
+                                                <FaWrench /> Skills
+                                            </Link>
+                                        </MenuItem>
+                                    </MenuList>
+                                </ClickAwayListener>
+                            </Paper>
+                        </Grow>
+                    )}
+                </Popper>
+                <Popper
                     open={openAboutMe}
                     anchorEl={anchorRefAboutMe.current}
                     role={undefined}
@@ -405,7 +529,7 @@ const TopNavigationBar = () => {
                 variant="dark"
                 expanded={expanded}
             >
-                <Link to="/about">
+                <Link to="/">
                     <Avatar /> Karandeep Virk
                 </Link>
                 <Navbar.Toggle
@@ -419,53 +543,27 @@ const TopNavigationBar = () => {
                             className="nav-link"
                             to="/"
                         >
-                            <PopOver icon="Home" text="Blog" />
-                            <p className="d-block margin-0 d-lg-none">Blog</p>
+                            <PopOver icon="Home" text="Home" />
+                            <p className="d-block margin-0 d-lg-none">Home</p>
                         </Link>
                         <Link
                             onClick={() => setExpanded(false)}
                             className="nav-link"
-                            to="/education"
+                            to="/"
                         >
-                            <PopOver icon="SchoolIcon" text="Education" />
+                            <PopOver icon="Services" text="Services" />
                             <p className="d-block margin-0 d-lg-none">
-                                Education
+                                Services
                             </p>
-                        </Link>
-                        <Link
-                            onClick={() => setExpanded(false)}
-                            className="nav-link"
-                            to="/work"
-                        >
-                            <PopOver icon="WorkIcon" text="Work Experience" />
-                            <p className="d-block margin-0 d-lg-none">Work</p>
-                        </Link>
-                        <Link
-                            onClick={() => setExpanded(false)}
-                            className="nav-link"
-                            to="/projects"
-                        >
-                            <PopOver icon="AccountTreeIcon" text="Projects" />
-                            <p className="d-block margin-0 d-lg-none">
-                                Projects
-                            </p>
-                        </Link>
-
-                        <Link
-                            onClick={() => setExpanded(false)}
-                            className="skills-link nav-link"
-                            to="/skills"
-                        >
-                            <PopOver icon="BuildIcon" text="Skills" />
-                            <p className="d-block margin-0 d-lg-none">Skills</p>
                         </Link>
                         <MenuListComposition />
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
             <Switch>
-                <Route path="/" exact component={Home} />
-                <Route path="/about" component={About} />
+                <Route path="/" exact component={About} />
+                <Route path="/blog" component={Blog} />
+                <Route path="/services" component={Services} />
                 <Route path="/gallery" component={Gallery} />
                 <Route path="/skills" component={Skills} />
                 <Route path="/work" component={Work} />

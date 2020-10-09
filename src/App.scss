@@ -2,21 +2,23 @@
 
 $primaryFont: "Open Sans", sans-serif;
 $secondaryFont: "Recursive", sans-serif;
-$primaryColor: #3f51b5;
-$secondaryColor: #333333;
+$primaryColor: #2a5ada;
+$secondaryColor: #ffac00;
+$root-bg: #ffffff;
+$footer-bg: #2c2b2d;
 
 #root {
     .App {
         .MuiButton-root {
-            background: linear-gradient(145deg, #ab7cff #673ab7) !important;
-            color: white;
+            background: transparent;
+            color: $root-bg;
             border: none;
             &:hover {
                 border: none;
                 background: linear-gradient(
                     145deg,
-                    #673ab7,
-                    #ab7cff
+                    $primaryColor,
+                    $secondaryColor
                 ) !important;
                 color: white;
             }
@@ -37,7 +39,7 @@ $secondaryColor: #333333;
             .MuiSvgIcon-root {
                 font-size: 2rem;
             }
-            background: linear-gradient(45deg, #673ab7, #ab7cff) !important;
+            background: #2a5ada;
             a {
                 @media only screen and (max-width: 768px) {
                     width: 80%;
@@ -85,6 +87,14 @@ $secondaryColor: #333333;
                             li {
                                 a {
                                     font-size: 1rem;
+                                    color: black;
+                                    display: flex;
+                                    align-items: center;
+                                    white-space: break-spaces;
+                                    justify-content: space-between;
+                                    svg {
+                                        font-size: 1rem;
+                                    }
                                 }
                             }
                         }
@@ -109,7 +119,7 @@ $secondaryColor: #333333;
             min-height: 100vh;
             max-width: 100%;
             width: 100%;
-            background: #ececec;
+            background: white;
             position: relative;
             .spinner-bar {
                 width: 100%;
@@ -135,6 +145,7 @@ $secondaryColor: #333333;
                         margin-top: 20px;
                         color: white;
                     }
+                    padding-bottom: 40px;
                 }
             }
             &.blog {
@@ -176,17 +187,16 @@ $secondaryColor: #333333;
                     }
                     padding: 0;
                     .news-bar {
-                        min-height: 900px;
                         max-height: 200vh;
                         overflow-y: scroll;
-                        border: 12px solid #ececec;
-                        border-top: 0;
+                        border: 6px solid #ffffff;
                         padding: 0;
                         border-left: 0;
+                        border-right: 0;
                         .news-box {
                             cursor: pointer;
                             transition: 500ms;
-                            background: #f3f3f3;
+                            background: #ffffff;
                             padding: 20px;
                             margin: 0;
                             margin-bottom: 10px;
@@ -468,7 +478,7 @@ $secondaryColor: #333333;
             }
         }
         .footer {
-            background: #1d282c;
+            background: $footer-bg;
             .top-footer {
                 padding: 20px 0;
                 h2 {
@@ -545,7 +555,7 @@ $secondaryColor: #333333;
             .bottom-footer {
                 display: flex;
                 padding: 3px 6px 3px 2%;
-                background: linear-gradient(45deg, #673ab7, #ab7cff) !important;
+                background: $primaryColor;
                 justify-content: space-between;
                 align-items: center;
                 .footer-left {

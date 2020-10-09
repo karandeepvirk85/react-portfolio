@@ -2,7 +2,7 @@ import React from "react";
 import Popover from "@material-ui/core/Popover";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import { FaFilePdf, FaFileWord, FaUser } from "react-icons/fa";
+import { FaFilePdf, FaFileWord, FaUser, FaCogs } from "react-icons/fa";
 import Cardbusiness from "@material-ui/icons/FeaturedPlayList";
 import AccountTreeIcon from "@material-ui/icons/AccountTree";
 import WorkIcon from "@material-ui/icons/Work";
@@ -11,7 +11,7 @@ import SchoolIcon from "@material-ui/icons/School";
 import PhotoCameraIcon from "@material-ui/icons/PhotoLibrary";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import FbIcon from "@material-ui/icons/Facebook";
-import { FaIdCard, FaHome, FaMobileAlt } from "react-icons/fa";
+import { FaIdCard, FaHome, FaMobileAlt, FaTools } from "react-icons/fa";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import VideocamIcon from "@material-ui/icons/Videocam";
 const useStyles = makeStyles((theme) => ({
@@ -31,7 +31,9 @@ const getIcon = (icon) => {
     if (icon == "IconDocX") {
         return <FaFileWord className="d-none d-sm-block" />;
     }
-
+    if (icon == "Services") {
+        return <FaTools className="d-none d-sm-block" />;
+    }
     if (icon == "CardBusiness") {
         return <Cardbusiness className="d-none d-sm-block" />;
     }

@@ -8,23 +8,10 @@ export default class About extends Component {
         return (
             <>
                 <div className="page-container about">
-                    <Row className="insta-row">
-                        <Col md={5}>
-                            <InstagramEmbed
-                                url="https://www.instagram.com/p/CDSpHgilPsq/?utm_source=ig_embed"
-                                hideCaption={false}
-                                containerTagName="div"
-                                protocol=""
-                                injectScript
-                                onLoading={() => {}}
-                                onSuccess={() => {}}
-                                onAfterRender={() => {}}
-                                onFailure={() => {}}
-                            />
-                        </Col>
-
-                        <Col xs={12} md={7} className="home-info">
+                    <Row>
+                        <Col md={12} className="home-info">
                             <SinglePage slug="about-me" />
+                            <br />
                             <SimpleMenu />
                         </Col>
                     </Row>
