@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import InstagramEmbed from "react-instagram-embed";
 import { Row, Col } from "react-bootstrap";
 import SimpleMenu from "./navigate.component.js";
 import SinglePage from "./page.component.js";
