@@ -487,7 +487,7 @@ const TopNavigationBar = () => {
   return (
     <Router>
       <Navbar collapseOnSelect expand="lg" variant="dark" expanded={expanded}>
-        <Link to="/">
+        <Link to="/about">
           <Avatar /> Karandeep Virk
         </Link>
         <Navbar.Toggle

@@ -233,7 +233,7 @@
   width: auto;
 }
 #root .App .page-container.blog .blog-container .blog-tile .blog-inner .blog-right {
-  background-color: #ffffff;
+  background-color: #e5e5e5;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -282,7 +282,7 @@
   justify-content: space-between;
   display: flex;
   padding: 4px;
-  background: #ffffff;
+  background: #dbdbdb;
   border: 1px solid #f3f3f3;
 }
 #root .App .page-container.blog .blog-container .blog-tile .blog-bottom p {
@@ -292,17 +292,17 @@
   margin: 0;
 }
 #root .App .page-container.blog .blog-container .blog-tile .blog-bottom p a {
-  color: #673ab7;
+  color: #8b8b8b;
 }
 #root .App .page-container.blog .blog-container .blog-tile .blog-bottom p.category {
   cursor: pointer;
-  background: #673ab7;
-  color: white;
+  background: #8b8b8b;
+  box-shadow: 0px 0px 2px 0px #868686;
+  color: #ffffff;
   border-radius: 10px;
   padding: 1px 6px;
   font-size: 12px;
   margin-right: 4px;
-  border: 1px solid #251b38;
 }
 #root .App .page-container.blog .blog-container .blog-tile .blog-bottom p.category:hover {
   background-color: transparent;
