@@ -6,7 +6,7 @@
 }
 #root .App .MuiButton-root:hover {
   border: none;
-  background: linear-gradient(145deg, #2a5ada, #ffac00) !important;
+  background: linear-gradient(145deg, #2a5ada, #00256a) !important;
   color: white;
 }
 #root .App .margin-0 {
@@ -349,7 +349,7 @@
   cursor: pointer;
 }
 #root .App .page-container.skills h2 {
-  color: #ffac00;
+  color: #00256a;
   font-family: "Open Sans", sans-serif;
   font-size: 1.3rem;
   font-weight: 900;
@@ -359,7 +359,7 @@
 }
 #root .App .page-container.skills svg {
   font-size: 3rem;
-  color: #ffac00;
+  color: #00256a;
 }
 #root .App .page-container.skills .circular-bar {
   margin-top: 60px;
@@ -393,7 +393,7 @@
   }
 }
 #root .App .page-container.work h2 {
-  color: #ffac00;
+  color: #00256a;
   font-family: "Open Sans", sans-serif;
   font-size: 1.8rem;
   font-weight: 900;
@@ -420,7 +420,7 @@
   margin-bottom: 50px;
 }
 #root .App .page-container.education .MuiCard-root .MuiCardContent-root h2 {
-  color: #ffac00;
+  color: #00256a;
   font-size: 1.6rem;
   font-weight: 800;
   font-family: "Open Sans", sans-serif;
@@ -544,7 +544,7 @@
 }
 .share-links svg {
   font-size: 2rem;
-  color: #ffac00;
+  color: #00256a;
 }
 
 ::-webkit-scrollbar {
