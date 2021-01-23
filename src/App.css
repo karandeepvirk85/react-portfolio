@@ -58,7 +58,7 @@
   #root .App .navbar-dark .navbar-nav a {
     width: 100%;
     margin: 0px;
-    color: white;
+    color: white !important;
     padding: 10px 20px;
     background: linear-gradient(45deg, #545454, #0a0a0a) !important;
   }
@@ -147,7 +147,7 @@
   padding: 0;
 }
 #root .App .page-container.blog .side-bar h2 {
-  color: #7f51d0;
+  color: #575757;
   padding: 4px;
   font-size: 1.5rem;
 }
@@ -193,7 +193,7 @@
 }
 #root .App .page-container.blog .side-bar .news-bar .news-box h2 {
   margin-top: 6px;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   color: #666666;
   border-bottom: none;
 }

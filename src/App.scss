@@ -61,7 +61,7 @@ $footer-bg: #2c2b2d;
           @media only screen and (max-width: 992px) {
             width: 100%;
             margin: 0px;
-            color: white;
+            color: white !important;
             padding: 10px 20px;
             background: linear-gradient(45deg, #545454, #0a0a0a) !important;
           }
