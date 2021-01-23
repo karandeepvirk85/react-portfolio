@@ -103,7 +103,7 @@ class Blog_Controller{
 				$arrBlogs[] = array(
 					'title' => $objPosts->post_title,
 					'content' => apply_filters('the_content', $objPosts->post_content),
-					'small_content' => substr(strip_tags($objPosts->post_content), 0, 200),
+					'small_content' => substr(strip_tags($objPosts->post_content), 0, 300),
 					'author' => $strAuthorName,
 					'date' => date('d F Y', strtotime($objPosts->post_date)),
 					'image_thumb' => self::getFeaturedImage($objPosts->ID)['medium'],
