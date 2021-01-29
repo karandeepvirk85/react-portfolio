@@ -201,7 +201,7 @@ const MenuListComposition = () => {
           onClick={handleToggle}
           className="nice-dark-button"
         >
-          Social <FaChevronDown />
+          Connect <FaChevronDown />
         </Button>
 
         <Button
