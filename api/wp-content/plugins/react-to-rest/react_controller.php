@@ -46,7 +46,7 @@ class Blog_Controller{
 				'small_content' => substr(apply_filters('the_content', strip_tags($arrPosts[0]->post_content), 0, 500)),
 				'author' => $strAuthorName,
 				'date' => date('d F Y', strtotime($arrPosts[0]->post_date)),
-				'image_thumb' => self::getFeaturedImage($arrPosts[0]->ID)['medium'],
+				'image_thumb' => self::getFeaturedImage($arrPosts[0]->ID)['thumb'],
 				'image_full' => self::getFeaturedImage($arrPosts[0]->ID)['full'],
 				'category' => get_the_terms($arrPosts[0]->ID,'category'),
 				'url' => 'post/'.$arrPosts[0]->post_name

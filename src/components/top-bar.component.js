@@ -211,7 +211,7 @@ const MenuListComposition = () => {
           onClick={handleToggleAboutMe}
           className="nice-dark-button"
         >
-          About Me <FaChevronDown />
+          Me <FaChevronDown />
         </Button>
 
         <Popper
@@ -455,16 +455,6 @@ const MenuListComposition = () => {
                       <Link
                         onClick={() => setExpanded(false)}
                         className="nav-link"
-                        to="/contact"
-                      >
-                        <FaPhoneAlt /> Contact
-                      </Link>
-                    </MenuItem>
-
-                    <MenuItem onClick={handleClose}>
-                      <Link
-                        onClick={() => setExpanded(false)}
-                        className="nav-link"
                         to="/about"
                       >
                         <FaUser /> About me
@@ -505,6 +495,14 @@ const TopNavigationBar = () => {
               <p className="d-block margin-0 d-lg-none">Home</p>
             </Link>
             <MenuListComposition />
+            <Link
+              onClick={() => setExpanded(false)}
+              className="nav-link"
+              to="/contact"
+            >
+              <PopOver icon="Contact" text="Contact" />
+              <p className="d-block margin-0 d-lg-none">Contact</p>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

@@ -6,7 +6,7 @@
 }
 #root .App .MuiButton-root:hover {
   border: none;
-  background: linear-gradient(145deg, #2a5ada, #00256a) !important;
+  background: linear-gradient(145deg, #9100ff, #00256a) !important;
   color: white;
 }
 #root .App .margin-0 {
@@ -24,7 +24,7 @@
   }
 }
 #root .App .navbar-dark {
-  background: #2a5ada;
+  background: #9100ff;
 }
 #root .App .navbar-dark .MuiSvgIcon-root {
   font-size: 2rem;
@@ -294,6 +294,11 @@
 #root .App .page-container.blog .blog-container .blog-tile .blog-bottom p a {
   color: #8b8b8b;
 }
+#root .App .page-container.blog .blog-container .blog-tile .blog-bottom p a.read-more {
+  background-color: #9100ff;
+  color: white;
+  border-radius: 6px;
+}
 #root .App .page-container.blog .blog-container .blog-tile .blog-bottom p.category {
   cursor: pointer;
   background: #8b8b8b;
@@ -309,17 +314,12 @@
   color: gray;
   border: 1px solid #8d5fdf;
 }
-#root .App .page-container.blog .blog-container .blog-tile .blog-bottom span {
-  font-size: 1rem;
-}
-#root .App .page-container.blog .blog-container .blog-tile .blog-bottom svg {
+#root .App .page-container.blog .blog-container .blog-tile .blog-bottom p svg {
   margin: 0 4px;
   font-size: 1.1rem;
-  color: #673ab7;
 }
-#root .App .page-container.blog .blog-container .blog-tile .blog-bottom svg:first-child {
-  color: #ababab;
-  margin: 0 10px;
+#root .App .page-container.blog .blog-container .blog-tile .blog-bottom span {
+  font-size: 1rem;
 }
 #root .App .page-container.blog .blog-container .blog-tile .blog-bottom button {
   background-color: #1d282c;
@@ -509,7 +509,7 @@
 #root .App .footer .bottom-footer {
   display: flex;
   padding: 3px 6px 3px 2%;
-  background: #2a5ada;
+  background: #9100ff;
   justify-content: space-between;
   align-items: center;
 }
@@ -563,4 +563,4 @@
   background: #555;
 }
 
-/*# sourceMappingURL=App.css.map */
+/*# sourceMappingURL=app.css.map */
