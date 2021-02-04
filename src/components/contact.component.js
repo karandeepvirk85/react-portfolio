@@ -4,6 +4,11 @@ import axios from "axios";
 import Address from "./address.component.js";
 import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 import {
+  contactController,
+  portfolioLinkedIn,
+  portfolioGithub,
+} from "./constants/constants.component";
+import {
   FaInstagram,
   FaTwitter,
   FaFacebook,
@@ -35,7 +40,7 @@ export default class Contact extends Component {
     } else {
       axios({
         method: "post",
-        url: "https://karandeepvirk.com/api/contact_controller.php",
+        url: contactController,
         headers: {
           "content-type": "application/x-www-form-urlencoded",
         },
@@ -60,7 +65,7 @@ export default class Contact extends Component {
             <Router>
               <p>
                 <a
-                  href="https://www.linkedin.com/in/kv85/"
+                  href={portfolioLinkedIn}
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -69,7 +74,7 @@ export default class Contact extends Component {
               </p>
               <p>
                 <a
-                  href="https://github.com/karandeepvirk85"
+                  href={portfolioGithub}
                   rel="noopener noreferrer"
                   target="_blank"
                 >
