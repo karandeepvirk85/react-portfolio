@@ -8,4 +8,7 @@ const contactController =
 const blogApi =
   "https://karandeepvirk.com/api/wp-admin/admin-ajax.php?action=get_blogs";
 
-export { newsApi, contactController, blogApi };
+const categoryBlog =
+  "https://karandeepvirk.com/api/wp-admin/admin-ajax.php?action=get_blogs&category=";
+
+export { newsApi, contactController, blogApi, categoryBlog };

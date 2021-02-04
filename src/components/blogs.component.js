@@ -4,6 +4,8 @@ import {
   LinearIndeterminate,
 } from "./utility/utility.component.js";
 
+import { categoryBlog } from "./constants/constants.component.js";
+
 import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import {
@@ -33,9 +35,7 @@ export default class Blogs extends Component {
         category = this.props.category;
       }
     }
-    var apiEndPost =
-      "https://karandeepvirk.com/api/wp-admin/admin-ajax.php?action=get_blogs&category=" +
-      category;
+    var apiEndPost = categoryBlog + category;
     fetch(apiEndPost)
       .then((response) => response.json())
       .then((result) => {
