@@ -1,566 +1,707 @@
 @import "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap";
 #root .App .MuiButton-root {
-  background: transparent;
-  color: #ffffff;
-  border: none;
+    background: transparent;
+    color: #ffffff;
+    border: none;
 }
 #root .App .MuiButton-root:hover {
-  border: none;
-  background: linear-gradient(145deg, #9100ff, #00256a) !important;
-  color: white;
+    border: none;
+    background: linear-gradient(145deg, #9100ff, #00256a) !important;
+    color: white;
 }
 #root .App .margin-0 {
-  margin: 0;
+    margin: 0;
 }
 #root .App h1 {
-  font-family: "Recursive", sans-serif;
-  text-transform: uppercase;
-  font-size: 3rem;
-  font-weight: 900;
+    font-family: "Recursive", sans-serif;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 900;
 }
 @media only screen and (max-width: 768px) {
-  #root .App h1 {
-    font-size: 2rem;
-  }
+    #root .App h1 {
+        font-size: 2rem;
+    }
 }
 #root .App .navbar-dark {
-  background: #9100ff;
+    background: #9100ff;
 }
 #root .App .navbar-dark .MuiSvgIcon-root {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 #root .App .navbar-dark a {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: 700;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 @media only screen and (max-width: 768px) {
-  #root .App .navbar-dark a {
-    width: 80%;
-  }
+    #root .App .navbar-dark a {
+        width: 80%;
+    }
 }
 #root .App .navbar-dark a img {
-  border-radius: 100%;
-  width: 10%;
-  margin-right: 10px;
+    border-radius: 100%;
+    width: 10%;
+    margin-right: 10px;
 }
 @media only screen and (max-width: 992px) {
-  #root .App .navbar-dark .navbar-nav {
-    margin: 20px 0;
-  }
+    #root .App .navbar-dark .navbar-nav {
+        margin: 20px 0;
+    }
 }
 #root .App .navbar-dark .navbar-nav a {
-  color: white;
-  font-size: 1rem;
-  font-family: "Open Sans", sans-serif !important;
+    color: white;
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif !important;
 }
 @media only screen and (max-width: 992px) {
-  #root .App .navbar-dark .navbar-nav a {
-    width: 100%;
-    margin: 0px;
-    color: white !important;
-    padding: 10px 20px;
-    background: linear-gradient(45deg, #545454, #0a0a0a) !important;
-  }
+    #root .App .navbar-dark .navbar-nav a {
+        width: 100%;
+        margin: 0px;
+        color: white !important;
+        padding: 10px 20px;
+        background: linear-gradient(45deg, #545454, #0a0a0a) !important;
+    }
 }
 #root .App .navbar-dark .navbar-nav svg {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 #root .App .navbar-dark .navbar-nav .makeStyles-root-3,
 #root .App .navbar-dark .navbar-nav .jss3 {
-  align-items: center;
+    align-items: center;
 }
 #root .App .navbar-dark .navbar-nav .makeStyles-root-3 .top-bar-menu,
 #root .App .navbar-dark .navbar-nav .jss3 .top-bar-menu {
-  position: relative;
-  z-index: 9;
+    position: relative;
+    z-index: 9;
 }
 #root .App .navbar-dark .navbar-nav .makeStyles-root-3 .top-bar-menu ul,
 #root .App .navbar-dark .navbar-nav .jss3 .top-bar-menu ul {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 #root .App .navbar-dark .navbar-nav .makeStyles-root-3 .top-bar-menu ul li a,
 #root .App .navbar-dark .navbar-nav .jss3 .top-bar-menu ul li a {
-  font-size: 1rem;
-  color: black;
-  display: flex;
-  align-items: center;
-  white-space: break-spaces;
-  justify-content: space-between;
+    font-size: 1rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    white-space: break-spaces;
+    justify-content: space-between;
 }
-#root .App .navbar-dark .navbar-nav .makeStyles-root-3 .top-bar-menu ul li a svg,
+#root
+    .App
+    .navbar-dark
+    .navbar-nav
+    .makeStyles-root-3
+    .top-bar-menu
+    ul
+    li
+    a
+    svg,
 #root .App .navbar-dark .navbar-nav .jss3 .top-bar-menu ul li a svg {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 #root .App .navbar-dark .navbar-nav .makeStyles-root-3 .top-bar-menu button,
 #root .App .navbar-dark .navbar-nav .jss3 .top-bar-menu button {
-  margin: 0 6px;
+    margin: 0 6px;
 }
-#root .App .navbar-dark .navbar-nav .makeStyles-root-3 .top-bar-menu .MuiButton-label svg,
+#root
+    .App
+    .navbar-dark
+    .navbar-nav
+    .makeStyles-root-3
+    .top-bar-menu
+    .MuiButton-label
+    svg,
 #root .App .navbar-dark .navbar-nav .jss3 .top-bar-menu .MuiButton-label svg {
-  font-size: 12px;
-  margin-left: 4px;
+    font-size: 12px;
+    margin-left: 4px;
 }
 #root .App .navbar-dark .navbar-nav .makeStyles-root-3 .top-bar-menu a,
 #root .App .navbar-dark .navbar-nav .jss3 .top-bar-menu a {
-  color: #673ab7;
+    color: #673ab7;
 }
 #root .App .page-container {
-  padding: 20px 4%;
-  min-height: 100vh;
-  max-width: 100%;
-  width: 100%;
-  background: white;
-  position: relative;
+    padding: 20px 4%;
+    min-height: 100vh;
+    max-width: 100%;
+    width: 100%;
+    background: white;
+    position: relative;
 }
 #root .App .page-container .spinner-bar {
-  width: 100%;
-  height: 60vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 #root .App .page-container.about .home-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 40px;
 }
 #root .App .page-container.about .home-info p {
-  margin: 6px;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.1rem;
-  color: black;
-  font-weight: 300;
+    margin: 6px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.1rem;
+    color: black;
+    font-weight: 300;
 }
 #root .App .page-container.about .home-info a {
-  margin-top: 20px;
-  color: white;
+    margin-top: 20px;
+    color: white;
 }
 #root .App .page-container.blog.single .blog-container .blog-info {
-  display: flex;
-  justify-content: space-between;
-  color: #717171;
+    display: flex;
+    justify-content: space-between;
+    color: #717171;
 }
 #root .App .page-container.blog .side-bar {
-  padding: 0;
+    padding: 0;
 }
 #root .App .page-container.blog .side-bar h2 {
-  color: #575757;
-  padding: 4px;
-  font-size: 1.5rem;
+    color: #575757;
+    padding: 4px;
+    font-size: 1.5rem;
 }
 #root .App .page-container.blog .side-bar .category-bar {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 #root .App .page-container.blog .side-bar .category-bar a {
-  background-color: #ffffff;
-  display: flex;
-  width: calc(100% - 16px);
-  border-bottom: 1px solid #dedede;
-  margin: 0;
-  align-items: center;
-  justify-content: start;
-  padding: 6px;
-  margin: 2px;
+    background-color: #ffffff;
+    display: flex;
+    width: calc(100% - 16px);
+    border-bottom: 1px solid #dedede;
+    margin: 0;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 6px;
+    margin: 2px;
 }
 #root .App .page-container.blog .side-bar .category-bar a .tiny-image {
-  padding: 20px;
-  margin-right: 10px;
+    padding: 20px;
+    margin-right: 10px;
 }
 #root .App .page-container.blog .side-bar .news-bar {
-  max-height: 200vh;
-  overflow-y: scroll;
-  border: 6px solid #ffffff;
-  padding: 0;
-  border-left: 0;
-  border-right: 0;
+    max-height: 200vh;
+    overflow-y: scroll;
+    border: 6px solid #ffffff;
+    padding: 0;
+    border-left: 0;
+    border-right: 0;
 }
 #root .App .page-container.blog .side-bar .news-bar .news-box {
-  cursor: pointer;
-  transition: 500ms;
-  background: #ffffff;
-  padding: 20px;
-  margin: 0;
-  margin-bottom: 10px;
+    cursor: pointer;
+    transition: 500ms;
+    background: #ffffff;
+    padding: 20px;
+    margin: 0;
+    margin-bottom: 10px;
 }
 #root .App .page-container.blog .side-bar .news-bar .news-box .news-image {
-  padding: 60px 0;
+    padding: 60px 0;
 }
 #root .App .page-container.blog .side-bar .news-bar .news-box h2 {
-  margin-top: 6px;
-  font-size: 1.1rem;
-  color: #666666;
-  border-bottom: none;
+    margin-top: 6px;
+    font-size: 1.1rem;
+    color: #666666;
+    border-bottom: none;
 }
 #root .App .page-container.blog .side-bar .news-bar .news-box p.date {
-  color: darkgrey;
+    color: darkgrey;
 }
 #root .App .page-container.blog .side-bar .news-bar .news-box:hover {
-  background-color: #e4e4e4;
+    background-color: #e4e4e4;
 }
 #root .App .page-container.blog .blog-container {
-  overflow: hidden;
-  padding: 0;
+    overflow: hidden;
+    padding: 0;
 }
 #root .App .page-container.blog .blog-container .blog-tile {
-  background-color: #000000;
-  margin: 0 0 20px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  box-shadow: 0px 0px 5px -2px #0000006b;
+    background-color: #000000;
+    margin: 0 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 0px 0px 5px -2px #0000006b;
 }
 #root .App .page-container.blog .blog-container .blog-tile .blog-inner {
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
-#root .App .page-container.blog .blog-container .blog-tile .blog-inner:hover .blog-left {
-  transform: scale(1.2);
-  filter: saturate(2.5);
+#root
+    .App
+    .page-container.blog
+    .blog-container
+    .blog-tile
+    .blog-inner:hover
+    .blog-left {
+    transform: scale(1.2);
+    filter: saturate(2.5);
 }
-#root .App .page-container.blog .blog-container .blog-tile .blog-inner .blog-left {
-  box-shadow: inset 0px 0px 20px 4px #0000005c;
-  transition: 1s;
+#root
+    .App
+    .page-container.blog
+    .blog-container
+    .blog-tile
+    .blog-inner
+    .blog-left {
+    box-shadow: inset 0px 0px 20px 4px #0000005c;
+    transition: 1s;
 }
-#root .App .page-container.blog .blog-container .blog-tile .blog-inner .blog-left img {
-  width: auto;
+#root
+    .App
+    .page-container.blog
+    .blog-container
+    .blog-tile
+    .blog-inner
+    .blog-left
+    img {
+    width: auto;
 }
-#root .App .page-container.blog .blog-container .blog-tile .blog-inner .blog-right {
-  background-color: #e5e5e5;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 200px;
+#root
+    .App
+    .page-container.blog
+    .blog-container
+    .blog-tile
+    .blog-inner
+    .blog-right {
+    background-color: #e5e5e5;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 200px;
 }
-#root .App .page-container.blog .blog-container .blog-tile .blog-inner .blog-right .blog-description .blog-content {
-  padding: 0px 1rem;
+#root
+    .App
+    .page-container.blog
+    .blog-container
+    .blog-tile
+    .blog-inner
+    .blog-right
+    .blog-description
+    .blog-content {
+    padding: 0px 1rem;
 }
-#root .App .page-container.blog .blog-container .blog-tile .blog-inner .blog-right svg {
-  margin: 0 2px;
-  cursor: pointer;
+#root
+    .App
+    .page-container.blog
+    .blog-container
+    .blog-tile
+    .blog-inner
+    .blog-right
+    svg {
+    margin: 0 2px;
+    cursor: pointer;
 }
-#root .App .page-container.blog .blog-container .blog-tile .blog-inner .blog-right h1 {
-  padding: 10px 1rem;
-  margin: 0;
+#root
+    .App
+    .page-container.blog
+    .blog-container
+    .blog-tile
+    .blog-inner
+    .blog-right
+    h1 {
+    padding: 10px 1rem;
+    margin: 0;
 }
-#root .App .page-container.blog .blog-container .blog-tile .blog-inner .blog-right h1 a {
-  margin: 0;
-  padding: 10px 0;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 900;
-  color: black;
+#root
+    .App
+    .page-container.blog
+    .blog-container
+    .blog-tile
+    .blog-inner
+    .blog-right
+    h1
+    a {
+    margin: 0;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 900;
+    color: black;
 }
-#root .App .page-container.blog .blog-container .blog-tile .blog-inner .blog-right h1 .blog-info {
-  display: flex;
-  color: #ababab;
-  text-transform: uppercase;
-  align-items: center;
-  justify-content: flex-start;
+#root
+    .App
+    .page-container.blog
+    .blog-container
+    .blog-tile
+    .blog-inner
+    .blog-right
+    h1
+    .blog-info {
+    display: flex;
+    color: #ababab;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: flex-start;
 }
-#root .App .page-container.blog .blog-container .blog-tile .blog-inner .blog-right h1 .blog-info p {
-  font-size: 12px;
-  font-weight: normal;
+#root
+    .App
+    .page-container.blog
+    .blog-container
+    .blog-tile
+    .blog-inner
+    .blog-right
+    h1
+    .blog-info
+    p {
+    font-size: 12px;
+    font-weight: normal;
 }
-#root .App .page-container.blog .blog-container .blog-tile .blog-inner .blog-right h1 .blog-info p.blog-info-data {
-  margin: 6px 4px;
-  display: flex;
-  align-items: center;
+#root
+    .App
+    .page-container.blog
+    .blog-container
+    .blog-tile
+    .blog-inner
+    .blog-right
+    h1
+    .blog-info
+    p.blog-info-data {
+    margin: 6px 4px;
+    display: flex;
+    align-items: center;
 }
 #root .App .page-container.blog .blog-container .blog-tile .blog-bottom {
-  align-items: center;
-  font-size: 1rem;
-  justify-content: space-between;
-  display: flex;
-  padding: 4px;
-  background: #dbdbdb;
-  border: 1px solid #f3f3f3;
+    align-items: center;
+    font-size: 1rem;
+    justify-content: space-between;
+    display: flex;
+    padding: 4px;
+    background: #dbdbdb;
+    border: 1px solid #f3f3f3;
 }
 #root .App .page-container.blog .blog-container .blog-tile .blog-bottom p {
-  font-size: 12px;
-  font-weight: normal;
-  display: inline-flex;
-  margin: 0;
+    font-size: 12px;
+    font-weight: normal;
+    display: inline-flex;
+    margin: 0;
 }
 #root .App .page-container.blog .blog-container .blog-tile .blog-bottom p a {
-  color: #8b8b8b;
+    color: #8b8b8b;
 }
-#root .App .page-container.blog .blog-container .blog-tile .blog-bottom p a.read-more {
-  background-color: #9100ff;
-  color: white;
-  border-radius: 6px;
+#root
+    .App
+    .page-container.blog
+    .blog-container
+    .blog-tile
+    .blog-bottom
+    p
+    a.read-more {
+    background-color: #9100ff;
+    color: white;
+    border-radius: 6px;
 }
-#root .App .page-container.blog .blog-container .blog-tile .blog-bottom p.category {
-  cursor: pointer;
-  background: #8b8b8b;
-  box-shadow: 0px 0px 2px 0px #868686;
-  color: #ffffff;
-  border-radius: 10px;
-  padding: 1px 6px;
-  font-size: 12px;
-  margin-right: 4px;
+#root
+    .App
+    .page-container.blog
+    .blog-container
+    .blog-tile
+    .blog-bottom
+    p.category {
+    cursor: pointer;
+    background: #8b8b8b;
+    box-shadow: 0px 0px 2px 0px #868686;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 1px 6px;
+    font-size: 12px;
+    margin-right: 4px;
 }
-#root .App .page-container.blog .blog-container .blog-tile .blog-bottom p.category:hover {
-  background-color: transparent;
-  color: gray;
-  border: 1px solid #8d5fdf;
+#root
+    .App
+    .page-container.blog
+    .blog-container
+    .blog-tile
+    .blog-bottom
+    p.category:hover {
+    background-color: transparent;
+    color: gray;
+    border: 1px solid #8d5fdf;
 }
 #root .App .page-container.blog .blog-container .blog-tile .blog-bottom p svg {
-  margin: 0 4px;
-  font-size: 1.1rem;
+    margin: 0 4px;
+    font-size: 1.1rem;
 }
 #root .App .page-container.blog .blog-container .blog-tile .blog-bottom span {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 #root .App .page-container.blog .blog-container .blog-tile .blog-bottom button {
-  background-color: #1d282c;
+    background-color: #1d282c;
 }
 #root .App .page-container.blog .blog-container .blog-tile:hover {
-  opacity: 0.9;
+    opacity: 0.9;
 }
 #root .App .page-container.contact form {
-  background: white;
-  width: 100%;
-  padding: 2rem;
+    background: white;
+    width: 100%;
+    padding: 2rem;
 }
 #root .App .page-container.contact form .alert {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 #root .App .page-container.contact p {
-  margin: 0;
+    margin: 0;
 }
 #root .App .page-container.contact p a {
-  color: gray;
-  font-size: 1.2rem;
+    color: gray;
+    font-size: 1.2rem;
 }
 #root .App .page-container.contact svg {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 }
 #root .App .page-container.projects .MuiCard-root {
-  cursor: pointer;
+    cursor: pointer;
 }
 #root .App .page-container.skills h2 {
-  color: #00256a;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.3rem;
-  font-weight: 900;
-  border-bottom: 2px solid #312e6d;
-  margin: 20px 0;
-  text-transform: uppercase;
+    color: #00256a;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 900;
+    border-bottom: 2px solid #312e6d;
+    margin: 20px 0;
+    text-transform: uppercase;
 }
 #root .App .page-container.skills svg {
-  font-size: 3rem;
-  color: #00256a;
+    font-size: 3rem;
+    color: #00256a;
 }
 #root .App .page-container.skills .circular-bar {
-  margin-top: 60px;
-  margin-top: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    margin-top: 60px;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-#root .App .page-container.skills .MuiCollapse-container .MuiCollapse-wrapper .MuiCollapse-wrapperInner .MuiAccordionDetails-root p {
-  display: flex;
-  justify-content: start;
+#root
+    .App
+    .page-container.skills
+    .MuiCollapse-container
+    .MuiCollapse-wrapper
+    .MuiCollapse-wrapperInner
+    .MuiAccordionDetails-root
+    p {
+    display: flex;
+    justify-content: flex-start;
 }
-#root .App .page-container.skills .MuiCollapse-container .MuiCollapse-wrapper .MuiCollapse-wrapperInner .MuiAccordionDetails-root p .sub-icons {
-  margin: 0 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+#root
+    .App
+    .page-container.skills
+    .MuiCollapse-container
+    .MuiCollapse-wrapper
+    .MuiCollapse-wrapperInner
+    .MuiAccordionDetails-root
+    p
+    .sub-icons {
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-#root .App .page-container.skills .MuiCollapse-container .MuiCollapse-wrapper .MuiCollapse-wrapperInner .MuiAccordionDetails-root p .sub-icons p img {
-  width: 3.8rem;
+#root
+    .App
+    .page-container.skills
+    .MuiCollapse-container
+    .MuiCollapse-wrapper
+    .MuiCollapse-wrapperInner
+    .MuiAccordionDetails-root
+    p
+    .sub-icons
+    p
+    img {
+    width: 3.8rem;
 }
 #root .App .page-container.work ul {
-  background-color: white;
-  padding: 20px 3%;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: white;
+    padding: 20px 3%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 @media only screen and (max-width: 768px) {
-  #root .App .page-container.work ul {
-    padding: 20px 8%;
-  }
+    #root .App .page-container.work ul {
+        padding: 20px 8%;
+    }
 }
 #root .App .page-container.work h2 {
-  color: #00256a;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.8rem;
-  font-weight: 900;
-  margin: 0;
+    color: #00256a;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin: 0;
 }
 #root .App .page-container.work .job-address {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 #root .App .page-container.work .job-address h3 {
-  color: rgba(0, 0, 0, 0.5);
-  font-size: 1rem;
-  margin: 0;
-  font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 400;
 }
 #root .App .page-container.work .job-address h4 {
-  font-size: 1rem;
-  margin: 0;
+    font-size: 1rem;
+    margin: 0;
 }
 #root .App .page-container.education .MuiCard-root {
-  height: 220px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin-bottom: 50px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 50px;
 }
 #root .App .page-container.education .MuiCard-root .MuiCardContent-root h2 {
-  color: #00256a;
-  font-size: 1.6rem;
-  font-weight: 800;
-  font-family: "Open Sans", sans-serif;
-  text-transform: uppercase;
+    color: #00256a;
+    font-size: 1.6rem;
+    font-weight: 800;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
 }
 #root .App .page-container.education .MuiCard-root button {
-  width: 100%;
+    width: 100%;
 }
 #root .App .page-container.education .MuiCard-root p {
-  margin: 0;
+    margin: 0;
 }
 #root .App .footer {
-  background: #2c2b2d;
+    background: #2c2b2d;
 }
 #root .App .footer .top-footer {
-  padding: 20px 0;
+    padding: 20px 0;
 }
 #root .App .footer .top-footer h2 {
-  color: #ededed;
+    color: #ededed;
 }
 #root .App .footer .top-footer .general-info {
-  display: flex;
-  overflow: hidden;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 #root .App .footer .top-footer .general-info .img-fluid-avatar {
-  max-width: 130%;
+    max-width: 130%;
 }
 #root .App .footer .top-footer .general-info p {
-  color: white;
-  font-size: 1rem;
-  font-family: "Open Sans", sans-serif;
-  margin: 3px;
+    color: white;
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
+    margin: 3px;
 }
 #root .App .footer .top-footer .general-info p a {
-  color: white;
+    color: white;
 }
 #root .App .footer .top-footer .general-info h2 {
-  color: #ffffff;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 900;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 4px #000000d6;
+    color: #ffffff;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 4px #000000d6;
 }
 #root .App .footer .top-footer .terms-category {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 #root .App .footer .top-footer .terms-category h2 {
-  font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 #root .App .footer .top-footer .terms-category a {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  padding: 3px 0;
-  font-size: 1.1rem;
-  font-family: "Open Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 3px 0;
+    font-size: 1.1rem;
+    font-family: "Open Sans", sans-serif;
 }
 #root .App .footer .top-footer .footer-links {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 @media only screen and (max-width: 992px) {
-  #root .App .footer .top-footer .footer-links {
-    margin: 20px 0;
-  }
+    #root .App .footer .top-footer .footer-links {
+        margin: 20px 0;
+    }
 }
 #root .App .footer .top-footer .footer-links h2 {
-  font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 #root .App .footer .top-footer .footer-links a {
-  color: white;
-  padding: 3px 0;
-  font-size: 1.1rem;
-  font-family: "Open Sans", sans-serif;
+    color: white;
+    padding: 3px 0;
+    font-size: 1.1rem;
+    font-family: "Open Sans", sans-serif;
 }
 #root .App .footer .bottom-footer {
-  display: flex;
-  padding: 3px 6px 3px 2%;
-  background: #9100ff;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    padding: 3px 6px 3px 2%;
+    background: #9100ff;
+    justify-content: space-between;
+    align-items: center;
 }
 #root .App .footer .bottom-footer .footer-left {
-  color: gray;
+    color: gray;
 }
 #root .App .footer .bottom-footer .footer-right button {
-  background: #1d282c;
+    background: #1d282c;
 }
 #root .App .footer .bottom-footer .footer-icons {
-  display: inline-flex;
+    display: inline-flex;
 }
 #root .App .footer .bottom-footer .footer-icons svg {
-  color: #1d282c;
-  font-size: 1.2rem;
+    color: #1d282c;
+    font-size: 1.2rem;
 }
 
 .k-button {
-  background: #1d282c;
-  background-color: #1d282c !important;
-  color: white;
-  border: none;
+    background: #1d282c;
+    background-color: #1d282c !important;
+    color: white;
+    border: none;
 }
 .k-button:hover {
-  border: none;
-  background: linear-gradient(145deg, #673ab7, #ab7cff) !important;
-  color: white;
+    border: none;
+    background: linear-gradient(145deg, #673ab7, #ab7cff) !important;
+    color: white;
 }
 
 .share-links {
-  padding: 1px 6px;
+    padding: 1px 6px;
 }
 .share-links svg {
-  font-size: 2rem;
-  color: #00256a;
+    font-size: 2rem;
+    color: #00256a;
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+    width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+    background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+    background: #888;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+    background: #555;
 }
 
 /*# sourceMappingURL=app.css.map */

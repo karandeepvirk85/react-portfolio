@@ -109,7 +109,7 @@ export default class Footer extends Component {
                                     <div className="centerContent">
                                         <div className="selfCenter standardWidth">
                                             <TwitterTweetEmbed
-                                                tweetId={"1294928003554848771"}
+                                                tweetId={"1331712662607052801"}
                                             />
                                         </div>
                                     </div>
