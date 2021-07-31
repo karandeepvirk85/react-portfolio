@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { CircularIndeterminate } from "./utility/utility.component.js";
 import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { siteDomain } from "./constants/constants.component";
-const apiUrl = siteDomain + "/wp-admin/admin-ajax.php?action=get_terms";
+import { apiDomain } from "./constants/constants.component";
+const apiUrl = apiDomain + "/wp-admin/admin-ajax.php?action=get_terms";
 
 export default class Terms extends Component {
   constructor(props) {

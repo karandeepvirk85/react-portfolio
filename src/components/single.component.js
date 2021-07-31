@@ -16,7 +16,7 @@ import {
   FaShareAlt,
 } from "react-icons/fa";
 
-import { siteDomain } from "./constants/constants.component";
+import { apiDomain } from "./constants/constants.component";
 
 export default class Single extends Component {
   constructor(props) {
@@ -31,7 +31,7 @@ export default class Single extends Component {
   componentDidUpdate = (prevProps) => {
     if (this.props.match.params.slug !== prevProps.match.params.slug) {
       var apiEndPost =
-        siteDomain +
+        apiDomain +
         "/wp-admin/admin-ajax.php?action=get_single&slug=" +
         this.props.match.params.slug;
       fetch(apiEndPost)
@@ -47,7 +47,7 @@ export default class Single extends Component {
       match: { params },
     } = this.props;
     var apiEndPost =
-      siteDomain +
+      apiDomain +
       "/wp-admin/admin-ajax.php?action=get_single&slug=" +
       this.props.match.params.slug;
     fetch(apiEndPost)

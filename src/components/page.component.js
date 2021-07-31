@@ -4,7 +4,7 @@ import {
   renderHTML,
 } from "./utility/utility.component.js";
 
-import { siteDomain } from "./constants/constants.component";
+import { apiDomain } from "./constants/constants.component";
 
 export default class SinglePage extends Component {
   constructor(props) {
@@ -21,7 +21,7 @@ export default class SinglePage extends Component {
    */
   componentDidMount(props) {
     var apiEndPost =
-      siteDomain +
+      apiDomain +
       "/wp-admin/admin-ajax.php?action=get_page&slug=" +
       this.props.slug;
     fetch(apiEndPost)
