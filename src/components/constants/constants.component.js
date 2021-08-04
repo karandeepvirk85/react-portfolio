@@ -1,4 +1,8 @@
-const apiDomain = "https://karandeepvirk.in/api";
+const isLocalHost = true;
+const apiDomain =
+    isLocalHost === true
+        ? "http://localhost/react-portfolio/api"
+        : "https://karandeepvirk.in/api";
 const newsApi = apiDomain + "/wp-admin/admin-ajax.php?action=get_news";
 const contactController = apiDomain + "/contact_controller.php";
 const blogApi = apiDomain + "/wp-admin/admin-ajax.php?action=get_blogs";

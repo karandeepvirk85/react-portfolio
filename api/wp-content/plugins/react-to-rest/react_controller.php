@@ -14,6 +14,7 @@ class Blog_Controller{
 		add_action('wp_ajax_nopriv_get_terms', array(__CLASS__, 'getPostsTerms'));	
 		add_action('wp_ajax_get_page', array(__CLASS__, 'getPage'));
 		add_action('wp_ajax_nopriv_get_page', array(__CLASS__, 'getPage'));
+		//add_action('init',array(__CLASS__,'getNews'));
 	}
 	
 	/**
@@ -179,22 +180,29 @@ class Blog_Controller{
 	 */
 	public static function getNews(){
 
-		$strJson = '{
-			"articles":[
-				{
-					"author":"Rajarshi Mitra",
-					"title":"Top 3 Coins Bitcoin, Ethereum and Ripple Price Prediction: BTC & XRP lack healthy support – Confluence Detector",
-					"description":"Bitcoin Open: $11,529.43 Current Price: $11,414 BTC/USD has one strong resistance level at $11,875, which has the one-day and one-week Fibonacci 23.6",
-					"url":"",
-					"urlToImage":"",
-					"publishedAt":"2020-08-22T01:29:25Z",
-					"content":"Note: All information on this page is subject to change. The use of this website constitutes acceptance of our user agreement. Please read our privacy policy and legal disclaimer.\r\nTrading foreign ex… [+1338 chars]"
-				}
-			]
-		}';
-
-		$strJson = json_decode($strJson);
-		echo json_encode($strJson);
+		$args = array(
+			'post_type' => 'news',
+			'posts_per_page' => -1,
+			'numberposts' => -1,
+			'post_status' => 'publish',
+			'order_by' => 'date',
+			'order' => 'DESC'
+		);
+		
+		$arrNews = get_posts($args);
+		$arrNewsData = array();
+		foreach ($arrNews as $objNews){
+			$arrNewsData[] = array(
+				'title' => $objNews->post_title,
+				'description' => substr(stripcslashes(strip_tags($objNews->post_content)),0,250),
+				'published_at' => $objNews->post_date,
+				'short_description' => stripcslashes(strip_tags($objNews->post_excerpt)),
+				'news_url' =>urldecode(get_post_meta($objNews->ID,'meta_news_url', true)),
+				'author_name' => trim(get_post_meta($objNews->ID,'meta_author_name',true)),
+				'news_image' =>  wp_get_attachment_image_url(get_post_meta($objNews->ID,'_thumbnail_id',true),'large'),
+			);
+		}
+		echo json_encode($arrNewsData);
 		die;
 	}
 

@@ -1,7 +1,8 @@
 <?php 
+
 defined('ABSPATH') OR exit;
+
 class News_Controller{
-    
     public function __construct(){
         add_action('init', array(__CLASS__,'registerNewPostType'));
     }
@@ -15,7 +16,15 @@ class News_Controller{
             ),
                 'public' => true,
                 'has_archive' => false,
+                'show_in_rest' => true,
                 'rewrite' => array('slug' => 'news'),
+                'supports' =>array(
+                    'title' => 'title',
+                    'editor' => 'editor',
+                    'thumbnail' => 'thumbnail',
+                    'custom-fields' => 'custom-fields',
+                    'excerpt' => 'excerpt'
+                ), 
             )
         );
     }

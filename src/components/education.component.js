@@ -41,7 +41,6 @@ const arrDocuments = [
     {
         image: "/documents/certificates/original/btech.jpg",
         thumb: "/documents/certificates/thumbs/btech.jpg",
-
         title: "Bachelor Degree",
         subtitle: "Computer Science",
         location: "Lalru Mandi, Mohali, PTU",
@@ -149,10 +148,6 @@ const MediaCard = () => {
 };
 
 export default class Education extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div className="page-container education">
