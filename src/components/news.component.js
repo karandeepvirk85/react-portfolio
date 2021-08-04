@@ -47,7 +47,7 @@ export default class NewsBar extends Component {
                     <h2>{item.title}</h2>
                     <p className="date">{item.published_at}</p>
                     <p>{item.description}</p>
-                    {item.author != undefined && (
+                    {item.author_name != undefined && (
                         <p className="date">By {item.author_name}</p>
                     )}
                 </div>

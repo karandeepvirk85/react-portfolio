@@ -1,4 +1,4 @@
-const isLocalHost = true;
+const isLocalHost = false;
 const apiDomain =
     isLocalHost === true
         ? "http://localhost/react-portfolio/api"

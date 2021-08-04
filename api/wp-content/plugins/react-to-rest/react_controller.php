@@ -109,7 +109,7 @@ class Blog_Controller{
 					'image_thumb' => self::getFeaturedImage($objPosts->ID)['medium'],
 					'image_full' => self::getFeaturedImage($objPosts->ID)['full'],
 					'category' => get_the_terms($objPosts->ID,'category'),
-					'url' => 'https://karandeepvirk.com/post/'.$objPosts->post_name
+					'url' => 'post/'.$objPosts->post_name
 				);
 			}
 		}
@@ -194,7 +194,7 @@ class Blog_Controller{
 		foreach ($arrNews as $objNews){
 			$arrNewsData[] = array(
 				'title' => $objNews->post_title,
-				'description' => substr(stripcslashes(strip_tags($objNews->post_content)),0,250),
+				'description' => substr(stripcslashes(strip_tags($objNews->post_content)),0,250).'..',
 				'published_at' => $objNews->post_date,
 				'short_description' => stripcslashes(strip_tags($objNews->post_excerpt)),
 				'news_url' =>urldecode(get_post_meta($objNews->ID,'meta_news_url', true)),
