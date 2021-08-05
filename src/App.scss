@@ -121,6 +121,10 @@ $footer-bg: #2c2b2d;
             width: 100%;
             background: white;
             position: relative;
+            .grid-divison {
+                display: grid;
+                grid-template-columns: 3fr 9fr;
+            }
             .spinner-bar {
                 width: 100%;
                 height: 60vh;
@@ -176,6 +180,7 @@ $footer-bg: #2c2b2d;
                         color: #575757;
                         padding: 4px;
                         font-size: 1.5rem;
+                        margin: 0 0 12px 0;
                     }
                     .category-bar {
                         display: flex;
@@ -200,19 +205,21 @@ $footer-bg: #2c2b2d;
                     }
                     padding: 0;
                     .news-bar {
+                        display: grid;
                         max-height: 200vh;
                         overflow-y: scroll;
-                        border: 6px solid #ffffff;
                         padding: 0;
                         border-left: 0;
                         border-right: 0;
+                        grid-row-gap: 20px;
+                        direction: rtl;
                         .news-box {
+                            direction: ltr;
                             cursor: pointer;
                             transition: 500ms;
                             background: #ffffff;
-                            padding: 20px;
+                            padding: 0 20px 0 20px;
                             margin: 0;
-                            margin-bottom: 10px;
                             .news-image {
                                 padding: 60px 0;
                             }
@@ -235,10 +242,8 @@ $footer-bg: #2c2b2d;
                 }
                 .blog-container {
                     overflow: hidden;
-                    padding: 0;
                     .blog-tile {
                         background-color: #000000;
-                        margin: 0 0 20px 0;
                         display: flex;
                         flex-direction: column;
                         justify-content: space-around;
@@ -610,17 +615,17 @@ $footer-bg: #2c2b2d;
 }
 
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #ffffff;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: rgb(184, 184, 184);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: rgb(88, 88, 88);
 }

@@ -192,10 +192,11 @@ class Blog_Controller{
 		$arrNews = get_posts($args);
 		$arrNewsData = array();
 		foreach ($arrNews as $objNews){
+		$strNewsDate = date('d F Y',strtotime($objNews->post_date));
 			$arrNewsData[] = array(
 				'title' => $objNews->post_title,
 				'description' => substr(stripcslashes(strip_tags($objNews->post_content)),0,250).'..',
-				'published_at' => $objNews->post_date,
+				'published_at' => $strNewsDate  ,
 				'short_description' => stripcslashes(strip_tags($objNews->post_excerpt)),
 				'news_url' =>urldecode(get_post_meta($objNews->ID,'meta_news_url', true)),
 				'author_name' => trim(get_post_meta($objNews->ID,'meta_author_name',true)),
