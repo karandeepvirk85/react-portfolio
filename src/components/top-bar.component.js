@@ -145,30 +145,18 @@ const MenuListComposition = () => {
 
     // return focus to the button when we transitioned from !open -> open
     React.useEffect(() => {
-        if (prevPortfolio.current === true && openPortfolio === false) {
-            anchorRefPortfolio.current.focus();
-        }
         prevOpen.current = openPortfolio;
     }, [openPortfolio]);
 
     React.useEffect(() => {
-        if (prevOpen.current === true && open === false) {
-            anchorRef.current.focus();
-        }
         prevOpen.current = open;
     }, [open]);
 
     React.useEffect(() => {
-        if (prevAboutMe.current === true && openAboutMe === false) {
-            anchorRefAboutMe.current.focus();
-        }
         prevAboutMe.current = openAboutMe;
     }, [openAboutMe]);
 
     React.useEffect(() => {
-        if (prevOpenDownload.current === true && openDownload === false) {
-            anchorRefDownload.current.focus();
-        }
         prevOpenDownload.current = openDownload;
     }, [openDownload]);
 
@@ -542,7 +530,7 @@ const TopNavigationBar = () => {
                 expanded={expanded}
             >
                 <Link to="/about">
-                    <Avatar /> Karandeep Virk
+                    <Avatar /> Karandeep Singh Virk
                 </Link>
                 <Navbar.Toggle
                     aria-controls="responsive-navbar-nav"
