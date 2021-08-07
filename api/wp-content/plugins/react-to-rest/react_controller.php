@@ -43,7 +43,7 @@ class Blog_Controller{
 			$arrBlog = array(
 				'title' => $arrPosts[0]->post_title,
 				'content' => apply_filters('the_content', $arrPosts[0]->post_content),
-				'small_content' => substr(apply_filters('the_content', strip_tags($arrPosts[0]->post_content), 0, 500)),
+				'small_content' => substr(apply_filters('the_content', strip_tags($arrPosts[0]->post_content), 0, 300)),
 				'author' => $strAuthorName,
 				'date' => date('d F Y', strtotime($arrPosts[0]->post_date)),
 				'image_thumb' => self::getFeaturedImage($arrPosts[0]->ID)['thumb'],
@@ -103,7 +103,7 @@ class Blog_Controller{
 				$arrBlogs[] = array(
 					'title' => $objPosts->post_title,
 					'content' => apply_filters('the_content', $objPosts->post_content),
-					'small_content' => substr(strip_tags($objPosts->post_content), 0, 300),
+					'small_content' => substr(strip_tags($objPosts->post_content), 0, 400).'...',
 					'author' => $strAuthorName,
 					'date' => date('d F Y', strtotime($objPosts->post_date)),
 					'image_thumb' => self::getFeaturedImage($objPosts->ID)['medium'],

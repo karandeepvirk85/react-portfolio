@@ -234,6 +234,7 @@
   flex-direction: column;
   justify-content: space-around;
   box-shadow: 0px 0px 5px -2px #0000006b;
+  margin-bottom: 10px;
 }
 #root .App .page-container.blog .blog-container .blog-tile .blog-inner {
   overflow: hidden;
@@ -247,7 +248,12 @@
 }
 #root .App .page-container.blog .blog-container .blog-tile .blog-inner .blog-left {
   box-shadow: inset 0px 0px 20px 4px #0000005c;
-  transition: 1s;
+  transition: 500ms;
+  background-color: white;
+  padding: 8rem 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 #root .App .page-container.blog .blog-container .blog-tile .blog-inner .blog-left img {
   width: auto;

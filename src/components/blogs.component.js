@@ -60,9 +60,6 @@ export default class Blogs extends Component {
                             className="blog-left col-md-4"
                             style={{
                                 backgroundImage: "url(" + item.image_full + ")",
-                                backgroundPosition: "center",
-                                backgroundSize: "cover",
-                                backgroundRepeat: "no-repeat",
                             }}
                         ></div>
                         <div className="col-md-8 blog-right">

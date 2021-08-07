@@ -248,6 +248,7 @@ $footer-bg: #2c2b2d;
                         flex-direction: column;
                         justify-content: space-around;
                         box-shadow: 0px 0px 5px -2px #0000006b;
+                        margin-bottom: 10px;
                         .blog-inner {
                             overflow: hidden;
                             display: flex;
@@ -261,7 +262,12 @@ $footer-bg: #2c2b2d;
                             }
                             .blog-left {
                                 box-shadow: inset 0px 0px 20px 4px #0000005c;
-                                transition: 1s;
+                                transition: 500ms;
+                                background-color: white;
+                                padding: 8rem 0;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: contain;
                                 img {
                                     width: auto;
                                 }
