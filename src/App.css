@@ -186,8 +186,9 @@
   margin: 0;
   align-items: center;
   justify-content: start;
-  padding: 0;
+  padding: 2px;
   margin: 2px;
+  color: #000;
 }
 #root .App .page-container.blog .side-bar .category-bar a .tiny-image {
   padding: 20px;
