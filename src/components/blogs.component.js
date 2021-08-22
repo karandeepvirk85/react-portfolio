@@ -136,7 +136,6 @@ export default class Blogs extends Component {
                             {this.getCategories(item.category)}
                         </p>
                         <p>
-                            {console.log(item.url)}
                             <Link className="nav-link read-more" to={item.url}>
                                 Read More
                             </Link>

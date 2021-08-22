@@ -170,7 +170,7 @@
   color: #9100ff;
   background: #ffffff;
   padding: 8px;
-  border-bottom: 3px solid #c7c7c7;
+  border-bottom: 3px solid #eaeaea;
 }
 #root .App .page-container.blog .side-bar .category-bar {
   display: flex;
@@ -181,6 +181,7 @@
 #root .App .page-container.blog .side-bar .category-bar a {
   background-color: #ffffff;
   display: flex;
+  font-size: 1.3rem;
   width: calc(100% - 16px);
   border-bottom: 1px solid #dedede;
   margin: 0;
@@ -188,7 +189,7 @@
   justify-content: start;
   padding: 2px;
   margin: 2px;
-  color: #000;
+  color: #666;
 }
 #root .App .page-container.blog .side-bar .category-bar a .tiny-image {
   padding: 20px;
@@ -203,6 +204,7 @@
   border-right: 0;
   grid-row-gap: 20px;
   direction: rtl;
+  margin-bottom: 40px;
 }
 #root .App .page-container.blog .side-bar .news-bar .news-box {
   direction: ltr;
@@ -235,7 +237,7 @@
   color: #9100ff;
   background: #ffffff;
   padding: 8px;
-  border-bottom: 3px solid #c7c7c7;
+  border-bottom: 3px solid #eaeaea;
 }
 #root .App .page-container.blog .blog-container .blog-tile {
   background-color: #000000;
