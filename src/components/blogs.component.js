@@ -4,7 +4,7 @@ import {
     LinearIndeterminate,
 } from "./utility/utility.component.js";
 
-import { categoryBlog } from "./constants/constants.component.js";
+import { categoryBlog, siteDomain } from "./constants/constants.component.js";
 
 import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -90,6 +90,8 @@ export default class Blogs extends Component {
                                 target="blank"
                                 href={
                                     "https://www.linkedin.com/shareArticle?mini=true&amp;url=" +
+                                    siteDomain +
+                                    "/#/" +
                                     item.url
                                 }
                             >
@@ -97,19 +99,35 @@ export default class Blogs extends Component {
                             </a>
                             <a
                                 target="blank"
-                                href="https://www.facebook.com/sharer/sharer.php?u=wwww.karandeepvirk.in"
+                                href={
+                                    "https://www.facebook.com/sharer/sharer.php?u=" +
+                                    siteDomain +
+                                    "/#/" +
+                                    item.url
+                                }
                             >
                                 <FaFacebook />
                             </a>
                             <a
                                 target="blank"
-                                href="https://twitter.com/intent/tweet?text=&amp;url=www.karandeepvirk.com&amp;via="
+                                href={
+                                    "https://twitter.com/intent/tweet?text=&amp;url=" +
+                                    siteDomain +
+                                    "/#/" +
+                                    item.url +
+                                    "&amp;via="
+                                }
                             >
                                 <FaTwitter />
                             </a>
                             <a
                                 target="blank"
-                                href="mailto:someone@yoursite.com?subject=Sharing Profile Of Karandeep Virk&body=karandeepvirk.com"
+                                href={
+                                    "mailto:someone@yoursite.com?subject=Sharing Post of Karandeep Virk&body=" +
+                                    siteDomain +
+                                    "/#/" +
+                                    item.url
+                                }
                             >
                                 <FaEnvelope />
                             </a>

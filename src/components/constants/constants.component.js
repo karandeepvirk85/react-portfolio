@@ -1,4 +1,4 @@
-const isLocalHost = true;
+const isLocalHost = false;
 const apiDomain =
     isLocalHost === true
         ? "http://localhost/react-portfolio/api"
@@ -15,6 +15,7 @@ const portfolioPhone = "204-898-7629";
 const portfolioAddress = "14373 82b Ave, Surrey, BC V3W 0J4";
 const portfolioLinkedIn = "https://www.linkedin.com/in/kv85/";
 const portfolioGithub = "https://github.com/karandeepvirk85";
+const siteDomain = "https://www.karandeepvirk.in";
 
 export {
     newsApi,
@@ -28,4 +29,5 @@ export {
     googleMapAddress,
     portfolioLinkedIn,
     portfolioGithub,
+    siteDomain,
 };

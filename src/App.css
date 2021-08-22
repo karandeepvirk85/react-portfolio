@@ -166,9 +166,11 @@
   padding: 0;
 }
 #root .App .page-container.blog .side-bar h2 {
-  color: #959595;
-  font-size: 2rem;
-  margin: 0 0 12px 0;
+  font-size: 2.5rem;
+  color: #9100ff;
+  background: #ffffff;
+  padding: 8px;
+  border-bottom: 3px solid #c7c7c7;
 }
 #root .App .page-container.blog .side-bar .category-bar {
   display: flex;
@@ -184,7 +186,7 @@
   margin: 0;
   align-items: center;
   justify-content: start;
-  padding: 6px;
+  padding: 0;
   margin: 2px;
 }
 #root .App .page-container.blog .side-bar .category-bar a .tiny-image {
@@ -228,8 +230,11 @@
   overflow: hidden;
 }
 #root .App .page-container.blog .blog-container .main-heading {
-  font-size: 2rem;
-  color: #959595;
+  font-size: 2.5rem;
+  color: #9100ff;
+  background: #ffffff;
+  padding: 8px;
+  border-bottom: 3px solid #c7c7c7;
 }
 #root .App .page-container.blog .blog-container .blog-tile {
   background-color: #000000;
