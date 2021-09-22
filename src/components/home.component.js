@@ -110,9 +110,7 @@ export default class Blogs extends Component {
                         <SideBar />
                     </Col>
                     <Col className="blog-container">
-                        <h3 className="text-right main-heading">
-                            LATEST POSTS
-                        </h3>
+                        <h3 className="main-heading">LATEST POSTS</h3>
                         <AllBlogs />
                     </Col>
                 </div>

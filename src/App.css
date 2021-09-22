@@ -6,7 +6,7 @@
 }
 #root .App .MuiButton-root:hover {
   border: none;
-  background: linear-gradient(145deg, #9100ff, #00256a) !important;
+  background: linear-gradient(145deg, #444444, #00256a) !important;
   color: white;
 }
 #root .App .margin-0 {
@@ -24,7 +24,7 @@
   }
 }
 #root .App .navbar-dark {
-  background: #9100ff;
+  background: #444444;
 }
 #root .App .navbar-dark .MuiSvgIcon-root {
   font-size: 2rem;
@@ -115,7 +115,16 @@
 }
 #root .App .page-container .grid-divison {
   display: grid;
-  grid-template-columns: 3fr 9fr;
+}
+@media (min-width: 350px) {
+  #root .App .page-container .grid-divison {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 992px) {
+  #root .App .page-container .grid-divison {
+    grid-template-columns: 1fr 3fr;
+  }
 }
 #root .App .page-container .spinner-bar {
   width: 100%;
@@ -165,12 +174,30 @@
 #root .App .page-container.blog .side-bar {
   padding: 0;
 }
+@media (min-width: 350px) {
+  #root .App .page-container.blog .side-bar {
+    grid-row-end: 2;
+  }
+}
+@media (min-width: 992px) {
+  #root .App .page-container.blog .side-bar {
+    grid-row-end: auto;
+  }
+}
 #root .App .page-container.blog .side-bar h2 {
-  font-size: 2.5rem;
-  color: #9100ff;
+  color: #444444;
   background: #ffffff;
   padding: 8px;
-  border-bottom: 3px solid #eaeaea;
+}
+@media (min-width: 350px) {
+  #root .App .page-container.blog .side-bar h2 {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 992px) {
+  #root .App .page-container.blog .side-bar h2 {
+    font-size: 2.5rem;
+  }
 }
 #root .App .page-container.blog .side-bar .category-bar {
   display: flex;
@@ -232,12 +259,32 @@
 #root .App .page-container.blog .blog-container {
   overflow: hidden;
 }
-#root .App .page-container.blog .blog-container .main-heading {
-  font-size: 2.5rem;
-  color: #9100ff;
+#root .App .page-container.blog .blog-container h3.main-heading {
+  color: #444444;
   background: #ffffff;
   padding: 8px;
-  border-bottom: 3px solid #eaeaea;
+}
+@media (min-width: 350px) {
+  #root .App .page-container.blog .blog-container h3.main-heading {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+}
+@media (min-width: 992px) {
+  #root .App .page-container.blog .blog-container h3.main-heading {
+    font-size: 2.5rem;
+    text-align: right;
+  }
+}
+@media (min-width: 350px) {
+  #root .App .page-container.blog .blog-container {
+    grid-row-end: 1;
+  }
+}
+@media (min-width: 992px) {
+  #root .App .page-container.blog .blog-container {
+    grid-row-end: auto;
+  }
 }
 #root .App .page-container.blog .blog-container .blog-tile {
   background-color: #000000;
@@ -250,8 +297,18 @@
 #root .App .page-container.blog .blog-container .blog-tile .blog-inner {
   overflow: hidden;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+}
+@media (min-width: 350px) {
+  #root .App .page-container.blog .blog-container .blog-tile .blog-inner {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) {
+  #root .App .page-container.blog .blog-container .blog-tile .blog-inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 #root .App .page-container.blog .blog-container .blog-tile .blog-inner:hover .blog-left {
   transform: scale(1.2);
@@ -325,14 +382,23 @@
 #root .App .page-container.blog .blog-container .blog-tile .blog-bottom p {
   font-size: 12px;
   font-weight: normal;
-  display: inline-flex;
   margin: 0;
+}
+@media (min-width: 350px) {
+  #root .App .page-container.blog .blog-container .blog-tile .blog-bottom p {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  #root .App .page-container.blog .blog-container .blog-tile .blog-bottom p {
+    display: inline-flex;
+  }
 }
 #root .App .page-container.blog .blog-container .blog-tile .blog-bottom p a {
   color: #8b8b8b;
 }
 #root .App .page-container.blog .blog-container .blog-tile .blog-bottom p a.read-more {
-  background-color: #9100ff;
+  background-color: #444444;
   color: white;
   border-radius: 6px;
 }
@@ -343,8 +409,17 @@
   color: #ffffff;
   border-radius: 10px;
   padding: 1px 6px;
-  font-size: 12px;
-  margin-right: 4px;
+}
+@media (min-width: 350px) {
+  #root .App .page-container.blog .blog-container .blog-tile .blog-bottom p.category {
+    font-size: 9px;
+    margin: 2px;
+  }
+}
+@media (min-width: 768px) {
+  #root .App .page-container.blog .blog-container .blog-tile .blog-bottom p.category {
+    font-size: 12px;
+  }
 }
 #root .App .page-container.blog .blog-container .blog-tile .blog-bottom p.category:hover {
   background-color: transparent;
@@ -546,7 +621,7 @@
 #root .App .footer .bottom-footer {
   display: flex;
   padding: 3px 6px 3px 2%;
-  background: #9100ff;
+  background: #444444;
   justify-content: space-between;
   align-items: center;
 }
