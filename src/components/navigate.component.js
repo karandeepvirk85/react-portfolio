@@ -49,13 +49,6 @@ export default function SimpleMenu() {
                     {" "}
                     Download Cover Letter{" "}
                 </MenuItem>
-                <MenuItem
-                    onClick={(e) => {
-                        DownLoadDocument("/documents/vcard.png", e);
-                    }}
-                >
-                    Visiting Card{" "}
-                </MenuItem>
             </Menu>
         </div>
     );

@@ -338,20 +338,6 @@ const MenuListComposition = () => {
                                                 <FaFileWord /> DOCX Resume
                                             </Link>
                                         </MenuItem>
-
-                                        <MenuItem onClick={handleClose}>
-                                            <Link
-                                                className="nav-link"
-                                                onClick={(e) => {
-                                                    DownLoadDocument(
-                                                        "/documents/vcard.png",
-                                                        e
-                                                    );
-                                                }}
-                                            >
-                                                <FaIdCard /> V Card
-                                            </Link>
-                                        </MenuItem>
                                     </MenuList>
                                 </ClickAwayListener>
                             </Paper>
