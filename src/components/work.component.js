@@ -58,7 +58,7 @@ const AlluraDirect = () => {
 const NaigatorText = () => {
     return (
         <>
-            <h2>Programmer</h2>
+            <h2>Web Developer / Programmer</h2>
             <div className="job-address">
                 <h3>
                     Navigator Multimedia, Kelowna BC, CANADA{" "}

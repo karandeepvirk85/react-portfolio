@@ -497,7 +497,6 @@
 #root .App .page-container.work ul {
   background-color: white;
   padding: 20px 3%;
-  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 @media only screen and (max-width: 768px) {
   #root .App .page-container.work ul {
