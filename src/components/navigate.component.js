@@ -39,15 +39,15 @@ export default function SimpleMenu() {
                         DownLoadDocument("/documents/Karandeep_Virk.pdf", e);
                     }}
                 >
-                    Download Resume{" "}
+                    Download Resume in PDF{" "}
                 </MenuItem>
                 <MenuItem
                     onClick={(e) => {
-                        DownLoadDocument("/documents/Cover_Letter.pdf", e);
+                        DownLoadDocument("/documents/Karandeep_Virk.docx", e);
                     }}
                 >
                     {" "}
-                    Download Cover Letter{" "}
+                    Download Resume in Docx{" "}
                 </MenuItem>
             </Menu>
         </div>
