@@ -232,29 +232,6 @@ const MenuListComposition = () => {
                                                     setExpanded(false)
                                                 }
                                                 className="nav-link"
-                                                to="/facebook"
-                                            >
-                                                <FaFacebook /> Facebook
-                                            </Link>
-                                        </MenuItem>
-                                        <MenuItem onClick={handleClose}>
-                                            <Link
-                                                onClick={() =>
-                                                    setExpanded(false)
-                                                }
-                                                className="nav-link"
-                                                to="/instagram"
-                                            >
-                                                <FaInstagram /> Instagram
-                                            </Link>
-                                        </MenuItem>
-
-                                        <MenuItem onClick={handleClose}>
-                                            <Link
-                                                onClick={() =>
-                                                    setExpanded(false)
-                                                }
-                                                className="nav-link"
                                                 to="/twitter"
                                             >
                                                 <FaTwitter /> Twitter

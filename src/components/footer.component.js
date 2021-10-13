@@ -122,14 +122,8 @@ export default class Footer extends Component {
                 <div className="bottom-footer">
                     <div className="footer-icons">
                         <Router>
-                            <Link className="nav-link" to="/instagram">
-                                <FaInstagram />
-                            </Link>
                             <Link className="nav-link" to="/twitter">
                                 <FaTwitter />
-                            </Link>
-                            <Link className="nav-link" to="/facebook">
-                                <FaFacebook />
                             </Link>
                             <Nav.Link
                                 href="https://github.com/karandeepvirk85"
@@ -139,7 +133,7 @@ export default class Footer extends Component {
                                 <FaGithubSquare />
                             </Nav.Link>
                             <Nav.Link
-                                href="https://www.linkedin.com/in/kv85/"
+                                href="https://www.linkedin.com/in/ikvirk/"
                                 rel="noopener noreferrer"
                                 target="_blank"
                             >
