@@ -12,7 +12,7 @@ class Address extends Component {
   render() {
     return (
       <>
-        <p>
+        <p className="text-center">
           <FaMapMarker /> <a href={googleMapAddress}>{portfolioAddress}</a>
         </p>
         <p>

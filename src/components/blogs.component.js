@@ -6,14 +6,13 @@ import {
 
 import { categoryBlog, siteDomain } from "./constants/constants.component.js";
 
-import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Link } from "react-router-dom";
 
 import {
     FaUser,
     FaCalendar,
     FaLinkedin,
     FaFacebook,
-    FaInstagram,
     FaTwitter,
     FaShareAlt,
     FaEnvelope,
