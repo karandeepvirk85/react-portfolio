@@ -7,6 +7,8 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import NatureIcon from "@material-ui/icons/Nature";
+import { themeColor } from "./constants/constants.component.js";
+
 import {
     MaterialsUI,
     Authorize,
@@ -54,47 +56,97 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: theme.typography.fontWeightRegular,
     },
 }));
-
+const circleStroke = "rgb(40 236 0)";
 const objExpertise = [
     {
         header: "React",
         value: "70",
-        color: "#333333",
+        color: circleStroke,
     },
     {
         header: "JavaScript",
         value: "70",
-        color: "#333333",
+        color: circleStroke,
+    },
+    {
+        header: "TypeScript",
+        value: "80",
+        color: circleStroke,
     },
     {
         header: "PHP",
         value: "90",
-        color: "#333333",
+        color: circleStroke,
     },
     {
         header: "Angular",
         value: "45",
-        color: "#333333",
+        color: themeColor,
     },
     {
         header: "Git",
-        value: "50",
-        color: "#333333",
+        value: "80",
+        color: circleStroke,
     },
     {
         header: "Bootstrap",
         value: "80",
-        color: "#333333",
+        color: circleStroke,
+    },
+    {
+        header: "Testing/JEST",
+        value: "65",
+        color: themeColor,
+    },
+    {
+        header: "SASS/CSS",
+        value: "80",
+        color: circleStroke,
+    },
+    {
+        header: "JQuery",
+        value: "90",
+        color: circleStroke,
     },
     {
         header: "Materials-UI",
+        value: "70",
+        color: circleStroke,
+    },
+    {
+        header: "Node",
+        value: "80",
+        color: circleStroke,
+    },
+    {
+        header: "REST API",
+        value: "85",
+        color: circleStroke,
+    },
+    {
+        header: "FORMIK",
+        value: "70",
+        color: circleStroke,
+    },
+    {
+        header: "MYSQL",
+        value: "70",
+        color: circleStroke,
+    },
+    {
+        header: "MongoDB",
+        value: "70",
+        color: circleStroke,
+    },
+    {
+        header: "Ant-D",
         value: "60",
-        color: "#333333",
+        color: themeColor,
     },
     {
         header: "Wordpress",
         value: "90",
-        color: "#333333",
+        color: circleStroke,
     },
 ];
 
@@ -399,7 +451,7 @@ const Accordians = () => {
 
 const CircularBar = () => {
     const List = objExpertise.map((item, index) => (
-        <Col xs={12} md={2}>
+        <Col xs={6} md={2} lg={2}>
             <CircularProgressbar
                 value={item.value}
                 text={`${item.value}%`}
@@ -408,7 +460,7 @@ const CircularBar = () => {
                     textColor: item.color,
                 })}
             />
-            ;<h5 className="text-center">{item.header}</h5>
+            <h6 className="text-center">{item.header}</h6>
         </Col>
     ));
 
@@ -419,10 +471,10 @@ export default class Skills extends Component {
         return (
             <div className="page-container skills">
                 <h1>SKILLS</h1>
-                <Accordians />
                 <Row className="circular-bar">
                     <CircularBar />
                 </Row>
+                <Accordians />
             </div>
         );
     }

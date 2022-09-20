@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
 import LinkIcon from '@material-ui/icons/Link';
 import {Col} from 'react-bootstrap';
+import { themeColor } from './constants/constants.component';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -22,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: '56.25%', // 16:9
     },
     avatar: {
-        backgroundColor: red[500],
+        backgroundColor: themeColor,
     },
 }));
 
@@ -42,7 +43,7 @@ const openLink = (link) =>{
 export default function ProjectCards(props){
     const classes = useStyles();
     return(
-        <Col xl= {3} lg= {4} md={6} xs={12} className="project-tile">
+        <Col xl= {4} lg= {6} md={6} xs={12} className="project-tile">
             <Card className= {classes.root} onClick = {()=>openLink(props.link)}>
                 <CardHeader
                     avatar={

@@ -1,22 +1,14 @@
 import React, { Component } from "react";
 import ProjectCards from "./projectcards.component.js";
-import { Container, Row } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import {
-    FaReact,
     FaWordpress,
     FaJs,
     FaPhp,
     FaPaypal,
-    FaStripeS,
     FaSass,
     FaHtml5,
     FaCss3Alt,
-    FaGithub,
-    FaNodeJs,
-    FaBootstrap,
-    FaLinkedin,
-    FaFacebook,
-    FaInstagram,
     FaAngular,
     FaGoogle,
 } from "react-icons/fa";
@@ -63,7 +55,7 @@ const objProject = [
         link: "https://www.tropicaladventurestravel.com/trip/raja-ampat-indonesia",
         media: "/images/projects/ta.jpg",
         description:
-            "I have designed and developed this application and built Custom E Cart from scratch. In this application user can make partial deposit before buying tour. The next payment user can pay any time using Order Key. It also has email notifations with Admin controls.",
+            "I have designed and developed this application and built Custom E Cart from scratch. In this application user can make partial deposit before buying tour. The next payment user can pay any time using Order Key. It also has email notifications with Admin controls.",
         languages: [
             { icon: <FaWordpress /> },
             { icon: <FaSass /> },
@@ -72,25 +64,6 @@ const objProject = [
             { icon: <FaPaypal /> },
         ],
     },
-
-    {
-        letter: "D",
-        title: "Reataurant POS System",
-        type: "Personal",
-        link: "http://system-preview.dosacrepecafe.com/",
-        media: "/images/projects/dosa.jpg",
-        description:
-            "I had develoepd this pure JS application integrated with Wordpress and PHP. Developed WP Theme and Plugin from scratch. Admin can add discount, extra, control the Menu of the application and Orders. The payment method used was Stripe.",
-        languages: [
-            { icon: <FaJs /> },
-            { icon: <FaWordpress /> },
-            { icon: <FaSass /> },
-            { icon: <FaHtml5 /> },
-            { icon: <FaCss3Alt /> },
-            { icon: <FaStripeS /> },
-        ],
-    },
-
     {
         letter: "T",
         title: "The School Concierge",
@@ -116,7 +89,7 @@ const objProject = [
         link: "https://github.com/karandeepvirk85/Wordpress-Default-Framework/tree/branch",
         media: "/images/projects/wp.png",
         description:
-            "I designed & developed my own custom WordPress Theme and Plugin from scratch. I wrote Object Oriented code and added various controllers such as Fields, Settings, Custom Post type Controllers, etc. I also added payment page integrated with Stripe. You can view here karandeepvirk.in/preview",
+            "I designed & developed my own custom WordPress Theme and Plugin from scratch. I wrote Object Oriented code and added various controllers such as Fields, Settings, Custom Post type Controllers, etc. I also added payment page integrated with Stripe. You can view here http://global-immigration.ca/",
         languages: [
             { icon: <FaAngular /> },
             { icon: <FaPhp /> },
@@ -175,23 +148,7 @@ const objProject = [
             { icon: <FaHtml5 /> },
             { icon: <FaCss3Alt /> },
         ],
-    },
-
-    {
-        letter: "K",
-        title: "Document Storage Application",
-        type: "At Navigator Multimedia",
-        link: "https://www.privateaccess.kghfoundation.com/",
-        media: "/images/projects/kg.png",
-        description:
-            " I had developed this PHP application in which users can Add, Update, Delete documents. Admin can control the access of the documents between users. ",
-        languages: [
-            { icon: <FaWordpress /> },
-            { icon: <FaSass /> },
-            { icon: <FaHtml5 /> },
-            { icon: <FaCss3Alt /> },
-        ],
-    },
+    }
 ];
 
 const ProjectsHTML = () => {

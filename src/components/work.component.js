@@ -5,12 +5,58 @@ class Work extends Component {
         return (
             <div className="page-container work">
                 <h1>WORK EXPERIENCE</h1>
+                <VolanteSystem/>
                 <AlluraDirect />
                 <NaigatorText />
-                <InfoWiz />
+                <McNewton />
             </div>
         );
     }
+}
+
+const VolanteSystem = () =>{
+    return(
+        <>
+        <h2>React Developer</h2>
+        <div className="job-address">
+            <h3>
+                Volante Systems, Toronto, ON <strong> CANADA </strong><span>Feb 2022 - Present</span>
+            </h3>
+            <h4>
+                <a target ="_blank" href="https://www.volantesystems.com/">https://www.volantesystems.com/</a>
+            </h4>
+        </div>
+        <ul>
+            <li>
+                Developed and tested react components using React, Typescript, ES6, mobX,
+                Formik, Webpack, Jira, Bit bucket, Docker Container, Mongo DB, React testing
+                library, Jest, Sonar cloud, Husky, Mocha and JS hint.
+            </li>
+            <li>
+                Converted designed mock-ups into fully functioning user interface with Unit
+                testing, Integrated Testing under Sprints, Scrums and Agile development
+                environment.
+            </li>
+            <li>
+                Modified discount feature to manage the different types of discounts with the
+                ability to add discounts per item, by percentage or value, ability to set
+                minimum and maximum value, tax options, etc.
+            </li>
+            <li>
+                Developed schedule interface and functionality to modify different types of
+                schedule which can be repeated daily, weekly, monthly, etc.
+            </li>
+            <li>
+                Attended different meetings every day to refine stories, story points, bug triage, weekly refinements. Removed story defects, bugs and worked
+                collaboratively with QA team.
+            </li>
+            <li>
+                Communicated with back end developer and used Swagger to manage end
+                points and handled requests and responses back and forth with server.
+            </li>
+        </ul>
+        </>  
+    )
 }
 
 const AlluraDirect = () => {
@@ -19,9 +65,11 @@ const AlluraDirect = () => {
             <h2>React Web Developer</h2>
             <div className="job-address">
                 <h3>
-                    AlluraDirect, Vancouver BC, CANADA
-                    <span>Sep 2020 - Present</span>
+                    AlluraDirect, Vancouver BC, <strong>CANADA</strong>  <span>Sep 2020 - Oct 2021</span>
                 </h3>
+                <h4>
+                    <a target ="_blank" href="https://www.alluradirect.com/">https://www.alluradirect.com/</a>
+                </h4>
             </div>
             <ul>
                 <li>
@@ -54,9 +102,12 @@ const NaigatorText = () => {
             <h2>Web Developer / Programmer</h2>
             <div className="job-address">
                 <h3>
-                    Navigator Multimedia, Kelowna BC, CANADA{" "}
+                    Navigator Multimedia, Kelowna BC, <strong>CANADA</strong>{" "}
                     <span>July 2016 - April 2020</span>
                 </h3>
+                <h4>
+                    <a target ="_blank" href="https://www.navigator.ca/?">https://www.navigator.ca/</a>
+                </h4>
             </div>
             <ul>
                 <li>
@@ -119,15 +170,18 @@ const NaigatorText = () => {
     );
 };
 
-const InfoWiz = () => {
+const McNewton = () => {
     return (
         <>
             <h2>Software Developer</h2>
             <div className="job-address">
                 <h3>
-                    McNewton, IT Park, Chandigarh, INDIA
+                    McNewton, IT Park, Chandigarh, <strong>INDIA</strong>
                     <span>&nbsp;Dec 2013 - January 2015</span>
                 </h3>
+                <h4>
+                    <a href="https://www.zaubacorp.com/company/McNewton-Solutions-Private-Limited/U72900DL2012PTC234560">McNewton (Striked Off)</a>
+                </h4>
             </div>
             <ul>
                 <li>

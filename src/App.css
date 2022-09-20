@@ -6,7 +6,7 @@
 }
 #root .App .MuiButton-root:hover {
   border: none;
-  background: linear-gradient(145deg, #0005ad, #00256a) !important;
+  background: linear-gradient(145deg, #000176, #ffb400) !important;
   color: white;
 }
 #root .App .margin-0 {
@@ -24,7 +24,7 @@
   }
 }
 #root .App .navbar-dark {
-  background: #0005ad;
+  background: #000176;
 }
 #root .App .navbar-dark .MuiSvgIcon-root {
   font-size: 2rem;
@@ -185,7 +185,7 @@
   }
 }
 #root .App .page-container.blog .side-bar h2 {
-  color: #0005ad;
+  color: #000176;
   background: #ffffff;
   padding: 8px;
 }
@@ -260,7 +260,7 @@
   overflow: hidden;
 }
 #root .App .page-container.blog .blog-container h3.main-heading {
-  color: #0005ad;
+  color: #000176;
   background: #ffffff;
   padding: 8px;
 }
@@ -398,7 +398,7 @@
   color: #8b8b8b;
 }
 #root .App .page-container.blog .blog-container .blog-tile .blog-bottom p a.read-more {
-  background-color: #0005ad;
+  background-color: #000176;
   color: white;
   border-radius: 6px;
 }
@@ -461,7 +461,7 @@
   cursor: pointer;
 }
 #root .App .page-container.skills h2 {
-  color: #00256a;
+  color: #000176;
   font-family: "Open Sans", sans-serif;
   font-size: 1.3rem;
   font-weight: 900;
@@ -471,7 +471,7 @@
 }
 #root .App .page-container.skills svg {
   font-size: 3rem;
-  color: #00256a;
+  color: #000176;
 }
 #root .App .page-container.skills .circular-bar {
   margin-top: 60px;
@@ -479,6 +479,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#root .App .page-container.skills .circular-bar div {
+  padding: 0 2rem;
 }
 #root .App .page-container.skills .MuiCollapse-container .MuiCollapse-wrapper .MuiCollapse-wrapperInner .MuiAccordionDetails-root p {
   display: flex;
@@ -504,7 +507,7 @@
   }
 }
 #root .App .page-container.work h2 {
-  color: #00256a;
+  color: #ffb400;
   font-family: "Open Sans", sans-serif;
   font-size: 1.8rem;
   font-weight: 900;
@@ -531,7 +534,7 @@
   margin-bottom: 50px;
 }
 #root .App .page-container.education .MuiCard-root .MuiCardContent-root h2 {
-  color: #00256a;
+  color: #ffb400;
   font-size: 1.6rem;
   font-weight: 800;
   font-family: "Open Sans", sans-serif;
@@ -620,7 +623,7 @@
 #root .App .footer .bottom-footer {
   display: flex;
   padding: 3px 6px 3px 2%;
-  background: #0005ad;
+  background: #000176;
   justify-content: space-between;
   align-items: center;
 }
@@ -634,7 +637,7 @@
   display: inline-flex;
 }
 #root .App .footer .bottom-footer .footer-icons svg {
-  color: #1d282c;
+  color: #ffffff;
   font-size: 1.2rem;
 }
 
@@ -655,7 +658,7 @@
 }
 .share-links svg {
   font-size: 2rem;
-  color: #00256a;
+  color: #ffb400;
 }
 
 ::-webkit-scrollbar {
@@ -674,4 +677,4 @@
   background: rgb(88, 88, 88);
 }
 
-/*# sourceMappingURL=App.css.map */
+/*# sourceMappingURL=app.css.map */

@@ -1,68 +1,68 @@
 import React from 'react';
 const MaterialsUI = () =>{
     return(
-        <img src="/icons/mui.svg"/>
+        <img alt ="M-UI" src="/icons/mui.svg"/>
     )
 }
 const Authorize = () =>{
     return(
-        <img src="/icons/Authorize.webp"/>
+        <img alt ="Authorize.Net" src="/icons/Authorize.webp"/>
     )
 }
 const Elavon = () =>{
     return(
-        <img src="/icons/Elavon.png"/>
+        <img alt ="Elavon" src="/icons/Elavon.png"/>
     )
 }
 const WooCommerece = () =>{
     return(
-        <img src="/icons/Woocommerece.png"/>
+        <img alt ="Woo-Commerece" src="/icons/Woocommerece.png"/>
     )
 }
 const ACF = () =>{
     return(
-        <img src="/icons/Acf.png"/>
+        <img alt="Advanced Custom Fields" src="/icons/Acf.png"/>
     )
 }
 const Total = () =>{
     return(
-        <img src="/icons/total.png"/>
+        <img alt ="Total" src="/icons/total.png"/>
     )
 }
 
 const Yoast = () =>{
     return(
-        <img src="/icons/Yoast.png"/>
+        <img alt="Yoast" src="/icons/Yoast.png"/>
     )
 }
 
 const Buddy = () =>{
     return(
-        <img src="/icons/buddy.png"/>
+        <img alt="BuddyPress" src="/icons/buddy.png"/>
     )
 }
 
 const Lasso = () =>{
     return(
-        <img src="/icons/lasso.jpeg"/>
+        <img alt="Lasso" src="/icons/lasso.jpeg"/>
     )
 }
 
 const Constant = () =>{
     return(
-        <img src="/icons/constant.gif"/>
+        <img alt="Constant Contact" src="/icons/constant.gif"/>
     )
 }
 
 const Solve = () =>{
     return(
-        <img src="/icons/solve.png"/>
+        <img alt="Solve-360" src="/icons/solve.png"/>
     )
 }
 
 const Checkfront = () =>{
     return(
-        <img src="/icons/checkfront.jpg"/>
+        <img alt="Check Front" src="/icons/checkfront.jpg"/>
     )
 }
 

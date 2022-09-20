@@ -2,8 +2,8 @@
 
 $primaryFont: "Open Sans", sans-serif;
 $secondaryFont: "Recursive", sans-serif;
-$primaryColor:#0005ad;
-$secondaryColor: #00256a;
+$primaryColor:#000176;
+$secondaryColor: #ffb400;
 $root-bg: #ffffff;
 $footer-bg: #2c2b2d;
 
@@ -457,7 +457,7 @@ $footer-bg: #2c2b2d;
             }
             &.skills {
                 h2 {
-                    color: $secondaryColor;
+                    color: $primaryColor;
                     font-family: $primaryFont;
                     font-size: 1.3rem;
                     font-weight: 900;
@@ -467,7 +467,7 @@ $footer-bg: #2c2b2d;
                 }
                 svg {
                     font-size: 3rem;
-                    color: $secondaryColor;
+                    color: $primaryColor;
                 }
                 .circular-bar {
                     margin-top: 60px;
@@ -475,6 +475,9 @@ $footer-bg: #2c2b2d;
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    div{
+                        padding: 0 2rem;
+                    }
                 }
                 .MuiCollapse-container {
                     .MuiCollapse-wrapper {
@@ -648,7 +651,7 @@ $footer-bg: #2c2b2d;
                 .footer-icons {
                     display: inline-flex;
                     svg {
-                        color: #1d282c;
+                        color: #ffffff;
                         font-size: 1.2rem;
                     }
                 }
