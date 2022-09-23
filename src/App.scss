@@ -2,7 +2,7 @@
 
 $primaryFont: "Open Sans", sans-serif;
 $secondaryFont: "Recursive", sans-serif;
-$primaryColor:#000176;
+$primaryColor:#8500ff;
 $secondaryColor: #ffb400;
 $root-bg: #ffffff;
 $footer-bg: #2c2b2d;
@@ -40,6 +40,7 @@ $footer-bg: #2c2b2d;
                 font-size: 2rem;
             }
             background: $primaryColor;
+            padding: 2px 1rem;
             a {
                 @media only screen and (max-width: 768px) {
                     width: 80%;
@@ -49,7 +50,8 @@ $footer-bg: #2c2b2d;
                 font-weight: 700;
                 img {
                     border-radius: 100%;
-                    width: 6.5%;
+                    width: auto;
+                    height: 36px;
                     margin-right: 10px;
                 }
             }
