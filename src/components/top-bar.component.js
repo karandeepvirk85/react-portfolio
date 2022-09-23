@@ -307,6 +307,20 @@ const MenuListComposition = () => {
                                                 className="nav-link"
                                                 onClick={(e) => {
                                                     DownLoadDocument(
+                                                        "/documents/Cover_Letter.pdf",
+                                                        e
+                                                    );
+                                                }}
+                                            >
+                                            <FaFilePdf /> Cover Letter
+                                            </Link>
+                                        </MenuItem>
+
+                                        <MenuItem onClick={handleClose}>
+                                            <Link
+                                                className="nav-link"
+                                                onClick={(e) => {
+                                                    DownLoadDocument(
                                                         "/documents/Karandeep_Virk.docx",
                                                         e
                                                     );
