@@ -31,9 +31,17 @@ const useStyles = makeStyles((theme) => ({
 
 const arrDocuments = [
     {
+        image: "/documents/certificates/original/mtech.jpg",
+        thumb: "/documents/certificates/thumbs/mtech.jpg",
+        title: "Master in Technology",
+        subtitle: "E Security",
+        location: "Fatehgarh Sahib, PTU",
+        year: "May 2021",
+    },
+    {
         image: "/documents/certificates/original/master.jpg",
         thumb: "/documents/certificates/thumbs/master.jpg",
-        title: "Master Degree",
+        title: "Mtech Detail Marks Card",
         subtitle: "E Security",
         location: "Fatehgarh Sahib, PTU",
         year: "May 2013",

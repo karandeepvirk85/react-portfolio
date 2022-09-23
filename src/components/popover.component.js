@@ -2,7 +2,7 @@ import React from "react";
 import Popover from "@material-ui/core/Popover";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import { FaFilePdf, FaFileWord, FaUser, FaCogs } from "react-icons/fa";
+import { FaFilePdf, FaFileWord, FaUser } from "react-icons/fa";
 import Cardbusiness from "@material-ui/icons/FeaturedPlayList";
 import AccountTreeIcon from "@material-ui/icons/AccountTree";
 import WorkIcon from "@material-ui/icons/Work";
@@ -25,63 +25,63 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const getIcon = (icon) => {
-    if (icon == "IconDownload") {
+    if (icon === "IconDownload") {
         return <FaFilePdf className="d-none d-sm-block" />;
     }
-    if (icon == "IconDocX") {
+    if (icon === "IconDocX") {
         return <FaFileWord className="d-none d-sm-block" />;
     }
-    if (icon == "Services") {
+    if (icon === "Services") {
         return <FaTools className="d-none d-sm-block" />;
     }
-    if (icon == "CardBusiness") {
+    if (icon === "CardBusiness") {
         return <Cardbusiness className="d-none d-sm-block" />;
     }
 
-    if (icon == "About") {
+    if (icon === "About") {
         return <FaUser className="d-none d-sm-block" />;
     }
 
-    if (icon == "Home") {
+    if (icon === "Home") {
         return <FaHome className="d-none d-sm-block" />;
     }
 
-    if (icon == "Contact") {
+    if (icon === "Contact") {
         return <FaMobileAlt className="d-none d-sm-block" />;
     }
 
-    if (icon == "AccountTreeIcon") {
+    if (icon === "AccountTreeIcon") {
         return <AccountTreeIcon className="d-none d-sm-block" />;
     }
 
-    if (icon == "multimedia") {
+    if (icon === "multimedia") {
         return <VideocamIcon className="d-none d-sm-block" />;
     }
 
-    if (icon == "WorkIcon") {
+    if (icon === "WorkIcon") {
         return <WorkIcon className="d-none d-sm-block" />;
     }
 
-    if (icon == "BuildIcon") {
+    if (icon === "BuildIcon") {
         return <BuildIcon className="d-none d-sm-block" />;
     }
 
-    if (icon == "SchoolIcon") {
+    if (icon === "SchoolIcon") {
         return <SchoolIcon className="d-none d-sm-block" />;
     }
-    if (icon == "PhotoCameraIcon") {
+    if (icon === "PhotoCameraIcon") {
         return <PhotoCameraIcon className="d-none d-sm-block" />;
     }
-    if (icon == "instagram") {
+    if (icon === "instagram") {
         return <InstagramIcon className="d-none d-sm-block" />;
     }
-    if (icon == "fbIcon") {
+    if (icon === "fbIcon") {
         return <FbIcon className="d-none d-sm-block" />;
     }
-    if (icon == "IdCard") {
+    if (icon === "IdCard") {
         return <FaIdCard className="d-none d-sm-block" />;
     }
-    if (icon == "twitter") {
+    if (icon === "twitter") {
         return <TwitterIcon className="d-none d-sm-block" />;
     }
 };

@@ -27,22 +27,15 @@ import SingleCategory from "./singlecategory.component.js";
 
 import {
     FaChevronDown,
-    FaFacebook,
-    FaInstagram,
     FaTwitter,
     FaGithub,
     FaLinkedin,
-    FaUser,
-    FaImages,
-    FaPhoneAlt,
     FaFilePdf,
-    FaIdCard,
     FaFileWord,
     FaProjectDiagram,
     FaSuitcase,
     FaUniversity,
     FaWrench,
-    FaToolbox,
 } from "react-icons/fa";
 import Single from "./single.component.js";
 

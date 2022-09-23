@@ -49,6 +49,15 @@ export default function SimpleMenu() {
                     {" "}
                     Download Resume in Docx{" "}
                 </MenuItem>
+
+                <MenuItem
+                    onClick={(e) => {
+                        DownLoadDocument("/documents/Cover_Letter.pdf", e);
+                    }}
+                >
+                    {" "}
+                    Download Cover Letter{" "}
+                </MenuItem>
             </Menu>
         </div>
     );
