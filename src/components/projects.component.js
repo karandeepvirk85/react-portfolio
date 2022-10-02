@@ -64,21 +64,66 @@ const objProject = [
             { icon: <FaPaypal /> },
         ],
     },
+
     {
-        letter: "T",
-        title: "The School Concierge",
+        letter: "G",
+        title: "Google Transit Bus Feed",
         type: "At Navigator Multimedia",
-        link: "https://theschoolconcierge.com/",
-        media: "/images/projects/tsc.png",
+        link: "https://www.google.com/maps/dir/Jasper,+Alberta+T0E+1E0/edmonton/@53.203329,-118.0033668,7z/data=!4m13!4m12!1m5!1m1!1s0x53832b0868553e29:0x1f2002bd0b192882!2m2!1d-118.0813581!2d52.8736786!1m5!1m1!1s0x53a0224580deff23:0x411fa00c4af6155d!2m2!1d-113.4937266!2d53.5460983",
+        media: "/images/projects/googlebus.png",
         description:
-            "The School Concierge is a kids hot lunch program for parents and schools. Application front and backend is developed in Angular JS. I had added various componet to the application such as Media Library, Scheduling hot lunch, Different views for different users, Handled JSON data back and forth with API.",
+            "I have added google transit bus feed. Inorder to add feed I had to work with google employee. I created data structure in different CSV files.",
         languages: [
-            { icon: <FaAngular /> },
+
+            { icon: <FaGoogle/> },
+        ],
+    },
+
+    {
+        letter: "O",
+        title: "Google Map Trails On Scroll",
+        type: "At Navigator Multimedia",
+        link: "https://www.originspringcreek.com/destination-location/?view=large",
+        media: "/images/projects/origin.png",
+        description:
+            "I have created animated Google Map Trail by working on google map JavaScript. When user scrolls it shows images and desription of locations along with google map trail animation in Spring Creek.",
+        languages: [
+            { icon: <FaSass /> },
+            { icon: <FaHtml5 /> },
+            { icon: <FaCss3Alt /> },
+            { icon: <FaGoogle /> },
+        ],
+    },
+    {
+        letter: "B",
+        title: "BC Golf Guide",
+        type: "At Navigator Multimedia",
+        link: "https://www.bcgolfguide.com/",
+        media: "/images/projects/bcgolf.png",
+        description:
+            "Developed Whole Website from designed Mockup. I have added Packages, Map, Blog, etc",
+        languages: [
             { icon: <FaPhp /> },
             { icon: <FaSass /> },
             { icon: <FaHtml5 /> },
             { icon: <FaCss3Alt /> },
             { icon: <FaPaypal /> },
+        ],
+    },
+
+    {
+        letter: "B",
+        title: "Blue Imp",
+        type: "At Navigator Multimedia",
+        link: "https://www.blueimp.com/",
+        media: "/images/projects/blueimp.png",
+        description:
+            "Worked on different features. Added color selection option, images carousel, lazy Loading.",
+        languages: [
+            { icon: <FaPhp /> },
+            { icon: <FaSass /> },
+            { icon: <FaHtml5 /> },
+            { icon: <FaCss3Alt /> }
         ],
     },
 
@@ -172,7 +217,7 @@ export default class Projects extends Component {
     render() {
         return (
             <div className="page-container projects">
-                <h1>PROJECTS</h1>
+                <h1>KEY PROJECTS</h1>
                 <Row>
                     <ProjectsHTML />
                 </Row>
